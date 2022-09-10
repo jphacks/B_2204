@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,13 +28,17 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button buttonInput;
 
   @NonNull
+  public final EditText kindStudy;
+
+  @NonNull
   public final TextView sampleText;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonGame,
-      @NonNull Button buttonInput, @NonNull TextView sampleText) {
+      @NonNull Button buttonInput, @NonNull EditText kindStudy, @NonNull TextView sampleText) {
     this.rootView = rootView;
     this.buttonGame = buttonGame;
     this.buttonInput = buttonInput;
+    this.kindStudy = kindStudy;
     this.sampleText = sampleText;
   }
 
@@ -76,6 +81,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.kind_study;
+      EditText kindStudy = ViewBindings.findChildViewById(rootView, id);
+      if (kindStudy == null) {
+        break missingId;
+      }
+
       id = R.id.sample_text;
       TextView sampleText = ViewBindings.findChildViewById(rootView, id);
       if (sampleText == null) {
@@ -83,7 +94,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ConstraintLayout) rootView, buttonGame, buttonInput,
-          sampleText);
+          kindStudy, sampleText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

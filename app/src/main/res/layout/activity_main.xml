@@ -15,7 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="650dp"
             android:layout_marginBottom="10dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/sample_text"
@@ -32,8 +33,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ゲーム"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"/>
 
+            <EditText
+                android:id="@+id/kind_study"
+                android:layout_width="280dp"
+                android:layout_height="80dp"
+                android:hint="種類"
+                android:maxLines="1"
+                android:layout_marginTop="300dp"/>
 
 
         </LinearLayout>

@@ -2753,6 +2753,7 @@ id item4
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
+id kind_study
 id labeled
 id layout
 id left
@@ -3096,6 +3097,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_input
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item

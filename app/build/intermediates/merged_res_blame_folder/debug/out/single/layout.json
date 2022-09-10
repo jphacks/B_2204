@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/activity_main.xml"
+        "merged": "C:\\Users\\somaf\\cardGame\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\somaf\\cardGame\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\somaf\\cardGame\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_input.xml",
+        "source": "C:\\Users\\somaf\\cardGame\\app\\src\\main\\res\\layout\\activity_input.xml"
     }
 ]

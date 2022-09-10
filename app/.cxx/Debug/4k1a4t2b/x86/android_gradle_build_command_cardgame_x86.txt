@@ -1,0 +1,7 @@
+Executable : C:\Users\somaf\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+C:\Users\somaf\cardGame\app\.cxx\Debug\4k1a4t2b\x86
+cardgame
+jvmArgs : 
+

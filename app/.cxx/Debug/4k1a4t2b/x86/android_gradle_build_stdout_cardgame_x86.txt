@@ -1,0 +1,2 @@
+ninja: Entering directory `C:\Users\somaf\cardGame\app\.cxx\Debug\4k1a4t2b\x86'
+ninja: no work to do.

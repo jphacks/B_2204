@@ -1,0 +1,6 @@
+com/example/cardgame/BuildConfig.java
+ com.example.cardgame.BuildConfig
+com/example/cardgame/MainActivity.java
+ com.example.cardgame.MainActivity
+com/example/cardgame/databinding/ActivityMainBinding.java
+ com.example.cardgame.databinding.ActivityMainBinding

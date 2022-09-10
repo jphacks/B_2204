@@ -1,0 +1,3 @@
+C:/Users/somaf/cardGame/app/.cxx/Debug/4k1a4t2b/x86/CMakeFiles/rebuild_cache.dir
+C:/Users/somaf/cardGame/app/.cxx/Debug/4k1a4t2b/x86/CMakeFiles/cardgame.dir
+C:/Users/somaf/cardGame/app/.cxx/Debug/4k1a4t2b/x86/CMakeFiles/edit_cache.dir

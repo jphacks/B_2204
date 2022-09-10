@@ -2611,9 +2611,9 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button2
-id button3
 id buttonPanel
+id button_game
+id button_input
 id cache_measures
 id callMeasure
 id cancel_button

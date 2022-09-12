@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -20,11 +21,29 @@ public final class ActivityInputBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final Button buttonInput;
+  public final Button buttonBack;
 
-  private ActivityInputBinding(@NonNull CoordinatorLayout rootView, @NonNull Button buttonInput) {
+  @NonNull
+  public final Button buttonReturn;
+
+  @NonNull
+  public final EditText kindStudy;
+
+  @NonNull
+  public final EditText timeHour;
+
+  @NonNull
+  public final EditText timeMunite;
+
+  private ActivityInputBinding(@NonNull CoordinatorLayout rootView, @NonNull Button buttonBack,
+      @NonNull Button buttonReturn, @NonNull EditText kindStudy, @NonNull EditText timeHour,
+      @NonNull EditText timeMunite) {
     this.rootView = rootView;
-    this.buttonInput = buttonInput;
+    this.buttonBack = buttonBack;
+    this.buttonReturn = buttonReturn;
+    this.kindStudy = kindStudy;
+    this.timeHour = timeHour;
+    this.timeMunite = timeMunite;
   }
 
   @Override
@@ -54,13 +73,38 @@ public final class ActivityInputBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button_input;
-      Button buttonInput = ViewBindings.findChildViewById(rootView, id);
-      if (buttonInput == null) {
+      id = R.id.button_back;
+      Button buttonBack = ViewBindings.findChildViewById(rootView, id);
+      if (buttonBack == null) {
         break missingId;
       }
 
-      return new ActivityInputBinding((CoordinatorLayout) rootView, buttonInput);
+      id = R.id.button_return;
+      Button buttonReturn = ViewBindings.findChildViewById(rootView, id);
+      if (buttonReturn == null) {
+        break missingId;
+      }
+
+      id = R.id.kind_study;
+      EditText kindStudy = ViewBindings.findChildViewById(rootView, id);
+      if (kindStudy == null) {
+        break missingId;
+      }
+
+      id = R.id.time_hour;
+      EditText timeHour = ViewBindings.findChildViewById(rootView, id);
+      if (timeHour == null) {
+        break missingId;
+      }
+
+      id = R.id.time_munite;
+      EditText timeMunite = ViewBindings.findChildViewById(rootView, id);
+      if (timeMunite == null) {
+        break missingId;
+      }
+
+      return new ActivityInputBinding((CoordinatorLayout) rootView, buttonBack, buttonReturn,
+          kindStudy, timeHour, timeMunite);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

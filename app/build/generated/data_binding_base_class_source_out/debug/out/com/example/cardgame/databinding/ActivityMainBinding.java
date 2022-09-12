@@ -4,47 +4,38 @@ package com.example.cardgame.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.cardgame.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CoordinatorLayout rootView;
 
   @NonNull
-  public final Button buttonGame;
-
-  @NonNull
-  public final Button buttonInput;
-
-  @NonNull
-  public final EditText kindStudy;
+  public final FloatingActionButton fabInput;
 
   @NonNull
   public final TextView sampleText;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonGame,
-      @NonNull Button buttonInput, @NonNull EditText kindStudy, @NonNull TextView sampleText) {
+  private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull FloatingActionButton fabInput, @NonNull TextView sampleText) {
     this.rootView = rootView;
-    this.buttonGame = buttonGame;
-    this.buttonInput = buttonInput;
-    this.kindStudy = kindStudy;
+    this.fabInput = fabInput;
     this.sampleText = sampleText;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -69,21 +60,9 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button_game;
-      Button buttonGame = ViewBindings.findChildViewById(rootView, id);
-      if (buttonGame == null) {
-        break missingId;
-      }
-
-      id = R.id.button_input;
-      Button buttonInput = ViewBindings.findChildViewById(rootView, id);
-      if (buttonInput == null) {
-        break missingId;
-      }
-
-      id = R.id.kind_study;
-      EditText kindStudy = ViewBindings.findChildViewById(rootView, id);
-      if (kindStudy == null) {
+      id = R.id.fab_input;
+      FloatingActionButton fabInput = ViewBindings.findChildViewById(rootView, id);
+      if (fabInput == null) {
         break missingId;
       }
 
@@ -93,8 +72,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, buttonGame, buttonInput,
-          kindStudy, sampleText);
+      return new ActivityMainBinding((CoordinatorLayout) rootView, fabInput, sampleText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

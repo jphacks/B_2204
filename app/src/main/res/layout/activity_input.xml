@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,10 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center_horizontal"
-    >
+        android:gravity="center_horizontal">
 
         <Button
+            android:id="@+id/button_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="戻る"
@@ -68,16 +69,12 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button_kind"
+            android:id="@+id/button_return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_maginTop="20dp"
+            android:layout_marginTop="20dp"
             android:text="確定" />
 
     </LinearLayout>
 
-
-
-
-</LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

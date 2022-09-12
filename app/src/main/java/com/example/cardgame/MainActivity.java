@@ -2,6 +2,7 @@ package com.example.cardgame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,10 +10,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.cardgame.databinding.ActivityMainBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Used to load the 'cardgame' library on application startup.
+    // C++ ライブラリの読み込み
     static {
         System.loadLibrary("cardgame");
     }
@@ -26,23 +28,21 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Example of a call to a native method
+        // Hello World
+        //TODO("C++の使い方が分かるまで残す")
         TextView tv = binding.sampleText;
         tv.setText(stringFromJNI());
 
-        Button bt_game = (Button) binding.buttonGame;
-        bt_game.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fab_input = (FloatingActionButton) binding.fabInput;
+        fab_input.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.d("Button:","Gameボタンが押されました");
+                Log.d("Button:","Inputボタンが押されました");
+                // 画面遷移 //
+                Intent intent = new Intent(getApplication(), InputActivity.class);
+                startActivity(intent);
             }
         });
 
-        Button bt_input = (Button) binding.buttonInput;
-        bt_input.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.d("Button:","Inputボタンが押されました");
-            }
-        });
 
     }
 

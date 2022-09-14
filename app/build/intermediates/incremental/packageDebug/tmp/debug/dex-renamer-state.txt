@@ -1,12 +1,12 @@
-#Mon Sep 12 11:42:30 JST 2022
+#Wed Sep 14 14:21:20 JST 2022
 path.3=9/classes.dex
 path.2=2/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.3=/Users/mahiro/cardGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
-base.2=/Users/mahiro/cardGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
-base.1=/Users/mahiro/cardGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.0=/Users/mahiro/cardGame/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.3=C\:\\Users\\somaf\\cardGame\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.2=C\:\\Users\\somaf\\cardGame\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.1=C\:\\Users\\somaf\\cardGame\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=C\:\\Users\\somaf\\cardGame\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex

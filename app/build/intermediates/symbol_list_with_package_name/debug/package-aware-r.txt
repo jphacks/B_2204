@@ -3022,7 +3022,7 @@ id textinput_prefix_text
 id textinput_suffix_text
 id time
 id time_hour
-id time_munite
+id time_minute
 id title
 id titleDividerNoCustom
 id title_template

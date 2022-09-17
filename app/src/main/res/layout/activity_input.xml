@@ -49,6 +49,7 @@
                     android:layout_width="280dp"
                     android:layout_height="80dp"
                     android:hint="種類"
+                    android:inputType="text"
                     android:maxLines="1" />
 
             </LinearLayout>
@@ -89,7 +90,7 @@
                     android:text="時間" />
 
                 <EditText
-                    android:id="@+id/time_munite"
+                    android:id="@+id/time_minute"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:hint="mm"

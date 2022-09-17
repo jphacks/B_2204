@@ -1,6 +1,9 @@
 package com.example.cardgame;
 
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,14 +17,21 @@ import com.example.cardgame.databinding.ActivityInputBinding;
 import com.example.cardgame.databinding.ActivityMainBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class InputActivity extends AppCompatActivity {
 
-    // Used to load the 'cardgame' library on application startup.
+    // C++ ライブラリの読み込み
     static {
         System.loadLibrary("cardgame");
     }
 
+    public native float calculateHour(float hour, float minute);
+
     private ActivityInputBinding binding;
+    // DBヘルパー使用宣言 //
+    FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(this); // コンテクストを渡す
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +39,9 @@ public class InputActivity extends AppCompatActivity {
 
         binding = ActivityInputBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // 書き換えモード　//
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         // 戻るボタン //
         Button bt_back = (Button) binding.buttonBack;
@@ -42,7 +55,6 @@ public class InputActivity extends AppCompatActivity {
         });
 
         // テキスト読み込み用 //
-
         EditText et_kind = (EditText) binding.kindStudy;
         EditText et_hour = (EditText) binding.timeHour;
         EditText et_minute = (EditText) binding.timeMinute;
@@ -53,21 +65,35 @@ public class InputActivity extends AppCompatActivity {
         bt_return.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.d("Button:","Returnボタンが押されました");
-                // 情報取得　種類//
-                String text_study = et_kind.getText().toString();
-                Log.d("text check:",text_study);
+                // 情報取得 //
+                String subject = et_kind.getText().toString();
+                float hour = new Float(et_hour.getText().toString());
+                float minute = new Float(et_minute.getText().toString());
+                // 日付取得 //
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy'-'MM'-'dd");
+                Date date = new Date();
+                // 時間変換 //
+                float time = calculateHour(hour, minute);
 
-                // 情報取得　時間 //
-                String number_hour = et_hour.getText().toString();
-                Log.d("hour check:",number_hour);
+                // Value設定 //
+                ContentValues values = new ContentValues();
+                values.put(FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT, subject);
+                values.put(FeedReaderContract.StudyEntry.COLUMN_NAME_TIME, time);
+                values.put(FeedReaderContract.StudyEntry.COLUMN_NAME_DATE, String.valueOf(sdf.format(date)));
 
-                // 情報取得　分 //
-                String number_minute = et_minute.getText().toString();
-                Log.d("minute check:",number_minute);
+                // PUSH
+                long newRowId = db.insert(FeedReaderContract.StudyEntry.TABLE_NAME, null, values);
+
                 // 画面遷移 //
                 Intent intent = new Intent(getApplication(), MainActivity.class);
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        dbHelper.close();
+        super.onDestroy();
     }
 }

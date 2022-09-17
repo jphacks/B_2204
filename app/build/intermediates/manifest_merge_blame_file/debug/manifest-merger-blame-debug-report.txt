@@ -6,99 +6,99 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="29"
-8-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml
+8-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml
+9-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:5:5-31:19
+11-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:5:5-31:19
 12        android:allowBackup="true"
-12-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:6:9-35
+12-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.7.0] C:\Users\somaf\.gradle\caches\transforms-3\9339927e08badd09bc5459e4ba900d5f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+13-->[androidx.core:core:1.7.0] /Users/mahiro/.gradle/caches/transforms-3/9339927e08badd09bc5459e4ba900d5f/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 14        android:debuggable="true"
 15        android:extractNativeLibs="false"
 16        android:icon="@mipmap/ic_launcher"
-16-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:7:9-43
+16-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:7:9-43
 17        android:label="@string/app_name"
-17-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:8:9-41
+17-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:8:9-41
 18        android:roundIcon="@mipmap/ic_launcher_round"
-18-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:9:9-54
+18-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:9:9-54
 19        android:supportsRtl="true"
-19-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:10:9-35
+19-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:10:9-35
 20        android:testOnly="true"
 21        android:theme="@style/Theme.CardGame" >
-21-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:11:9-46
+21-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:11:9-46
 22        <activity
-22-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:12:9-20:20
+22-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:12:9-20:20
 23            android:name="com.example.cardgame.MainActivity"
-23-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:13:13-41
+23-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:13:13-41
 24            android:exported="true" >
-24-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:14:13-36
+24-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:14:13-36
 25            <intent-filter>
-25-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:15:13-19:29
+25-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:15:13-19:29
 26                <action android:name="android.intent.action.MAIN" />
-26-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:16:17-69
-26-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:16:25-66
+26-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:16:17-69
+26-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:16:25-66
 27
 28                <category android:name="android.intent.category.LAUNCHER" />
-28-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:18:17-77
-28-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:18:27-74
+28-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:18:17-77
+28-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:18:27-74
 29            </intent-filter>
 30        </activity>
 31        <!-- InputActivity -->
 32        <activity
-32-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:22:9-30:20
+32-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:22:9-30:20
 33            android:name="com.example.cardgame.InputActivity"
-33-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:23:13-42
+33-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:23:13-42
 34            android:exported="true" >
-34-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:24:13-36
+34-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:24:13-36
 35            <intent-filter>
-35-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:25:13-29:29
+35-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:25:13-29:29
 36                <action android:name="android.intent.action.INPUT" />
-36-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:26:17-70
-36-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:26:25-67
+36-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:26:17-70
+36-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:26:25-67
 37
 38                <category android:name="android.intent.category.LAUNCHER" />
-38-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:18:17-77
-38-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:18:27-74
+38-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:18:17-77
+38-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:18:27-74
 39            </intent-filter>
 40        </activity>
 41
 42        <provider
-42-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+42-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/09b79be83fba3907471fe1de63f439d3/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
 43            android:name="androidx.startup.InitializationProvider"
-43-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+43-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/09b79be83fba3907471fe1de63f439d3/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
 44            android:authorities="com.example.cardgame.androidx-startup"
-44-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+44-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/09b79be83fba3907471fe1de63f439d3/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
 45            android:exported="false" >
-45-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+45-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/09b79be83fba3907471fe1de63f439d3/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
 46            <meta-data
-46-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+46-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/09b79be83fba3907471fe1de63f439d3/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
 47                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-47-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+47-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/09b79be83fba3907471fe1de63f439d3/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
 48                android:value="androidx.startup" />
-48-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+48-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/09b79be83fba3907471fe1de63f439d3/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
 49            <meta-data
-49-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\somaf\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+49-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mahiro/.gradle/caches/transforms-3/0e4a425e61d135d109d64d5f17d999df/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
 50                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-50-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\somaf\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+50-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mahiro/.gradle/caches/transforms-3/0e4a425e61d135d109d64d5f17d999df/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
 51                android:value="androidx.startup" />
-51-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\somaf\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+51-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mahiro/.gradle/caches/transforms-3/0e4a425e61d135d109d64d5f17d999df/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
 52        </provider>
 53
 54        <uses-library
-54-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\8a814577c3bf581ff0fb5aa95a211166\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+54-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/8a814577c3bf581ff0fb5aa95a211166/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
 55            android:name="androidx.window.extensions"
-55-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\8a814577c3bf581ff0fb5aa95a211166\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+55-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/8a814577c3bf581ff0fb5aa95a211166/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
 56            android:required="false" />
-56-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\8a814577c3bf581ff0fb5aa95a211166\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+56-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/8a814577c3bf581ff0fb5aa95a211166/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
 57        <uses-library
-57-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\8a814577c3bf581ff0fb5aa95a211166\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+57-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/8a814577c3bf581ff0fb5aa95a211166/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
 58            android:name="androidx.window.sidecar"
-58-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\8a814577c3bf581ff0fb5aa95a211166\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+58-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/8a814577c3bf581ff0fb5aa95a211166/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
 59            android:required="false" />
-59-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\8a814577c3bf581ff0fb5aa95a211166\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+59-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/8a814577c3bf581ff0fb5aa95a211166/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
 60    </application>
 61
 62</manifest>

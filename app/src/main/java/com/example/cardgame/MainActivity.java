@@ -28,11 +28,6 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Hello World
-        //TODO("C++の使い方が分かるまで残す")
-        TextView tv = binding.sampleText;
-        tv.setText(stringFromJNI());
-
         FloatingActionButton fab_input = (FloatingActionButton) binding.fabInput;
         fab_input.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -45,10 +40,4 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-    /**
-     * A native method that is implemented by the 'cardgame' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
 }

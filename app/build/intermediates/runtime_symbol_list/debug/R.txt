@@ -3021,7 +3021,7 @@ int id textinput_prefix_text 0x7f0801d2
 int id textinput_suffix_text 0x7f0801d3
 int id time 0x7f0801d4
 int id time_hour 0x7f0801d5
-int id time_minute 0x7f0801fc
+int id time_minute 0x7f0801d6
 int id title 0x7f0801d7
 int id titleDividerNoCustom 0x7f0801d8
 int id title_template 0x7f0801d9

@@ -8,11 +8,23 @@
     <fragment
         android:id="@+id/navi_home"
         android:name="com.example.cardgame.FragmentStats"
-        android:label="FragmentHome"
+        android:label="FragmentStats"
         tools:layout="@layout/fragment_stats">
 
         <action
-            android:id="@+id/action_to_home"
+            android:id="@+id/action_to_game"
+            app:destination="@id/navi_home" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navi_game"
+        android:name="com.example.cardgame.FragmentGame"
+        android:label="FragmentGame"
+        tools:layout="@layout/fragment_game">
+
+        <action
+            android:id="@+id/action_to_stats"
             app:destination="@id/navi_home" />
 
     </fragment>

@@ -1,6 +1,10 @@
 package com.example.cardgame;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private ActivityMainBinding binding;
+    AppBarConfiguration appBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
+
+    /*
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavController navController= Navigation.findNavController(this, R.id.navHostFragment) ;
+        return NavigationUI.navigateUp(navController,appBarConfiguration) || super.onSupportNavigateUp();
+    }
+     */
+
 }

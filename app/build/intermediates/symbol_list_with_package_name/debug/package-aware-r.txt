@@ -31,6 +31,10 @@ anim fragment_fast_out_extra_slow_in
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
+anim nav_default_enter_anim
+anim nav_default_exit_anim
+anim nav_default_pop_enter_anim
+anim nav_default_pop_exit_anim
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -63,6 +67,10 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+animator nav_default_enter_anim
+animator nav_default_exit_anim
+animator nav_default_pop_enter_anim
+animator nav_default_pop_exit_anim
 attr SharedValue
 attr SharedValueId
 attr action
@@ -2620,7 +2628,8 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_text
-id action_to_home
+id action_to_game
+id action_to_stats
 id actions
 id activity_chooser_view_content
 id add
@@ -2656,6 +2665,7 @@ id buttonPanel
 id button_back
 id button_game
 id button_return
+id button_stats
 id cache_measures
 id callMeasure
 id cancel_button
@@ -2869,6 +2879,7 @@ id multiply
 id nav_controller_view_tag
 id nav_host_fragment
 id nav_host_fragment_container
+id navi_game
 id navi_home
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
@@ -3011,6 +3022,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id text_game
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3065,6 +3077,7 @@ integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
 integer bottom_sheet_slide_duration
 integer cancel_button_image_alpha
+integer config_navAnimTime
 integer config_tooltipAnimTime
 integer design_snackbar_text_max_lines
 integer design_tab_indicator_anim_duration_ms
@@ -3171,6 +3184,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_game
 layout fragment_stats
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3368,6 +3382,8 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
+string nav_app_bar_navigate_up_description
+string nav_app_bar_open_drawer_description
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

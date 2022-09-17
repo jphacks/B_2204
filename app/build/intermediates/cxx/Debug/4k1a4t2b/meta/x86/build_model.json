@@ -29,7 +29,10 @@
     "intermediatesFolder": "C:\\Users\\somaf\\cardGame\\app\\build\\intermediates\\cxx\\Debug\\4k1a4t2b",
     "isDebuggableEnabled": true,
     "validAbiList": [
-      "X86"
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
     ],
     "buildTargetSet": [],
     "implicitBuildTargetSet": [],
@@ -128,7 +131,6 @@
         "rootBuildGradleFolder": "C:\\Users\\somaf\\cardGame",
         "sdkFolder": "C:\\Users\\somaf\\AppData\\Local\\Android\\Sdk",
         "isBuildOnlyTargetAbiEnabled": true,
-        "ideBuildTargetAbi": "x86,armeabi-v7a,armeabi",
         "isCmakeBuildCohabitationEnabled": false,
         "isPrefabEnabled": false
       },

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bottom Navigation -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navi_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/navi_home"/>
+    <item
+        android:id="@+id/navi_game"
+        android:icon="@drawable/ic_game"
+        android:title="@string/navi_game"/>
+</menu>

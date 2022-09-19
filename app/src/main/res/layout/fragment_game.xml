@@ -22,7 +22,7 @@
                 android:id="@+id/button_stats"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="戻る"
+                android:text="グラフ"
                 android:layout_gravity="left"/>
 
             <TextView

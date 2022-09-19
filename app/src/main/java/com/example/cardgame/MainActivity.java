@@ -3,8 +3,6 @@ package com.example.cardgame;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +12,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.cardgame.databinding.ActivityMainBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+import androidx.navigation.Navigation;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private ActivityMainBinding binding;
-    AppBarConfiguration appBarConfiguration;
+    private AppBarConfiguration appBarConfiguration;
     //FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(this); // コンテクストを渡す
 
     @Override
@@ -33,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // Bottom Menu //
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment); // MainActivityに表示するFragment
+        BottomNavigationView bottom_navigation = binding.bottomNavigation;
+        NavigationUI.setupWithNavController(bottom_navigation, navController);
 
         FloatingActionButton fab_input = (FloatingActionButton) binding.fabInput;
         fab_input.setOnClickListener(new View.OnClickListener() {
@@ -88,12 +98,10 @@ public class MainActivity extends AppCompatActivity {
     }
     */
 
-    /*
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController= Navigation.findNavController(this, R.id.navHostFragment) ;
+        NavController navController= Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController,appBarConfiguration) || super.onSupportNavigateUp();
     }
-     */
 
 }

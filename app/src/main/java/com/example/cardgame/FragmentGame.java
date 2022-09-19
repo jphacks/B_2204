@@ -21,7 +21,7 @@ public class FragmentGame extends Fragment {
         Button bt_stats = view.findViewById(R.id.button_stats); // IDから探す(BundleじゃないのはActivityじゃないから。viewがActivityに相当)
         bt_stats.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.d("Button:","Gameボタンが押されました");
+                Log.d("Button:","Statsボタンが押されました");
                 //TODO("FragmentGameへの遷移")
             }
         });

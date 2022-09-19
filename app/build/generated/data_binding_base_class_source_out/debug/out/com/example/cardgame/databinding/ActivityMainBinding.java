@@ -4,13 +4,13 @@ package com.example.cardgame.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.cardgame.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -21,16 +21,16 @@ public final class ActivityMainBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final FloatingActionButton fabInput;
+  public final BottomNavigationView bottomNavigation;
 
   @NonNull
-  public final TextView sampleText;
+  public final FloatingActionButton fabInput;
 
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull FloatingActionButton fabInput, @NonNull TextView sampleText) {
+      @NonNull BottomNavigationView bottomNavigation, @NonNull FloatingActionButton fabInput) {
     this.rootView = rootView;
+    this.bottomNavigation = bottomNavigation;
     this.fabInput = fabInput;
-    this.sampleText = sampleText;
   }
 
   @Override
@@ -60,19 +60,19 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_navigation;
+      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigation == null) {
+        break missingId;
+      }
+
       id = R.id.fab_input;
       FloatingActionButton fabInput = ViewBindings.findChildViewById(rootView, id);
       if (fabInput == null) {
         break missingId;
       }
 
-      id = R.id.sample_text;
-      TextView sampleText = ViewBindings.findChildViewById(rootView, id);
-      if (sampleText == null) {
-        break missingId;
-      }
-
-      return new ActivityMainBinding((CoordinatorLayout) rootView, fabInput, sampleText);
+      return new ActivityMainBinding((CoordinatorLayout) rootView, bottomNavigation, fabInput);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -5,16 +5,16 @@ com/example/cardgame/FragmentGame.java
  com.example.cardgame.FragmentGame$1
 com/example/cardgame/FeedReaderDbHelper.java
  com.example.cardgame.FeedReaderDbHelper
-com/example/cardgame/MainActivity.java
- com.example.cardgame.MainActivity
- com.example.cardgame.MainActivity$1
 com/example/cardgame/FeedReaderContract.java
  com.example.cardgame.FeedReaderContract
  com.example.cardgame.FeedReaderContract$StudyEntry
-com/example/cardgame/databinding/ActivityMainBinding.java
- com.example.cardgame.databinding.ActivityMainBinding
+com/example/cardgame/MainActivity.java
+ com.example.cardgame.MainActivity
+ com.example.cardgame.MainActivity$1
 com/example/cardgame/databinding/ActivityInputBinding.java
  com.example.cardgame.databinding.ActivityInputBinding
+com/example/cardgame/databinding/ActivityMainBinding.java
+ com.example.cardgame.databinding.ActivityMainBinding
 com/example/cardgame/databinding/FragmentGameBinding.java
  com.example.cardgame.databinding.FragmentGameBinding
 com/example/cardgame/databinding/FragmentStatsBinding.java
@@ -23,8 +23,6 @@ com/example/cardgame/InputActivity.java
  com.example.cardgame.InputActivity
  com.example.cardgame.InputActivity$1
  com.example.cardgame.InputActivity$2
-com/example/cardgame/databinding/ContentMainBinding.java
- com.example.cardgame.databinding.ContentMainBinding
 com/example/cardgame/FragmentStats.java
  com.example.cardgame.FragmentStats
  com.example.cardgame.FragmentStats$1

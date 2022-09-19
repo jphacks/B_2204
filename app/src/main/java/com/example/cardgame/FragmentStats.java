@@ -37,8 +37,8 @@ public class FragmentStats extends Fragment {
         });
 
         // getAll
-        List all_data = mainActivity.getAll();
-        Log.d("DATA: ", String.valueOf(all_data));
+        //List all_data = mainActivity.getAll();
+        //Log.d("DATA: ", String.valueOf(all_data));
 
         // Chart //
 

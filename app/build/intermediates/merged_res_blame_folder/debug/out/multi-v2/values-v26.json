@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\somaf\\cardGame\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\somaf\\.gradle\\caches\\transforms-3\\19075c4677e37e538c54d7f745fc8af4\\transformed\\appcompat-1.4.1\\res\\values-v26\\values-v26.xml",
+                    "source": "/Users/mahiro/.gradle/caches/transforms-3/62f739c452da76e055bdd8dfd658546b/transformed/appcompat-1.4.1/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_stats">
 
         <action
-            android:id="@+id/action_to_game"
+            android:id="@+id/action_to_home"
             app:destination="@id/navi_home" />
 
     </fragment>
@@ -24,8 +24,8 @@
         tools:layout="@layout/fragment_game">
 
         <action
-            android:id="@+id/action_to_stats"
-            app:destination="@id/navi_home" />
+            android:id="@+id/action_to_game"
+            app:destination="@id/navi_game" />
 
     </fragment>
 

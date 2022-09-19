@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     AppBarConfiguration appBarConfiguration;
+    //FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(this); // コンテクストを渡す
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

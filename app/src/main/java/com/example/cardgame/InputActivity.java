@@ -17,8 +17,15 @@ import com.example.cardgame.databinding.ActivityInputBinding;
 import com.example.cardgame.databinding.ActivityMainBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 
 public class InputActivity extends AppCompatActivity {
 
@@ -84,11 +91,6 @@ public class InputActivity extends AppCompatActivity {
                     minute = new Float(et_minute.getText().toString());
                 }
 
-
-
-
-
-
                 // 日付取得 //
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy'-'MM'-'dd");
                 Date date = new Date();
@@ -104,13 +106,78 @@ public class InputActivity extends AppCompatActivity {
                 // PUSH
                 long newRowId = db.insert(FeedReaderContract.StudyEntry.TABLE_NAME, null, values);
 
-
-
                 // 画面遷移 //
                 Intent intent = new Intent(getApplication(), MainActivity.class);
                 startActivity(intent);
             }
         });
+    }
+
+    // getリクエスト
+    public static String get(String endpoint, String encoding) throws IOException {
+
+        final int TIMEOUT_MILLIS = 0;// タイムアウトミリ秒：0は無限
+
+        final StringBuffer sb = new StringBuffer(""); // String型の出力
+
+        HttpURLConnection httpConn = null; // 接続
+        BufferedReader br = null;
+        InputStream is = null;
+        InputStreamReader isr = null;
+
+        try {
+            URL url = new URL(endpoint); // エンドポイント取得
+            httpConn = (HttpURLConnection) url.openConnection(); // 接続
+            httpConn.setConnectTimeout(TIMEOUT_MILLIS);// 接続にかかる時間
+            httpConn.setReadTimeout(TIMEOUT_MILLIS);// データの読み込みにかかる時間
+            httpConn.setRequestMethod("GET");// HTTPメソッド
+            httpConn.setUseCaches(false);// キャッシュ利用
+            httpConn.setDoOutput(false);// リクエストのボディの送信を許可(GETのときはfalse,POSTのときはtrueにする)
+            httpConn.setDoInput(true);// レスポンスのボディの受信を許可
+
+            httpConn.connect(); // 接続する
+
+            final int responseCode = httpConn.getResponseCode(); // Status コード
+
+            if (responseCode == HttpURLConnection.HTTP_OK) { // 接続に成功したら 200番台
+                is = httpConn.getInputStream();
+                isr = new InputStreamReader(is, encoding);
+                br = new BufferedReader(isr); // レスポンスをBufferdReader型へ
+                // 標準入力
+                String line = null;
+                while ((line = br.readLine()) != null) {
+                    sb.append(line);
+                }
+            } else {
+                Log.e("ERROR: ", "something went long");
+            }
+
+        } catch (IOException e) {
+            throw e;
+        } finally { // ファイルを閉じる
+            // fortify safeかつJava1.6 compliantなclose処理
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {}
+            }
+            if (isr != null) {
+                try {
+                    isr.close();
+                } catch (IOException e) {
+                }
+            }
+            if (is != null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                }
+            }
+            if (httpConn != null) {
+                httpConn.disconnect(); // 接続を絶つ
+            }
+        }
+        return sb.toString();
     }
 
     @Override

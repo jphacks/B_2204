@@ -5,7 +5,10 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.provider.BaseColumns;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +23,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.navigation.Navigation;
 
+import java.io.IOException;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private AppBarConfiguration appBarConfiguration;
-    //FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(this); // コンテクストを渡す
+    FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(this); // コンテクストを渡す
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +44,10 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Intent intent = new Intent(getApplication(), SignUpActivity.class);
-        startActivity(intent);
+        if(!isLogIn()) { // Tableに何も無かったら
+            Intent intent = new Intent(getApplication(), SignUpActivity.class);
+            startActivity(intent);
+        }
 
         // Bottom Menu //
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment); // MainActivityに表示するFragment
@@ -58,48 +65,26 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    /*
-    public List getAll(){
+
+    public boolean isLogIn(){
         // DB読み込み
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-
         // queryのselect
         String[] projection = {
                 BaseColumns._ID,
-                FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT,
-                FeedReaderContract.StudyEntry.COLUMN_NAME_DATE,
-                FeedReaderContract.StudyEntry.COLUMN_NAME_TIME
+                FeedReaderContract.AccountEntry.COLUMN_NAME_ACCOUNT,
         };
-
-        // [Where] 条件式
-        String selection = FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT + " = ?";
-        String[] selectionArgs = { "" };
-
-        // How you want the results sorted in the resulting Cursor
-        String sortOrder =
-                FeedReaderContract.StudyEntry.COLUMN_NAME_DATE + " DESC";
-
         Cursor cursor = db.query(
-                FeedReaderContract.StudyEntry.TABLE_NAME,   // The table to query
+                FeedReaderContract.AccountEntry.TABLE_NAME,   // The table to query
                 projection,             // The array of columns to return (pass null to get all)
                 null,              // The columns for the WHERE clause
                 null,          // The values for the WHERE clause
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
-                sortOrder               // The sort order
+                null               // The sort order
         );
-
-        List itemIds = new ArrayList<>();
-        while(cursor.moveToNext()) {
-            long itemId = cursor.getLong(
-                    cursor.getColumnIndexOrThrow(FeedReaderContract.StudyEntry._ID));
-            itemIds.add(itemId);
-        }
-        cursor.close();
-
-        return itemIds;
+        return cursor.getCount() != 0;
     }
-    */
 
     @Override
     public boolean onSupportNavigateUp() {
@@ -107,4 +92,9 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController,appBarConfiguration) || super.onSupportNavigateUp();
     }
 
+    @Override
+    protected void onDestroy() {
+        dbHelper.close(); // DBを永続化
+        super.onDestroy();
+    }
 }

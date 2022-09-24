@@ -6,4 +6,10 @@
 
     <!-- background Image's name -->
     <string name ="img_bg">background</string>
+
+    <!-- penguin Images -->
+    <string name ="img_pg_settle">penguin_settle</string>
+
+    <!-- icon Image -->
+    <string name ="img_icon">penguin_icon</string>
 </resources>

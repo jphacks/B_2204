@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:src ="@drawable/icon"
+        android:contentDescription="@string/img_icon"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:background="@drawable/border">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="user name"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:hint="英数字20文字以内"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="password"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/user_pass"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:hint="英数字6文字以上"
+                android:inputType="textPassword"
+                android:maxLines="1"/>
+
+            <EditText
+                android:id="@+id/user_confilm"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="確認用"
+                android:inputType="textPassword"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_sign"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="サインイン"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

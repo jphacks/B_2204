@@ -1,3 +1,2 @@
 ninja: Entering directory `C:\Users\somaf\cardGame\app\.cxx\Debug\4k1a4t2b\x86'
-[1/2] Building CXX object CMakeFiles/cardgame.dir/native-lib.cpp.o
-[2/2] Linking CXX shared library C:\Users\somaf\cardGame\app\build\intermediates\cxx\Debug\4k1a4t2b\obj\x86\libcardgame.so
+ninja: no work to do.

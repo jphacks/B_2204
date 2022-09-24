@@ -2495,7 +2495,11 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baby_feed
+drawable baby_move
+drawable baby_settle
 drawable background
+drawable border
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2522,6 +2526,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable icon
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2673,6 +2678,7 @@ id buttonPanel
 id button_back
 id button_game
 id button_return
+id button_sign
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3062,6 +3068,9 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user_confilm
+id user_name
+id user_pass
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3175,6 +3184,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_input
 layout activity_main
+layout activity_signup
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3318,6 +3328,8 @@ string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string img_bg
+string img_icon
+string img_pg_settle
 string installation_cancelled
 string installation_failed
 string installing_module

@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        Intent intent = new Intent(getApplication(), SignUpActivity.class);
+        startActivity(intent);
+
         // Bottom Menu //
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment); // MainActivityに表示するFragment
         BottomNavigationView bottom_navigation = binding.bottomNavigation;

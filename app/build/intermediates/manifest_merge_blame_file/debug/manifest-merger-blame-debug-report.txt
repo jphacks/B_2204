@@ -17,7 +17,7 @@
 13-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:13:22-74
 14
 15    <application
-15-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:5:5-31:19
+15-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:5:5-40:19
 16        android:allowBackup="true"
 16-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:6:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -70,88 +70,105 @@
 42-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:18:27-74
 43            </intent-filter>
 44        </activity>
-45
-46        <provider
-46-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-47            android:name="androidx.startup.InitializationProvider"
-47-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-48            android:authorities="com.example.cardgame.androidx-startup"
-48-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-49            android:exported="false" >
-49-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-50            <meta-data
-50-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-51                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-51-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-52                android:value="androidx.startup" />
-52-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-53            <meta-data
-53-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\somaf\.gradle\caches\transforms-3\85c000ae06e827f0184aae672321919d\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-54                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-54-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\somaf\.gradle\caches\transforms-3\85c000ae06e827f0184aae672321919d\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-55                android:value="androidx.startup" />
-55-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\somaf\.gradle\caches\transforms-3\85c000ae06e827f0184aae672321919d\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-56        </provider>
-57
-58        <uses-library
-58-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-59            android:name="androidx.window.extensions"
-59-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-60            android:required="false" />
-60-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-61        <uses-library
-61-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-62            android:name="androidx.window.sidecar"
-62-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-63            android:required="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
-63-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-64        <activity
-64-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:18:9-24:45
-65            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
-65-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:19:13-100
-66            android:enabled="false"
-66-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:20:13-36
-67            android:exported="false"
-67-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:21:13-37
-68            android:launchMode="singleInstance"
-68-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:22:13-48
-69            android:process=":playcore_missing_splits_activity"
-69-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:23:13-64
-70            android:stateNotNeeded="true" />
-70-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:24:13-42
-71        <activity
-71-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:25:9-29:65
-72            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-72-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:26:13-93
-73            android:exported="false"
-73-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:27:13-37
-74            android:stateNotNeeded="true"
-74-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:28:13-42
-75            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
-75-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:29:13-62
-76        <service
-76-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:32:9-39:19
-77            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
-77-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:33:13-94
-78            android:enabled="false"
-78-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:34:13-36
-79            android:exported="true" >
-79-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:35:13-36
-80            <meta-data
-80-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:36:13-38:41
-81                android:name="com.google.android.play.core.assetpacks.versionCode"
-81-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:37:17-83
-82                android:value="11003" />
-82-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:38:17-38
-83        </service>
-84        <service
-84-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:40:9-43:40
-85            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
-85-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:41:13-95
-86            android:enabled="false"
-86-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:42:13-36
-87            android:exported="false" />
-87-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:43:13-37
-88    </application>
-89
-90</manifest>
+45        <activity
+45-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:32:9-39:20
+46            android:name="com.example.cardgame.SignUpActivity"
+46-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:33:13-42
+47            android:exported="true" >
+47-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:34:13-36
+48            <intent-filter>
+48-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:35:13-38:29
+49                <action android:name="android.intent.action.SIGNUP" />
+49-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:36:17-71
+49-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:36:25-68
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:18:17-77
+51-->C:\Users\somaf\cardGame\app\src\main\AndroidManifest.xml:18:27-74
+52            </intent-filter>
+53        </activity>
+54
+55        <provider
+55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+56            android:name="androidx.startup.InitializationProvider"
+56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+57            android:authorities="com.example.cardgame.androidx-startup"
+57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+58            android:exported="false" >
+58-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+59            <meta-data
+59-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+60                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+60-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+61                android:value="androidx.startup" />
+61-->[androidx.emoji2:emoji2:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\fd08cf07cec7f3f4d027ae145d5df4b6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+62            <meta-data
+62-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\somaf\.gradle\caches\transforms-3\85c000ae06e827f0184aae672321919d\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+63                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+63-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\somaf\.gradle\caches\transforms-3\85c000ae06e827f0184aae672321919d\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+64                android:value="androidx.startup" />
+64-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\somaf\.gradle\caches\transforms-3\85c000ae06e827f0184aae672321919d\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+65        </provider>
+66
+67        <uses-library
+67-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+68            android:name="androidx.window.extensions"
+68-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+69            android:required="false" />
+69-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+70        <uses-library
+70-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+71            android:name="androidx.window.sidecar"
+71-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+72            android:required="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+72-->[androidx.window:window:1.0.0] C:\Users\somaf\.gradle\caches\transforms-3\f3750f9a404ebfbb9d0e3475d4f6596b\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+73        <activity
+73-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:18:9-24:45
+74            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+74-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:19:13-100
+75            android:enabled="false"
+75-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:20:13-36
+76            android:exported="false"
+76-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:21:13-37
+77            android:launchMode="singleInstance"
+77-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:22:13-48
+78            android:process=":playcore_missing_splits_activity"
+78-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:23:13-64
+79            android:stateNotNeeded="true" />
+79-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:24:13-42
+80        <activity
+80-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:25:9-29:65
+81            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+81-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:26:13-93
+82            android:exported="false"
+82-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:27:13-37
+83            android:stateNotNeeded="true"
+83-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:28:13-42
+84            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
+84-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:29:13-62
+85        <service
+85-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:32:9-39:19
+86            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+86-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:33:13-94
+87            android:enabled="false"
+87-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:34:13-36
+88            android:exported="true" >
+88-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:35:13-36
+89            <meta-data
+89-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:36:13-38:41
+90                android:name="com.google.android.play.core.assetpacks.versionCode"
+90-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:37:17-83
+91                android:value="11003" />
+91-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:38:17-38
+92        </service>
+93        <service
+93-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:40:9-43:40
+94            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
+94-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:41:13-95
+95            android:enabled="false"
+95-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:42:13-36
+96            android:exported="false" />
+96-->[com.google.android.play:core:1.10.3] C:\Users\somaf\.gradle\caches\transforms-3\fc2e212d8550cdb81a11c436ad268161\transformed\jetified-core-1.10.3\AndroidManifest.xml:43:13-37
+97    </application>
+98
+99</manifest>

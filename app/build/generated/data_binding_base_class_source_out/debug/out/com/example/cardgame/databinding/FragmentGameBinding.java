@@ -4,7 +4,6 @@ package com.example.cardgame.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,15 +20,10 @@ public final class FragmentGameBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final Button buttonStats;
-
-  @NonNull
   public final TextView textGame;
 
-  private FragmentGameBinding(@NonNull CoordinatorLayout rootView, @NonNull Button buttonStats,
-      @NonNull TextView textGame) {
+  private FragmentGameBinding(@NonNull CoordinatorLayout rootView, @NonNull TextView textGame) {
     this.rootView = rootView;
-    this.buttonStats = buttonStats;
     this.textGame = textGame;
   }
 
@@ -60,19 +54,13 @@ public final class FragmentGameBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button_stats;
-      Button buttonStats = ViewBindings.findChildViewById(rootView, id);
-      if (buttonStats == null) {
-        break missingId;
-      }
-
       id = R.id.text_game;
       TextView textGame = ViewBindings.findChildViewById(rootView, id);
       if (textGame == null) {
         break missingId;
       }
 
-      return new FragmentGameBinding((CoordinatorLayout) rootView, buttonStats, textGame);
+      return new FragmentGameBinding((CoordinatorLayout) rootView, textGame);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

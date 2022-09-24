@@ -67,8 +67,28 @@ public class InputActivity extends AppCompatActivity {
                 Log.d("Button:","Returnボタンが押されました");
                 // 情報取得 //
                 String subject = et_kind.getText().toString();
-                float hour = new Float(et_hour.getText().toString());
-                float minute = new Float(et_minute.getText().toString());
+
+                float hour, minute;
+
+                if(et_hour.getText().toString().length() == 0 && et_minute.getText().toString().length() == 0) {
+                    hour = 0;
+                    minute = 0;
+                }else if(et_hour.getText().toString().length() == 0){
+                    hour = 0;
+                    minute = new Float(et_minute.getText().toString());
+                }else if(et_minute.getText().toString().length() == 0){
+                    hour = new Float(et_hour.getText().toString());
+                    minute = 0;
+                }else{
+                    hour = new Float(et_hour.getText().toString());
+                    minute = new Float(et_minute.getText().toString());
+                }
+
+
+
+
+
+
                 // 日付取得 //
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy'-'MM'-'dd");
                 Date date = new Date();
@@ -83,6 +103,8 @@ public class InputActivity extends AppCompatActivity {
 
                 // PUSH
                 long newRowId = db.insert(FeedReaderContract.StudyEntry.TABLE_NAME, null, values);
+
+
 
                 // 画面遷移 //
                 Intent intent = new Intent(getApplication(), MainActivity.class);

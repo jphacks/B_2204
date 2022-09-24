@@ -15,6 +15,7 @@ public class FragmentGame extends Fragment {
     }
 
     // Viewが出来たら(ActivityのonCreateに相当) //
+    /*
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Gameボタン
@@ -26,4 +27,6 @@ public class FragmentGame extends Fragment {
             }
         });
     }
+
+    */
 }

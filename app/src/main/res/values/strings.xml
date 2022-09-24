@@ -3,4 +3,7 @@
     <!-- Bottom Navigation -->
     <string name="navi_home">書庫</string>
     <string name="navi_game">ゲーム</string>
+
+    <!-- background Image's name -->
+    <string name ="img_bg">background</string>
 </resources>

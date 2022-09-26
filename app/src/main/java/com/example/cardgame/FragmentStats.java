@@ -27,14 +27,6 @@ public class FragmentStats extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Activityを取得する
         MainActivity mainActivity = (MainActivity) getActivity();
-        // Gameボタン
-        Button bt_game = view.findViewById(R.id.button_game); // IDから探す(BundleじゃないのはActivityじゃないから。viewがActivityに相当)
-        bt_game.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.d("Button:","Gameボタンが押されました");
-                //TODO("FragmentGameへの遷移")
-            }
-        });
 
         // getAll
         //List all_data = mainActivity.getAll();

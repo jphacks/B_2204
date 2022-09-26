@@ -2676,7 +2676,6 @@ id bounceEnd
 id bounceStart
 id buttonPanel
 id button_back
-id button_game
 id button_return
 id button_sign
 id cache_measures

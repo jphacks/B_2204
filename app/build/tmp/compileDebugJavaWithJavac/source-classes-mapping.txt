@@ -29,6 +29,6 @@ com/example/cardgame/InputActivity.java
  com.example.cardgame.InputActivity
  com.example.cardgame.InputActivity$1
  com.example.cardgame.InputActivity$2
+ com.example.cardgame.InputActivity$3
 com/example/cardgame/FragmentStats.java
  com.example.cardgame.FragmentStats
- com.example.cardgame.FragmentStats$1

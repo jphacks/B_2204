@@ -3,10 +3,12 @@ package com.example.cardgame;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.provider.BaseColumns;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -29,8 +31,10 @@ import java.io.PrintStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import kotlinx.coroutines.GlobalScope;
@@ -65,10 +69,9 @@ public class SignUpActivity extends AppCompatActivity {
                 long newRowId = db.insert(FeedReaderContract.AccountEntry.TABLE_NAME, null, values);
                 // Postリクエスト
                 String uri = "https://penguin-study-api.herokuapp.com/v1/users";
-                String postJson = "{\"name\":\""+user+"\",\"pass\":\""+pass+"\"}";
+                String postJson = "{\"name\":\""+user+"\",\"password\":\""+pass+"\"}";
                 Map<String, String> headers = new HashMap<String, String>(); // HTTPヘッダ(指定したければ)
                 headers.put("Content-Type", "application/json");
-                Log.d("LOG: ", postJson);
                 try {
                     String a = post(uri, "UTF-8", headers ,postJson);
                     Log.d("LOG: ", a);
@@ -86,15 +89,11 @@ public class SignUpActivity extends AppCompatActivity {
     public static String post(String endpoint, String encoding, Map<String, String> headers, String jsonString) throws IOException {
         final int TIMEOUT_MILLIS = 0;// タイムアウトミリ秒：0は無限
 
-        final StringBuffer sb = new StringBuffer("");
-
+        // Mainスレッド以外での実行
         new Thread(new Runnable() {
             @Override
             public void run() {
 
-                BufferedReader br = null;
-                InputStream is = null;
-                InputStreamReader isr = null;
                 HttpURLConnection httpConn = null;
 
                 try {
@@ -122,14 +121,7 @@ public class SignUpActivity extends AppCompatActivity {
                     final int responseCode = httpConn.getResponseCode();
 
                     if (responseCode == HttpURLConnection.HTTP_OK) {
-
-                        is = httpConn.getInputStream();
-                        isr = new InputStreamReader(is, encoding);
-                        br = new BufferedReader(isr);
-                        String line = null;
-                        while ((line = br.readLine()) != null) {
-                            sb.append(line);
-                        }
+                        Log.d("done: ", "finished");
                     } else {
                         // If responseCode is not HTTP_OK
                         Log.d("eorroor", "やばいって");
@@ -143,33 +135,10 @@ public class SignUpActivity extends AppCompatActivity {
                         Log.d("ccc", "やばいって");
                         ioException.printStackTrace();
                     }
-                } finally {
-                    // fortify safeかつJava1.6 compliantなclose処理
-                    if (br != null) {
-                        try {
-                            br.close();
-                        } catch (IOException e) {
-                        }
-                    }
-                    if (isr != null) {
-                        try {
-                            isr.close();
-                        } catch (IOException e) {
-                        }
-                    }
-                    if (is != null) {
-                        try {
-                            is.close();
-                        } catch (IOException e) {
-                        }
-                    }
-                    if (httpConn != null) {
-                        httpConn.disconnect();
-                    }
                 }
             }
         }).start();
-        return sb.toString();
+        return "done";
     }
 
     @Override

@@ -3067,9 +3067,9 @@ int id uniform 0x7f0801ec
 int id unlabeled 0x7f0801ed
 int id up 0x7f0801ee
 int id useLogo 0x7f0801ef
-int id user_confilm 0x7f0801f0
 int id user_name 0x7f0801f1
 int id user_pass 0x7f0801f2
+int id user_secondpass 0x7f080207
 int id vertical_only 0x7f0801f3
 int id view_offset_helper 0x7f0801f4
 int id view_transition 0x7f0801f5
@@ -3334,6 +3334,10 @@ int string installation_failed 0x7f11002f
 int string installing_module 0x7f110030
 int string item_view_role_description 0x7f110031
 int string label 0x7f110032
+int string login_confilm_error 0x7f110088
+int string login_empty_error 0x7f110089
+int string login_pass_length_error 0x7f11008a
+int string login_user_length_error 0x7f11008b
 int string m3_ref_typeface_brand_medium 0x7f110033
 int string m3_ref_typeface_brand_regular 0x7f110034
 int string m3_ref_typeface_plain_medium 0x7f110035
@@ -3419,6 +3423,7 @@ int string progress 0x7f110084
 int string retry 0x7f110085
 int string search_menu_title 0x7f110086
 int string status_bar_notification_info_overflow 0x7f110087
+int string unknown_error 0x7f11008c
 int style AlertDialog_AppCompat 0x7f120000
 int style AlertDialog_AppCompat_Light 0x7f120001
 int style AndroidThemeColorAccentYellow 0x7f120002

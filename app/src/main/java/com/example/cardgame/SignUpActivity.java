@@ -52,9 +52,6 @@ public class SignUpActivity extends AppCompatActivity {
         binding = ActivitySignupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // 書き換えモード　//
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-
         EditText et_user = (EditText) binding.userName;
         EditText et_pass = (EditText) binding.userPass;
         EditText et_pass_second = (EditText) binding.userSecondpass;
@@ -65,35 +62,22 @@ public class SignUpActivity extends AppCompatActivity {
                 String user = et_user.getText().toString();
                 String pass = et_pass.getText().toString();
                 String pass_second = et_pass_second.getText().toString();
-
-                if(user.isEmpty() || pass.isEmpty() || pass_second.isEmpty()){
-                    Toast.makeText(getApplicationContext(), R.string.login_empty_error, Toast.LENGTH_SHORT).show();
-                }else if (! pass.equals(pass_second)){
-                    Toast.makeText(getApplicationContext(), R.string.login_confilm_error, Toast.LENGTH_SHORT).show();
-                }else if( pass.length() < 6){
-                    Toast.makeText(getApplicationContext(), R.string.login_pass_length_error, Toast.LENGTH_SHORT).show();
-                }else if(user.length() > 20){
-                    Toast.makeText(getApplicationContext(), R.string.login_user_length_error, Toast.LENGTH_SHORT).show();
-                }else{
-
-                    // toDo "passが正常かどうかで条件分岐" //
-
-                    // Value設定 //
-                    ContentValues values = new ContentValues();
-                    values.put(FeedReaderContract.AccountEntry.COLUMN_NAME_ACCOUNT, user);
-                    values.put(FeedReaderContract.AccountEntry.COLUMN_NAME_PASS, pass);
-                    long newRowId = db.insert(FeedReaderContract.AccountEntry.TABLE_NAME, null, values);
-                    // Postリクエスト
-                    String uri = "https://penguin-study-api.herokuapp.com/v1/users";
-                    String postJson = "{\"name\":\"" + user + "\",\"password\":\"" + pass + "\"}";
-                    Map<String, String> headers = new HashMap<String, String>(); // HTTPヘッダ(指定したければ)
-                    headers.put("Content-Type", "application/json");
-                    try {
-                        String a = post(uri, "UTF-8", headers, postJson);
-                        Log.d("LOG: ", a);
-                    } catch (IOException e) {
-                        Log.d("aaa", "やばいって");
-                        e.printStackTrace();
+                if(checker(user, pass, pass_second)){
+                    if(!dbHelper.setAccountData(user, pass))
+                        Toast.makeText(getApplicationContext(), R.string.unknown_error, Toast.LENGTH_SHORT).show();
+                    else {
+                        // Postリクエスト
+                        String uri = "https://penguin-study-api.herokuapp.com/v1/users";
+                        String postJson = "{\"name\":\"" + user + "\",\"password\":\"" + pass + "\"}";
+                        Map<String, String> headers = new HashMap<String, String>(); // HTTPヘッダ(指定したければ)
+                        headers.put("Content-Type", "application/json");
+                        try {
+                            String a = post(uri, "UTF-8", headers, postJson);
+                            Log.d("LOG: ", a);
+                        } catch (IOException e) {
+                            Log.d("aaa", "やばいって");
+                            e.printStackTrace();
+                        }
                     }
                     // 画面遷移 //
                     Intent intent = new Intent(getApplication(), MainActivity.class);
@@ -156,6 +140,23 @@ public class SignUpActivity extends AppCompatActivity {
             }
         }).start();
         return "done";
+    }
+
+    private boolean checker(String user, String pass, String pass_second){
+        if(user.isEmpty() || pass.isEmpty() || pass_second.isEmpty()){
+            Toast.makeText(getApplicationContext(), R.string.login_empty_error, Toast.LENGTH_SHORT).show();
+            return false;
+        }else if (! pass.equals(pass_second)){
+            Toast.makeText(getApplicationContext(), R.string.login_confilm_error, Toast.LENGTH_SHORT).show();
+            return false;
+        }else if( pass.length() < 6){
+            Toast.makeText(getApplicationContext(), R.string.login_pass_length_error, Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(user.length() > 20){
+            Toast.makeText(getApplicationContext(), R.string.login_user_length_error, Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 
     @Override

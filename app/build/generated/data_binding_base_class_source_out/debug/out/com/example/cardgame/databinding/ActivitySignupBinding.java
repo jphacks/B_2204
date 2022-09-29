@@ -24,21 +24,21 @@ public final class ActivitySignupBinding implements ViewBinding {
   public final Button buttonSign;
 
   @NonNull
-  public final EditText userConfilm;
-
-  @NonNull
   public final EditText userName;
 
   @NonNull
   public final EditText userPass;
 
+  @NonNull
+  public final EditText userSecondpass;
+
   private ActivitySignupBinding(@NonNull LinearLayout rootView, @NonNull Button buttonSign,
-      @NonNull EditText userConfilm, @NonNull EditText userName, @NonNull EditText userPass) {
+      @NonNull EditText userName, @NonNull EditText userPass, @NonNull EditText userSecondpass) {
     this.rootView = rootView;
     this.buttonSign = buttonSign;
-    this.userConfilm = userConfilm;
     this.userName = userName;
     this.userPass = userPass;
+    this.userSecondpass = userSecondpass;
   }
 
   @Override
@@ -74,12 +74,6 @@ public final class ActivitySignupBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.user_confilm;
-      EditText userConfilm = ViewBindings.findChildViewById(rootView, id);
-      if (userConfilm == null) {
-        break missingId;
-      }
-
       id = R.id.user_name;
       EditText userName = ViewBindings.findChildViewById(rootView, id);
       if (userName == null) {
@@ -92,8 +86,14 @@ public final class ActivitySignupBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySignupBinding((LinearLayout) rootView, buttonSign, userConfilm, userName,
-          userPass);
+      id = R.id.user_secondpass;
+      EditText userSecondpass = ViewBindings.findChildViewById(rootView, id);
+      if (userSecondpass == null) {
+        break missingId;
+      }
+
+      return new ActivitySignupBinding((LinearLayout) rootView, buttonSign, userName, userPass,
+          userSecondpass);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

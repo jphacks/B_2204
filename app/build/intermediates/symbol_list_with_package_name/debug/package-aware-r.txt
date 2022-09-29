@@ -3068,9 +3068,9 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id user_confilm
 id user_name
 id user_pass
+id user_secondpass
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3335,6 +3335,10 @@ string installation_failed
 string installing_module
 string item_view_role_description
 string label
+string login_confilm_error
+string login_empty_error
+string login_pass_length_error
+string login_user_length_error
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
 string m3_ref_typeface_plain_medium
@@ -3420,6 +3424,7 @@ string progress
 string retry
 string search_menu_title
 string status_bar_notification_info_overflow
+string unknown_error
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -102,28 +103,23 @@ public class InputActivity extends AppCompatActivity {
                 // 時間変換 //
                 float time = calculateHour(hour, minute);
 
-                // Value設定 //
-                ContentValues values = new ContentValues();
-                values.put(FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT, subject);
-                values.put(FeedReaderContract.StudyEntry.COLUMN_NAME_TIME, time);
-                values.put(FeedReaderContract.StudyEntry.COLUMN_NAME_DATE, String.valueOf(sdf.format(date)));
+                if(!dbHelper.setStudyData(subject, time, String.valueOf(sdf.format(date))))
+                    Toast.makeText(getApplicationContext(), R.string.unknown_error, Toast.LENGTH_SHORT).show();
+                else {
+                    // アカウント情報取得
+                    List account = getAccount();
 
-                // PUSH
-                long newRowId = db.insert(FeedReaderContract.StudyEntry.TABLE_NAME, null, values);
-
-                // アカウント情報取得
-                List account = getAccount();
-
-                // getリクエスト
-                String uri = "https://penguin-study-api.herokuapp.com/v1/users/" + account.get(0) +
-                        "/password/" + account.get(1) + "/hour/" + String.valueOf((int)hour) +
-                        "/minute/" + String.valueOf((int)minute);
-                try {
-                    String a = get(uri, "UTF-8", null);
-                    Log.d("LOG: ", a);
-                } catch (IOException e) {
-                    Log.d("aaa", "やばいって");
-                    e.printStackTrace();
+                    // getリクエスト
+                    String uri = "https://penguin-study-api.herokuapp.com/v1/users/" + account.get(0) +
+                            "/password/" + account.get(1) + "/hour/" + String.valueOf((int) hour) +
+                            "/minute/" + String.valueOf((int) minute);
+                    try {
+                        String a = get(uri, "UTF-8", null);
+                        Log.d("LOG: ", a);
+                    } catch (IOException e) {
+                        Log.d("aaa", "やばいって");
+                        e.printStackTrace();
+                    }
                 }
 
                 // 画面遷移 //

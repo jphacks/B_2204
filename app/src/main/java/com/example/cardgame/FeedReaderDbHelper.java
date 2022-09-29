@@ -83,8 +83,7 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         );
         return cursor;
     }
-    public Cursor queryTable(String table_name, String[] projection)
-    {
+    public Cursor queryTable(String table_name, String[] projection) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(
                 table_name,   // The table to query

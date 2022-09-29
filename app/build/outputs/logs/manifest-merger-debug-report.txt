@@ -11,6 +11,7 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/mahiro/.gr
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/mahiro/.gradle/caches/transforms-3/62f739c452da76e055bdd8dfd658546b/transformed/appcompat-1.4.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-dynamic-features-fragment:2.5.1] /Users/mahiro/.gradle/caches/transforms-3/caac6b9284accde02cce0b69fe03793b/transformed/jetified-navigation-dynamic-features-fragment-2.5.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.5.1] /Users/mahiro/.gradle/caches/transforms-3/a8b134b2873243b6a0acb64aec15718c/transformed/navigation-fragment-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] /Users/mahiro/.gradle/caches/transforms-3/2bd58ab95899ca9e7ff90e8bc12eb785/transformed/jetified-MPAndroidChart-v3.1.0/AndroidManifest.xml:2:1-20:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/d4af0e2f8876b52765db6c602d4f31b6/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] /Users/mahiro/.gradle/caches/transforms-3/a0e651b48fd1367c1a6a24c40222b0c6/transformed/jetified-appcompat-resources-1.4.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/481f126a96654abb613bef1790f41adb/transformed/jetified-emoji2-views-helper-1.0.0/AndroidManifest.xml:17:1-24:12
@@ -177,6 +178,8 @@ MERGED from [androidx.navigation:navigation-dynamic-features-fragment:2.5.1] /Us
 MERGED from [androidx.navigation:navigation-dynamic-features-fragment:2.5.1] /Users/mahiro/.gradle/caches/transforms-3/caac6b9284accde02cce0b69fe03793b/transformed/jetified-navigation-dynamic-features-fragment-2.5.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.5.1] /Users/mahiro/.gradle/caches/transforms-3/a8b134b2873243b6a0acb64aec15718c/transformed/navigation-fragment-2.5.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.5.1] /Users/mahiro/.gradle/caches/transforms-3/a8b134b2873243b6a0acb64aec15718c/transformed/navigation-fragment-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] /Users/mahiro/.gradle/caches/transforms-3/2bd58ab95899ca9e7ff90e8bc12eb785/transformed/jetified-MPAndroidChart-v3.1.0/AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] /Users/mahiro/.gradle/caches/transforms-3/2bd58ab95899ca9e7ff90e8bc12eb785/transformed/jetified-MPAndroidChart-v3.1.0/AndroidManifest.xml:16:5-18:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/d4af0e2f8876b52765db6c602d4f31b6/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/d4af0e2f8876b52765db6c602d4f31b6/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] /Users/mahiro/.gradle/caches/transforms-3/a0e651b48fd1367c1a6a24c40222b0c6/transformed/jetified-appcompat-resources-1.4.1/AndroidManifest.xml:20:5-22:41

@@ -1,6 +1,8 @@
 package com.example.cardgame;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -34,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private ActivityMainBinding binding;
-    private AppBarConfiguration appBarConfiguration;
     FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(this); // コンテクストを渡す
 
     @Override
@@ -84,12 +85,6 @@ public class MainActivity extends AppCompatActivity {
                 null               // The sort order
         );
         return cursor.getCount() != 0;
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController= Navigation.findNavController(this, R.id.nav_host_fragment);
-        return NavigationUI.navigateUp(navController,appBarConfiguration) || super.onSupportNavigateUp();
     }
 
     @Override

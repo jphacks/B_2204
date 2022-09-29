@@ -8,16 +8,23 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.cardgame.R;
+import com.github.mikephil.charting.charts.LineChart;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentStatsBinding implements ViewBinding {
   @NonNull
   private final CoordinatorLayout rootView;
 
-  private FragmentStatsBinding(@NonNull CoordinatorLayout rootView) {
+  @NonNull
+  public final LineChart lineChart;
+
+  private FragmentStatsBinding(@NonNull CoordinatorLayout rootView, @NonNull LineChart lineChart) {
     this.rootView = rootView;
+    this.lineChart = lineChart;
   }
 
   @Override
@@ -43,10 +50,19 @@ public final class FragmentStatsBinding implements ViewBinding {
 
   @NonNull
   public static FragmentStatsBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.line_chart;
+      LineChart lineChart = ViewBindings.findChildViewById(rootView, id);
+      if (lineChart == null) {
+        break missingId;
+      }
 
-    return new FragmentStatsBinding((CoordinatorLayout) rootView);
+      return new FragmentStatsBinding((CoordinatorLayout) rootView, lineChart);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

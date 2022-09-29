@@ -2824,6 +2824,7 @@ id leftToRight
 id legacy
 id line1
 id line3
+id line_chart
 id linear
 id listMode
 id list_item

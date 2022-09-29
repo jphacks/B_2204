@@ -2823,6 +2823,7 @@ int id leftToRight 0x7f0800f9
 int id legacy 0x7f0800fa
 int id line1 0x7f0800fb
 int id line3 0x7f0800fc
+int id line_chart 0x7f080205
 int id linear 0x7f0800fd
 int id listMode 0x7f0800fe
 int id list_item 0x7f0800ff

@@ -124,7 +124,6 @@ public class SignUpActivity extends AppCompatActivity {
                     if (responseCode == HttpURLConnection.HTTP_OK) {
                         Log.d("done: ", "finished");
                     } else {
-                        // If responseCode is not HTTP_OK
                         Log.d("eorroor", "やばいって");
                     }
 

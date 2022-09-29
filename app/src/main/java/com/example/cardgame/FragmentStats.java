@@ -72,8 +72,6 @@ public class FragmentStats extends Fragment {
     }
 
     public void getAll(){
-        // DB読み込み
-        dbHelper = new FeedReaderDbHelper(this.getActivity()); // ここでActivityを取得
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         // queryのselect
         String[] projection = {
@@ -82,15 +80,7 @@ public class FragmentStats extends Fragment {
                 FeedReaderContract.StudyEntry.COLUMN_NAME_TIME,
                 FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT
         };
-        Cursor cursor = db.query(
-                FeedReaderContract.StudyEntry.TABLE_NAME,   // The table to query
-                projection,             // The array of columns to return (pass null to get all)
-                null,              // The columns for the WHERE clause
-                null,          // The values for the WHERE clause
-                null,                   // don't group the rows
-                null,                   // don't filter by row groups
-                null               // The sort order
-        );
+        Cursor cursor = dbHelper.queryTable(FeedReaderContract.StudyEntry.TABLE_NAME,projection);
         ArrayList<Entry> data_set = new ArrayList<>();
         int i = 0;
         while(cursor.moveToNext()) {
@@ -112,58 +102,6 @@ public class FragmentStats extends Fragment {
         } else {
             // create a dataset and give it a type
             set1 = new LineDataSet(data_set, "DataSet");
-
-            set1.setDrawIcons(false);
-            set1.setColor(Color.BLACK);
-            set1.setCircleColor(Color.BLACK);
-            set1.setLineWidth(1f);
-            set1.setCircleRadius(3f);
-            set1.setDrawCircleHole(false);
-            set1.setValueTextSize(0f);
-            set1.setDrawFilled(true);
-            set1.setFormLineWidth(1f);
-            set1.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
-            set1.setFormSize(15.f);
-
-            set1.setFillColor(Color.BLUE);
-
-            ArrayList<ILineDataSet> dataSets = new ArrayList<>();
-            dataSets.add(set1); // add the datasets
-
-            // create a data object with the datasets
-            LineData lineData = new LineData(dataSets);
-
-            // set data
-            mChart.setData(lineData);
-        }
-    }
-
-    // テスト用 //
-    private void setData() {
-        // Entry()を使ってLineDataSetに設定できる形に変更してarrayを新しく作成
-        int[] data = {116, 111, 112, 121, 102, 83,
-                99, 101, 74, 105, 120, 112,
-                109, 102, 107, 93, 82, 99, 110,
-        };
-
-        ArrayList<Entry> values = new ArrayList<>();
-
-        for (int i = 0; i < data.length; i++) {
-            values.add(new Entry(i, data[i], null, null));
-        }
-
-        LineDataSet set1;
-
-        if (mChart.getData() != null &&
-                mChart.getData().getDataSetCount() > 0) {
-
-            set1 = (LineDataSet) mChart.getData().getDataSetByIndex(0);
-            set1.setValues(values);
-            mChart.getData().notifyDataChanged();
-            mChart.notifyDataSetChanged();
-        } else {
-            // create a dataset and give it a type
-            set1 = new LineDataSet(values, "DataSet");
 
             set1.setDrawIcons(false);
             set1.setColor(Color.BLACK);

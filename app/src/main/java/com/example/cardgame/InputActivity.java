@@ -45,6 +45,7 @@ public class InputActivity extends AppCompatActivity {
     private ActivityInputBinding binding;
     // DBヘルパー使用宣言 //
     FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(this); // コンテクストを渡す
+    private String uri = "https://penguin-study-api.herokuapp.com/v1/users/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,21 +82,8 @@ public class InputActivity extends AppCompatActivity {
                 // 情報取得 //
                 String subject = et_kind.getText().toString();
 
-                float hour, minute;
-
-                if(et_hour.getText().toString().length() == 0 && et_minute.getText().toString().length() == 0) {
-                    hour = 0;
-                    minute = 0;
-                }else if(et_hour.getText().toString().length() == 0){
-                    hour = 0;
-                    minute = new Float(et_minute.getText().toString());
-                }else if(et_minute.getText().toString().length() == 0){
-                    hour = new Float(et_hour.getText().toString());
-                    minute = 0;
-                }else{
-                    hour = new Float(et_hour.getText().toString());
-                    minute = new Float(et_minute.getText().toString());
-                }
+                float hour = etTransfer(et_hour);
+                float minute = etTransfer(et_minute);
 
                 // 日付取得 //
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy'-'MM'-'dd");
@@ -110,15 +98,12 @@ public class InputActivity extends AppCompatActivity {
                     List account = getAccount();
 
                     // getリクエスト
-                    String uri = "https://penguin-study-api.herokuapp.com/v1/users/" + account.get(0) +
-                            "/password/" + account.get(1) + "/hour/" + String.valueOf((int) hour) +
-                            "/minute/" + String.valueOf((int) minute);
+                    uri += account.get(0) + "/password/" + account.get(1) + "/hour/"
+                            + String.valueOf((int) hour) + "/minute/" + String.valueOf((int) minute);
                     try {
                         String a = get(uri, "UTF-8", null);
-                        Log.d("LOG: ", a);
                     } catch (IOException e) {
-                        Log.d("aaa", "やばいって");
-                        e.printStackTrace();
+                        Toast.makeText(getApplicationContext(), R.string.server_error, Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -178,6 +163,13 @@ public class InputActivity extends AppCompatActivity {
         return "done";
     }
 
+    private float etTransfer(EditText et){
+        if(et.getText().toString().length() == 0)
+            return 0;
+        else
+            return new Float(et.getText().toString());
+    }
+
     // アカウント情報取得
     public List getAccount(){
         // DB読み込み
@@ -188,15 +180,7 @@ public class InputActivity extends AppCompatActivity {
                 FeedReaderContract.AccountEntry.COLUMN_NAME_ACCOUNT,
                 FeedReaderContract.AccountEntry.COLUMN_NAME_PASS,
         };
-        Cursor cursor = db_read.query(
-                FeedReaderContract.AccountEntry.TABLE_NAME,   // The table to query
-                projection,             // The array of columns to return (pass null to get all)
-                null,              // The columns for the WHERE clause
-                null,          // The values for the WHERE clause
-                null,                   // don't group the rows
-                null,                   // don't filter by row groups
-                null               // The sort order
-        );
+        Cursor cursor = dbHelper.queryTable(FeedReaderContract.AccountEntry.TABLE_NAME,projection);
         List account = new ArrayList<>();
         while(cursor.moveToNext()) {
             String name = cursor.getString(

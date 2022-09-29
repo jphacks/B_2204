@@ -3423,6 +3423,7 @@ string path_password_strike_through
 string progress
 string retry
 string search_menu_title
+string server_error
 string status_bar_notification_info_overflow
 string unknown_error
 style AlertDialog_AppCompat

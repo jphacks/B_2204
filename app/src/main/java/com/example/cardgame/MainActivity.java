@@ -68,22 +68,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean isLogIn(){
-        // DB読み込み
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
-        // queryのselect
+        // projection 作成
         String[] projection = {
                 BaseColumns._ID,
                 FeedReaderContract.AccountEntry.COLUMN_NAME_ACCOUNT,
         };
-        Cursor cursor = db.query(
-                FeedReaderContract.AccountEntry.TABLE_NAME,   // The table to query
-                projection,             // The array of columns to return (pass null to get all)
-                null,              // The columns for the WHERE clause
-                null,          // The values for the WHERE clause
-                null,                   // don't group the rows
-                null,                   // don't filter by row groups
-                null               // The sort order
-        );
+        Cursor cursor = dbHelper.queryTable(FeedReaderContract.AccountEntry.TABLE_NAME,projection);
         return cursor.getCount() != 0;
     }
 

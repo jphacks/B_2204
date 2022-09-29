@@ -23,4 +23,6 @@
     <string name ="login_pass_length_error">6文字以上にしてください</string>
     <!-- Unknown error -->
     <string name ="unknown_error">原因不明のエラーです</string>
+    <!-- Server error -->
+    <string name ="server_error">サーバーエラーもう一度入力してください</string>
 </resources>

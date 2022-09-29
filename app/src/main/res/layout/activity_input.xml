@@ -50,6 +50,7 @@
                     android:layout_height="80dp"
                     android:hint="種類"
                     android:inputType="text"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:maxLines="1" />
 
             </LinearLayout>

@@ -3422,6 +3422,7 @@ int string path_password_strike_through 0x7f110083
 int string progress 0x7f110084
 int string retry 0x7f110085
 int string search_menu_title 0x7f110086
+int string server_error 0x7f11008d
 int string status_bar_notification_info_overflow 0x7f110087
 int string unknown_error 0x7f11008c
 int style AlertDialog_AppCompat 0x7f120000

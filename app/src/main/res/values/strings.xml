@@ -12,4 +12,14 @@
 
     <!-- icon Image -->
     <string name ="img_icon">penguin_icon</string>
+
+    <!-- login Error message -->
+    <!-- empty error -->
+    <string name ="login_empty_error">値を入力してください</string>
+    <!-- comfilm error -->
+    <string name ="login_confilm_error">パスワードが一致しません</string>
+
+    <!-- length error -->
+    <string name ="login_user_length_error">20文字以内にしてください</string>
+    <string name ="login_pass_length_error">6文字以上にしてください</string>
 </resources>

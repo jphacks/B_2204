@@ -72,6 +72,7 @@ public class FragmentStats extends Fragment {
     }
 
     public void getAll(){
+        dbHelper = new FeedReaderDbHelper(this.getActivity()); // ここでActivityを取得
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         // queryのselect
         String[] projection = {

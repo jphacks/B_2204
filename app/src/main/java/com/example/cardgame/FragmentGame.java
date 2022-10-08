@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 
 import com.github.mikephil.charting.data.Entry;
@@ -32,6 +34,7 @@ public class FragmentGame extends Fragment {
     // Viewを表示？ //
     private int feed_num = 0;
     TextView feed_output = null;
+    CoordinatorLayout ice_field = null;
 
     private FeedReaderDbHelper dbHelper = null; // ここの時点ではActivityを取得できない
 
@@ -52,6 +55,9 @@ public class FragmentGame extends Fragment {
         feed_output = view.findViewById(R.id.text_feed);
         feed_output.setText(feed_text,EDITABLE);
 
+        // 餌を表示するViewを取得
+        ice_field = view.findViewById(R.id.ice_field);
+
 	    //buttonの取得
 	    ImageButton bt_feed =  view.findViewById(R.id.button_feed);
 	
@@ -63,6 +69,8 @@ public class FragmentGame extends Fragment {
                     feed_num -= 1;
                     String feed_text = "残り餌数: " + feed_num;
                     feed_output.setText(feed_text,EDITABLE);
+
+                    giveFeed(window_size);
                 }
 	        }
 	    });
@@ -118,4 +126,24 @@ public class FragmentGame extends Fragment {
 
         return feed_amount;
     }
+
+    public void giveFeed(Point window_size){
+        //餌を追加して可視化する
+        //set wrap_content
+        final int WC = ViewGroup.LayoutParams.WRAP_CONTENT;
+        //ImageView定義
+        ImageView img_fish = new ImageView(getContext());
+        img_fish.setImageResource(R.drawable.fish);
+
+        double theta = 2 * Math.PI * Math.random();
+        float rnd_x = (float) (0.35 * window_size.x + 200 * Math.cos(theta));
+        float rnd_y = (float) (0.5 * window_size.y + 200 * Math.sin(theta));
+
+        img_fish.setX(rnd_x);
+        img_fish.setY(rnd_y);
+
+        // ice field に追加
+        ice_field.addView(img_fish, new ViewGroup.LayoutParams(WC, WC));
+    }
+
 }

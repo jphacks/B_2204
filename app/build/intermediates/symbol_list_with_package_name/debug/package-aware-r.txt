@@ -2809,6 +2809,7 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+id ice_field
 id icon
 id icon_group
 id ifRoom

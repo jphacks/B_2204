@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
+    android:layout_marginBottom="@dimen/bottom_margin"
     tools:context=".FragmentStats">
 
     <ImageView
@@ -22,24 +23,39 @@
         android:gravity="center"
         android:layout_weight="1">
 
-
         <TextView
             android:id="@+id/text_game"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World" />
 
-        <TextView
-            android:id="@+id/text_feed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/button_feed"
-            android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/fish"/>
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
+            <TextView
+                android:id="@+id/text_feed"
+                android:layout_width="wrap_content"
+                android:textColor="@color/red"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/button_feed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_button"
+                android:src="@drawable/fish"/>
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

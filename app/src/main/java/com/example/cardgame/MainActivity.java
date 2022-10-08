@@ -1,5 +1,6 @@
 package com.example.cardgame;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -12,6 +13,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -45,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // ActionBarの設定
+        if (savedInstanceState == null) {
+            View customActionBarView = this.getActionBarView(); // customActionBarの取得
+            ActionBar actionBar = this.getSupportActionBar(); // ActionBarの取得
+            actionBar.setDisplayShowTitleEnabled(true); // タイトルを表示するか
+            actionBar.setCustomView(customActionBarView); // ActionBarにcustomViewを設定する
+            actionBar.setDisplayShowCustomEnabled(true); // CutomViewを表示するか
+        }
+
         if(!isLogIn()) { // Tableに何も無かったら
             Intent intent = new Intent(getApplication(), SignUpActivity.class);
             startActivity(intent);
@@ -75,6 +86,14 @@ public class MainActivity extends AppCompatActivity {
         };
         Cursor cursor = dbHelper.queryTable(FeedReaderContract.AccountEntry.TABLE_NAME,projection);
         return cursor.getCount() != 0;
+    }
+
+    // アクションバーデザイン
+    private View getActionBarView() {
+        // 表示するlayoutファイルの取得
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.action_bar_img, null);
+        return view;
     }
 
     @Override

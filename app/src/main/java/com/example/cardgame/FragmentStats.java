@@ -15,20 +15,27 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class FragmentStats extends Fragment {
 
-    private LineChart mChart;
+    private BarChart mChart;
     private FeedReaderDbHelper dbHelper = null; // ここの時点ではActivityを取得できない
 
     // Viewを表示？ //
@@ -39,7 +46,7 @@ public class FragmentStats extends Fragment {
     // Viewが出来たら(ActivityのonCreateに相当) //
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        mChart = view.findViewById(R.id.line_chart);
+        mChart = view.findViewById(R.id.bar_chart);
 
         // Grid背景色
         mChart.setDrawGridBackground(true);
@@ -66,9 +73,6 @@ public class FragmentStats extends Fragment {
         // add data
         getAll();
 
-        mChart.animateX(2500);
-        //mChart.invalidate();
-
     }
 
     public void getAll(){
@@ -81,51 +85,37 @@ public class FragmentStats extends Fragment {
                 FeedReaderContract.StudyEntry.COLUMN_NAME_TIME,
                 FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT
         };
-        Cursor cursor = dbHelper.queryTable(FeedReaderContract.StudyEntry.TABLE_NAME,projection);
-        ArrayList<Entry> data_set = new ArrayList<>();
+        String group_by = FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT;
+        Cursor cursor = dbHelper.queryTable(FeedReaderContract.StudyEntry.TABLE_NAME, projection, group_by);
+        ArrayList<BarEntry> data_set = new ArrayList<>();
         int i = 0;
         while(cursor.moveToNext()) {
             float data = cursor.getLong(
                     cursor.getColumnIndexOrThrow(FeedReaderContract.StudyEntry.COLUMN_NAME_TIME));
-            data_set.add(new Entry(i, data, null, null));
+            String date = cursor.getString(
+                    cursor.getColumnIndexOrThrow(FeedReaderContract.StudyEntry.COLUMN_NAME_DATE));
+            data_set.add(new BarEntry(i, data, null));
             i++;
         }
         cursor.close();
-        LineDataSet set1;
+        BarDataSet set1;
 
-        if (mChart.getData() != null &&
-                mChart.getData().getDataSetCount() > 0) {
+        // create a dataset and give it a type
+        set1 = new BarDataSet(data_set, "Data");
 
-            set1 = (LineDataSet) mChart.getData().getDataSetByIndex(0);
-            set1.setValues(data_set);
-            mChart.getData().notifyDataChanged();
-            mChart.notifyDataSetChanged();
-        } else {
-            // create a dataset and give it a type
-            set1 = new LineDataSet(data_set, "DataSet");
+        set1.setDrawIcons(false);
+        set1.setColor(Color.BLACK);
+        set1.setValueTextSize(0f);
+        set1.setFormLineWidth(1f);
+        set1.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
+        set1.setFormSize(15.f);
 
-            set1.setDrawIcons(false);
-            set1.setColor(Color.BLACK);
-            set1.setCircleColor(Color.BLACK);
-            set1.setLineWidth(1f);
-            set1.setCircleRadius(3f);
-            set1.setDrawCircleHole(false);
-            set1.setValueTextSize(0f);
-            set1.setDrawFilled(true);
-            set1.setFormLineWidth(1f);
-            set1.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
-            set1.setFormSize(15.f);
+        ArrayList<IBarDataSet> dataSets = new ArrayList<>();
+        dataSets.add(set1); // add the datasets
 
-            set1.setFillColor(Color.BLUE);
-
-            ArrayList<ILineDataSet> dataSets = new ArrayList<>();
-            dataSets.add(set1); // add the datasets
-
-            // create a data object with the datasets
-            LineData lineData = new LineData(dataSets);
-
-            // set data
-            mChart.setData(lineData);
-        }
+        // create a data object with the datasets
+        BarData barData = new BarData(dataSets);
+        // set data
+        mChart.setData(barData);
     }
 }

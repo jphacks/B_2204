@@ -110,4 +110,32 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         );
         return cursor;
     }
+
+    public Cursor queryTable(String table_name, String[] projection, String group_by) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(
+                table_name,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                group_by,                   // don't group the rows
+                null,                   // don't filter by row groups
+                null               // The sort order
+        );
+        return cursor;
+    }
+
+    public Cursor queryTable(String table_name, String[] projection,String selection, String[] selectionArg, String group_by) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(
+                table_name,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArg,          // The values for the WHERE clause
+                group_by,                   // don't group the rows
+                null,                   // don't filter by row groups
+                null               // The sort order
+        );
+        return cursor;
+    }
 }

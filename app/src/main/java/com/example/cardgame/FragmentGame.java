@@ -30,7 +30,7 @@ import java.util.List;
 
 public class FragmentGame extends Fragment {
     // Viewを表示？ //
-    public int feed_num = 0;
+    private int feed_num = 0;
     TextView feed_output = null;
 
     private FeedReaderDbHelper dbHelper = null; // ここの時点ではActivityを取得できない
@@ -48,7 +48,7 @@ public class FragmentGame extends Fragment {
         feed_num = getFeed();
 
         // 餌数表示
-        String feed_text = "残り餌数　:" + feed_num;
+        String feed_text = "残り餌数: " + feed_num;
         feed_output = view.findViewById(R.id.text_feed);
         feed_output.setText(feed_text,EDITABLE);
 
@@ -61,7 +61,7 @@ public class FragmentGame extends Fragment {
                     Toast.makeText(getActivity().getApplicationContext(), R.string.feed_empty_error, Toast.LENGTH_SHORT).show();
                 else{
                     feed_num -= 1;
-                    String feed_text = "残り餌数　:" + feed_num;
+                    String feed_text = "残り餌数: " + feed_num;
                     feed_output.setText(feed_text,EDITABLE);
                 }
 	        }
@@ -97,13 +97,11 @@ public class FragmentGame extends Fragment {
                 FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT
         };
 
-
         // select文により昨日の勉強時間を取得
         String selection = FeedReaderContract.StudyEntry.COLUMN_NAME_DATE + " = ?";
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy'-'MM'-'dd");
         Date date = new Date();
         String[] selectionArg = { String.valueOf(sdf.format(date)) };
-
 
         Cursor cursor = dbHelper.queryTable(FeedReaderContract.StudyEntry.TABLE_NAME, projection, selection, selectionArg);
         List<Float> data_set = new ArrayList<Float>();
@@ -116,25 +114,8 @@ public class FragmentGame extends Fragment {
         }
         cursor.close();
 
-
-	// 餌残り数を返す
-        int feed_amount = (int) sum_data;
-	
-
-
-        System.out.println("テスト");
-        System.out.println(data_set);
-        System.out.println(sum_data);
+        int feed_amount = (int) sum_data; // 餌残り数を返す
 
         return feed_amount;
     }
-
-
-    /*
-        //TODO("StudyTableから勉強時間を持ってくる
-           1時間1個エサを取得 => TextViewで表示
-           余裕あったら whereで前日を定義
-           selection: date, selectionArgs: 前日")
-
-    */
 }

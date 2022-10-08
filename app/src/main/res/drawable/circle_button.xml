@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- サイズ -->
+    <size
+        android:width="100dp"
+        android:height="100dp" />
+    <!-- 色 -->
+    <solid
+        android:color="@color/palegreen"/>
+    <!-- 枠線 -->
+    <stroke
+        android:width="1dp"
+        android:color="@color/black" />
+</shape>

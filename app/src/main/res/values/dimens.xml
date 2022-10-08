@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="fab_margin">60dp</dimen>
+    <dimen name="bottom_margin">56dp</dimen>
 </resources>

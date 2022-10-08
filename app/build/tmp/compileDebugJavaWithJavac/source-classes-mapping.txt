@@ -29,6 +29,8 @@ com/example/cardgame/MainActivity.java
  com.example.cardgame.MainActivity$1
 com/example/cardgame/databinding/ActivityInputBinding.java
  com.example.cardgame.databinding.ActivityInputBinding
+com/example/cardgame/databinding/ActionBarImgBinding.java
+ com.example.cardgame.databinding.ActionBarImgBinding
 com/example/cardgame/databinding/FragmentStatsBinding.java
  com.example.cardgame.databinding.FragmentStatsBinding
 com/example/cardgame/InputActivity.java

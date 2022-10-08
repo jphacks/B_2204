@@ -10,7 +10,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.cardgame.R;
-import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.charts.BarChart;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,11 +20,11 @@ public final class FragmentStatsBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final LineChart lineChart;
+  public final BarChart barChart;
 
-  private FragmentStatsBinding(@NonNull CoordinatorLayout rootView, @NonNull LineChart lineChart) {
+  private FragmentStatsBinding(@NonNull CoordinatorLayout rootView, @NonNull BarChart barChart) {
     this.rootView = rootView;
-    this.lineChart = lineChart;
+    this.barChart = barChart;
   }
 
   @Override
@@ -54,13 +54,13 @@ public final class FragmentStatsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.line_chart;
-      LineChart lineChart = ViewBindings.findChildViewById(rootView, id);
-      if (lineChart == null) {
+      id = R.id.bar_chart;
+      BarChart barChart = ViewBindings.findChildViewById(rootView, id);
+      if (barChart == null) {
         break missingId;
       }
 
-      return new FragmentStatsBinding((CoordinatorLayout) rootView, lineChart);
+      return new FragmentStatsBinding((CoordinatorLayout) rootView, barChart);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

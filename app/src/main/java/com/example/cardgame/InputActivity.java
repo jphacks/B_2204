@@ -8,12 +8,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cardgame.databinding.ActivityInputBinding;
@@ -53,6 +55,15 @@ public class InputActivity extends AppCompatActivity {
 
         binding = ActivityInputBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // ActionBarの設定
+        if (savedInstanceState == null) {
+            View customActionBarView = this.getActionBarView(); // customActionBarの取得
+            ActionBar actionBar = this.getSupportActionBar(); // ActionBarの取得
+            actionBar.setDisplayShowTitleEnabled(true); // タイトルを表示するか
+            actionBar.setCustomView(customActionBarView); // ActionBarにcustomViewを設定する
+            actionBar.setDisplayShowCustomEnabled(true); // CutomViewを表示するか
+        }
 
         // 書き換えモード　//
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -193,6 +204,14 @@ public class InputActivity extends AppCompatActivity {
         cursor.close();
 
         return account;
+    }
+
+    // アクションバーデザイン
+    private View getActionBarView() {
+        // 表示するlayoutファイルの取得
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.action_bar_img, null);
+        return view;
     }
 
     @Override

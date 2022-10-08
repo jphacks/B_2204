@@ -8,14 +8,18 @@
         <entry key="..\:/Users/somaf/cardGame/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/somaf/cardGame/app/src/main/res/layout/activity_signup.xml" value="0.12" />
         <entry key="..\:/Users/somaf/cardGame/app/src/main/res/layout/fragment_game.xml" value="0.22" />
+        <entry key="app/src/main/res/drawable/circle_button.xml" value="0.14739583333333334" />
+        <entry key="app/src/main/res/drawable/edit_text.xml" value="0.14739583333333334" />
+        <entry key="app/src/main/res/layout/action_bar_img.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_input.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.13177083333333334" />
-        <entry key="app/src/main/res/layout/fragment_game.xml" value="0.12487335359675786" />
+        <entry key="app/src/main/res/layout/fragment_game.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_stats.xml" value="0.13177083333333334" />
         <entry key="app/src/main/res/layout/nav_host_fragment.xml" value="0.11503623188405797" />
         <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.2528205128205128" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14739583333333334" />
       </map>
     </option>
   </component>

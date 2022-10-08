@@ -7,77 +7,38 @@
     android:background="@drawable/background"
     tools:context=".FragmentStats">
 
+    <ImageView
+        android:id="@+id/penguin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baby_settle"
+        android:contentDescription="@string/img_pg_settle" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <TextView
+            android:id="@+id/text_game"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_weight="1">
+            android:text="Hello World" />
 
+        <TextView
+            android:id="@+id/text_feed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/text_game"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hello World" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageButton
+            android:id="@+id/button_feed"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="4"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="background"/>
-		
-	        <ImageView
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:src="@drawable/baby_settle"
-		        android:contentDescription="@string/img_pg_settle" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:gravity="center">
-
-
-            <TextView
-                android:id="@+id/text_feed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-		
-            <ImageButton
-		        android:id="@+id/button_feed"
-		        android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-		        android:src="@drawable/fish"/>
-		
-	
-	    </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:gravity="center">
-        </LinearLayout>
+            android:src="@drawable/fish"/>
 
     </LinearLayout>
 

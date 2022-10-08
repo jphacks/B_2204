@@ -4,12 +4,14 @@ import static android.widget.TextView.BufferType.EDITABLE;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +40,10 @@ public class FragmentGame extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        // Windowサイズ取得
+        Point window_size = new Point();
+        getActivity().getWindowManager().getDefaultDisplay().getRealSize(window_size);
+
         // 餌数取得
         feed_num = getFeed();
 
@@ -60,6 +66,23 @@ public class FragmentGame extends Fragment {
                 }
 	        }
 	    });
+
+        // ペンギンを動かす
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                ImageView penguin_img = view.findViewById(R.id.penguin);
+                Penguin penguin = new Penguin(penguin_img, window_size);
+                while(true) {
+                    penguin.move();
+                    try {
+                        Thread.sleep(100);//0.1秒停止します。
+                    } catch (InterruptedException e) {
+
+                    }
+                }
+            }
+        }).start();
 
     }
 

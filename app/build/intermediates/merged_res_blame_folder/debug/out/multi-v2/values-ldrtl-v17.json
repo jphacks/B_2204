@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/Users/somakai/.gradle/caches/transforms-3/e3ba8e6cff578cd96b602ad38939c593/transformed/material-1.6.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "/Users/mahiro/.gradle/caches/transforms-3/e3ba8e6cff578cd96b602ad38939c593/transformed/material-1.6.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

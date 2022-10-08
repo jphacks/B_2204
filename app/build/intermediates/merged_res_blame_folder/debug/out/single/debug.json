@@ -1,122 +1,122 @@
 [
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/layout_fragment_game.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_game.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_ic_home.png.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/ic_home.png"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/layout_activity_input.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/activity_input.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_border.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/border.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_background.png.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/background.png"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_ic_game.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/ic_game.png"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/layout_activity_input.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/activity_input.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/layout_activity_signup.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/activity_signup.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/layout_activity_signup.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/activity_signup.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/layout_fragment_stats.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_stats.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/layout_fragment_game.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_game.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/navigation_nav_graph.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/navigation/nav_graph.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_baby_move.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/baby_move.png"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_baby_settle.png.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/baby_settle.png"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_baby_settle.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/baby_settle.png"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/ic_launcher_background.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_ic_game.png.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/ic_game.png"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_background.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/background.png"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/layout_fragment_stats.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_stats.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_fish.png.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/fish.png"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_baby_feed.png.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/baby_feed.png"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/navigation_nav_graph.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/navigation/nav_graph.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_icon.png.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/icon.png"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/menu_menu_bottom_navigation.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/menu/menu_bottom_navigation.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_fish.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/fish.png"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_baby_move.png.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/baby_move.png"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_icon.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/icon.png"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_border.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/border.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_ic_home.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/ic_home.png"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/activity_main.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_baby_feed.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/baby_feed.png"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/menu_menu_bottom_navigation.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/menu/menu_bottom_navigation.xml"
     }
 ]

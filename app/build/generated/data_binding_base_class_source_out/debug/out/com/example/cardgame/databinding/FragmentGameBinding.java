@@ -4,6 +4,7 @@ package com.example.cardgame.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,14 +21,18 @@ public final class FragmentGameBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
+  public final ImageButton buttonFeed;
+
+  @NonNull
   public final TextView textFeed;
 
   @NonNull
   public final TextView textGame;
 
-  private FragmentGameBinding(@NonNull CoordinatorLayout rootView, @NonNull TextView textFeed,
-      @NonNull TextView textGame) {
+  private FragmentGameBinding(@NonNull CoordinatorLayout rootView, @NonNull ImageButton buttonFeed,
+      @NonNull TextView textFeed, @NonNull TextView textGame) {
     this.rootView = rootView;
+    this.buttonFeed = buttonFeed;
     this.textFeed = textFeed;
     this.textGame = textGame;
   }
@@ -59,6 +64,12 @@ public final class FragmentGameBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.button_feed;
+      ImageButton buttonFeed = ViewBindings.findChildViewById(rootView, id);
+      if (buttonFeed == null) {
+        break missingId;
+      }
+
       id = R.id.text_feed;
       TextView textFeed = ViewBindings.findChildViewById(rootView, id);
       if (textFeed == null) {
@@ -71,7 +82,7 @@ public final class FragmentGameBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentGameBinding((CoordinatorLayout) rootView, textFeed, textGame);
+      return new FragmentGameBinding((CoordinatorLayout) rootView, buttonFeed, textFeed, textGame);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

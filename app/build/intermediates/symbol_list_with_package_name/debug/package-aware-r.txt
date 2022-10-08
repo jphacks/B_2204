@@ -2677,6 +2677,7 @@ id bounceEnd
 id bounceStart
 id buttonPanel
 id button_back
+id button_feed
 id button_return
 id button_sign
 id cache_measures
@@ -3327,6 +3328,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string feed_empty_error
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string img_bg

@@ -2676,6 +2676,7 @@ int id bounceEnd 0x7f080064
 int id bounceStart 0x7f080065
 int id buttonPanel 0x7f080066
 int id button_back 0x7f080067
+int id button_feed 0x7f080206
 int id button_return 0x7f080068
 int id button_sign 0x7f080069
 int id cache_measures 0x7f08006a
@@ -3326,6 +3327,7 @@ int string error_icon_content_description 0x7f110025
 int string exposed_dropdown_menu_content_description 0x7f110026
 int string fab_transformation_scrim_behavior 0x7f110027
 int string fab_transformation_sheet_behavior 0x7f110028
+int string feed_empty_error 0x7f11008e
 int string hide_bottom_view_on_scroll_behavior 0x7f110029
 int string icon_content_description 0x7f11002a
 int string img_bg 0x7f11002b

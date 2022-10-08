@@ -9,13 +9,17 @@ import android.provider.BaseColumns;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.github.mikephil.charting.data.Entry;
+
+import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -24,6 +28,8 @@ import java.util.List;
 
 public class FragmentGame extends Fragment {
     // Viewを表示？ //
+    public int feed_num = 0;
+    TextView feed_output = null;
 
     private FeedReaderDbHelper dbHelper = null; // ここの時点ではActivityを取得できない
 
@@ -32,12 +38,28 @@ public class FragmentGame extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        // 餌数取得
+        feed_num = getFeed();
 
-        int feed_num = getFeed();
+        // 餌数表示
         String feed_text = "残り餌数　:" + feed_num;
-
-        TextView feed_output = view.findViewById(R.id.text_feed);
+        feed_output = view.findViewById(R.id.text_feed);
         feed_output.setText(feed_text,EDITABLE);
+
+	    //buttonの取得
+	    ImageButton bt_feed =  view.findViewById(R.id.button_feed);
+	
+        bt_feed.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (feed_num <= 0)
+                    Toast.makeText(getActivity().getApplicationContext(), R.string.feed_empty_error, Toast.LENGTH_SHORT).show();
+                else{
+                    feed_num -= 1;
+                    String feed_text = "残り餌数　:" + feed_num;
+                    feed_output.setText(feed_text,EDITABLE);
+                }
+	        }
+	    });
 
     }
 
@@ -53,7 +75,7 @@ public class FragmentGame extends Fragment {
         };
 
 
-        //toDo select文により昨日の勉強時間を取得
+        // select文により昨日の勉強時間を取得
         String selection = FeedReaderContract.StudyEntry.COLUMN_NAME_DATE + " = ?";
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy'-'MM'-'dd");
         Date date = new Date();
@@ -83,6 +105,7 @@ public class FragmentGame extends Fragment {
 
         return feed_amount;
     }
+
 
     /*
         //TODO("StudyTableから勉強時間を持ってくる

@@ -2513,6 +2513,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable fish
 drawable ic_clock_black_24dp
 drawable ic_game
 drawable ic_home
@@ -3035,6 +3036,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id text_feed
 id text_game
 id text_input_end_icon
 id text_input_error_icon

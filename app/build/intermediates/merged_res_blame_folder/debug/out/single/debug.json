@@ -76,6 +76,10 @@
         "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
+        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_fish.png.flat",
+        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/fish.png"
+    },
+    {
         "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/drawable_baby_feed.png.flat",
         "source": "/Users/somakai/workspace/cardGame/app/src/main/res/drawable/baby_feed.png"
     },

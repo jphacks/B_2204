@@ -14,8 +14,11 @@ com/example/cardgame/SignUpActivity.java
  com.example.cardgame.SignUpActivity
  com.example.cardgame.SignUpActivity$1
  com.example.cardgame.SignUpActivity$2
-com/example/cardgame/FragmentStats.java
- com.example.cardgame.FragmentStats
+com/example/cardgame/InputActivity.java
+ com.example.cardgame.InputActivity
+ com.example.cardgame.InputActivity$1
+ com.example.cardgame.InputActivity$2
+ com.example.cardgame.InputActivity$3
 com/example/cardgame/BuildConfig.java
  com.example.cardgame.BuildConfig
 com/example/cardgame/FragmentGame.java
@@ -33,8 +36,5 @@ com/example/cardgame/databinding/ActionBarImgBinding.java
  com.example.cardgame.databinding.ActionBarImgBinding
 com/example/cardgame/databinding/FragmentStatsBinding.java
  com.example.cardgame.databinding.FragmentStatsBinding
-com/example/cardgame/InputActivity.java
- com.example.cardgame.InputActivity
- com.example.cardgame.InputActivity$1
- com.example.cardgame.InputActivity$2
- com.example.cardgame.InputActivity$3
+com/example/cardgame/FragmentStats.java
+ com.example.cardgame.FragmentStats

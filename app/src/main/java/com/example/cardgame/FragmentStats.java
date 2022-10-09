@@ -1,5 +1,6 @@
 package com.example.cardgame;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -25,6 +26,7 @@ import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
@@ -54,10 +56,20 @@ public class FragmentStats extends Fragment {
         // no description text
         mChart.getDescription().setEnabled(true);
 
+        Context activity = this.getActivity();
+
+        // add data
+        List<String> labels = getAll(activity); // タイトル群を格納
+        Log.d("配列の長さ: ", String.valueOf(labels.size()));
+
         // Grid縦軸を破線
         XAxis xAxis = mChart.getXAxis();
+        //xAxis.setValueFormatter(new IndexAxisValueFormatter(labels));
         xAxis.enableGridDashedLine(10f, 10f, 0f);
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setTextSize(10);
+        xAxis.setAxisMinimum(0f);
+        xAxis.setAxisMaximum(10f);
 
         YAxis leftAxis = mChart.getAxisLeft();
         // Y軸最大最小設定
@@ -69,53 +81,60 @@ public class FragmentStats extends Fragment {
 
         // 右側の目盛り
         mChart.getAxisRight().setEnabled(false);
-
-        // add data
-        getAll();
+        mChart.groupBars(0f, 0.2f, 0.2f);
 
     }
 
-    public void getAll(){
-        dbHelper = new FeedReaderDbHelper(this.getActivity()); // ここでActivityを取得
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+    public List getAll(Context activity){
+        dbHelper = new FeedReaderDbHelper(activity); // ここでActivityを取得
         // queryのselect
         String[] projection = {
                 BaseColumns._ID,
                 FeedReaderContract.StudyEntry.COLUMN_NAME_DATE,
-                FeedReaderContract.StudyEntry.COLUMN_NAME_TIME,
-                FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT
+                "sum (" + FeedReaderContract.StudyEntry.COLUMN_NAME_TIME + ") as sum",
+                FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT,
         };
-        String group_by = FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT;
-        Cursor cursor = dbHelper.queryTable(FeedReaderContract.StudyEntry.TABLE_NAME, projection, group_by);
-        ArrayList<BarEntry> data_set = new ArrayList<>();
-        int i = 0;
-        while(cursor.moveToNext()) {
-            float data = cursor.getLong(
-                    cursor.getColumnIndexOrThrow(FeedReaderContract.StudyEntry.COLUMN_NAME_TIME));
-            String date = cursor.getString(
-                    cursor.getColumnIndexOrThrow(FeedReaderContract.StudyEntry.COLUMN_NAME_DATE));
-            data_set.add(new BarEntry(i, data, null));
-            i++;
+        String selection = FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT + " = ?";
+        List<String[]> selectionArgs = new ArrayList<>();
+        selectionArgs.add(new String[]{""});
+        selectionArgs.add(new String[]{"hhh"});
+        String group_by = FeedReaderContract.StudyEntry.COLUMN_NAME_DATE;
+        List<IBarDataSet> data_set = new ArrayList<>();
+        List<String> labels = new ArrayList<>();
+        for(String[] subject: selectionArgs) {
+            Cursor cursor = dbHelper.queryTable(FeedReaderContract.StudyEntry.TABLE_NAME, projection, selection, subject, group_by);
+            List<BarEntry> entry = new ArrayList<>();
+            int i = 0;
+            while (cursor.moveToNext()) {
+                float data = cursor.getLong(
+                        cursor.getColumnIndexOrThrow("sum"));
+                String date = cursor.getString(
+                        cursor.getColumnIndexOrThrow(FeedReaderContract.StudyEntry.COLUMN_NAME_DATE));
+                if (!labels.contains(date)) // ユニーク取得
+                    labels.add(date);
+                entry.add(new BarEntry(i, data));
+                i++;
+            }
+            BarDataSet dataSet = new BarDataSet(entry, subject[0]);
+
+            
+            if (subject[0] == "")
+                dataSet.setColor(Color.GREEN);
+            else if (subject[0] == "hhh")
+                dataSet.setColor(Color.BLUE);
+            dataSet.setValueTextSize(0f);
+            dataSet.setFormLineWidth(1f);
+            data_set.add(dataSet);
+            cursor.close();
         }
-        cursor.close();
-        BarDataSet set1;
+        String[] subjects = new String[]{"A", "B", "C"};
 
-        // create a dataset and give it a type
-        set1 = new BarDataSet(data_set, "Data");
+        // 型変換
+        BarData barData = new BarData(data_set);
 
-        set1.setDrawIcons(false);
-        set1.setColor(Color.BLACK);
-        set1.setValueTextSize(0f);
-        set1.setFormLineWidth(1f);
-        set1.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
-        set1.setFormSize(15.f);
-
-        ArrayList<IBarDataSet> dataSets = new ArrayList<>();
-        dataSets.add(set1); // add the datasets
-
-        // create a data object with the datasets
-        BarData barData = new BarData(dataSets);
         // set data
         mChart.setData(barData);
+
+        return labels;
     }
 }

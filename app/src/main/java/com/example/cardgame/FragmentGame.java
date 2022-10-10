@@ -5,6 +5,7 @@ import static android.widget.TextView.BufferType.EDITABLE;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Point;
+import android.graphics.PointF;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.util.Log;
@@ -33,8 +34,10 @@ import java.util.List;
 public class FragmentGame extends Fragment {
     // Viewを表示？ //
     private int feed_num = 0;
-    TextView feed_output = null;
-    CoordinatorLayout ice_field = null;
+    private TextView feed_output = null;
+    private CoordinatorLayout ice_field = null;
+    private boolean isFeed = false;
+    private PointF new_feed;
 
     private FeedReaderDbHelper dbHelper = null; // ここの時点ではActivityを取得できない
 
@@ -69,7 +72,6 @@ public class FragmentGame extends Fragment {
                     feed_num -= 1;
                     String feed_text = "残り餌数: " + feed_num;
                     feed_output.setText(feed_text,EDITABLE);
-
                     giveFeed(window_size);
                 }
 	        }
@@ -82,9 +84,15 @@ public class FragmentGame extends Fragment {
                 ImageView penguin_img = view.findViewById(R.id.penguin);
                 Penguin penguin = new Penguin(penguin_img, window_size);
                 while(true) {
+                    // 餌の追加
+                    if(isFeed){
+                        penguin.addFeed(new_feed);
+                        isFeed = false;
+                    }
+                    // 動く
                     penguin.move();
                     try {
-                        Thread.sleep(100);//0.1秒停止します。
+                        Thread.sleep(100);//0.1秒停止
                     } catch (InterruptedException e) {
 
                     }
@@ -144,6 +152,10 @@ public class FragmentGame extends Fragment {
 
         // ice field に追加
         ice_field.addView(img_fish, new ViewGroup.LayoutParams(WC, WC));
+
+        //　新しいエサを登録
+        isFeed = true;
+        new_feed = new PointF(rnd_x - 60f, rnd_y - 200f);
     }
 
 }

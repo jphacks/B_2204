@@ -1,5 +1,5 @@
-com/example/cardgame/Penguin.java
- com.example.cardgame.Penguin
+com/example/cardgame/databinding/FragmentStatsBinding.java
+ com.example.cardgame.databinding.FragmentStatsBinding
 com/example/cardgame/databinding/ActivitySignupBinding.java
  com.example.cardgame.databinding.ActivitySignupBinding
 com/example/cardgame/FeedReaderContract.java
@@ -21,10 +21,8 @@ com/example/cardgame/InputActivity.java
  com.example.cardgame.InputActivity$3
 com/example/cardgame/BuildConfig.java
  com.example.cardgame.BuildConfig
-com/example/cardgame/FragmentGame.java
- com.example.cardgame.FragmentGame
- com.example.cardgame.FragmentGame$1
- com.example.cardgame.FragmentGame$2
+com/example/cardgame/databinding/ActionBarImgBinding.java
+ com.example.cardgame.databinding.ActionBarImgBinding
 com/example/cardgame/FeedReaderDbHelper.java
  com.example.cardgame.FeedReaderDbHelper
 com/example/cardgame/MainActivity.java
@@ -32,9 +30,11 @@ com/example/cardgame/MainActivity.java
  com.example.cardgame.MainActivity$1
 com/example/cardgame/databinding/ActivityInputBinding.java
  com.example.cardgame.databinding.ActivityInputBinding
-com/example/cardgame/databinding/ActionBarImgBinding.java
- com.example.cardgame.databinding.ActionBarImgBinding
-com/example/cardgame/databinding/FragmentStatsBinding.java
- com.example.cardgame.databinding.FragmentStatsBinding
 com/example/cardgame/FragmentStats.java
  com.example.cardgame.FragmentStats
+com/example/cardgame/FragmentGame.java
+ com.example.cardgame.FragmentGame
+ com.example.cardgame.FragmentGame$1
+ com.example.cardgame.FragmentGame$2
+com/example/cardgame/Penguin.java
+ com.example.cardgame.Penguin

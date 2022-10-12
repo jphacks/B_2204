@@ -35,15 +35,19 @@ public final class ActivityInputBinding implements ViewBinding {
   @NonNull
   public final EditText timeMinute;
 
+  @NonNull
+  public final EditText toDo;
+
   private ActivityInputBinding(@NonNull CoordinatorLayout rootView, @NonNull Button buttonBack,
       @NonNull Button buttonReturn, @NonNull EditText kindStudy, @NonNull EditText timeHour,
-      @NonNull EditText timeMinute) {
+      @NonNull EditText timeMinute, @NonNull EditText toDo) {
     this.rootView = rootView;
     this.buttonBack = buttonBack;
     this.buttonReturn = buttonReturn;
     this.kindStudy = kindStudy;
     this.timeHour = timeHour;
     this.timeMinute = timeMinute;
+    this.toDo = toDo;
   }
 
   @Override
@@ -103,8 +107,14 @@ public final class ActivityInputBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.to_do;
+      EditText toDo = ViewBindings.findChildViewById(rootView, id);
+      if (toDo == null) {
+        break missingId;
+      }
+
       return new ActivityInputBinding((CoordinatorLayout) rootView, buttonBack, buttonReturn,
-          kindStudy, timeHour, timeMinute);
+          kindStudy, timeHour, timeMinute, toDo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

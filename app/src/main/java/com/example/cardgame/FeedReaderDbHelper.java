@@ -7,9 +7,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.security.PrivateKey;
+
 public class FeedReaderDbHelper extends SQLiteOpenHelper {
     // Version変更
-    public static final int DATABASE_VERSION = 22;
+    public static final int DATABASE_VERSION = 23;
     public static final String DATABASE_NAME = "StudiesDB.db";
 
     // ENTRYの型を設定
@@ -18,7 +20,8 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
                     FeedReaderContract.StudyEntry._ID + " INTEGER PRIMARY KEY," +
                     FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT + " TEXT," +
                     FeedReaderContract.StudyEntry.COLUMN_NAME_DATE + " TEXT,"+
-                    FeedReaderContract.StudyEntry.COLUMN_NAME_TIME + " FLOAT)";
+                    FeedReaderContract.StudyEntry.COLUMN_NAME_TIME + " FLOAT," +
+                    FeedReaderContract.StudyEntry.COLUMN_NAME_TODO + " TEXT)";
 
     // 複数テーブル
     private static final String SQL_CREATE_ACCOUNT =
@@ -42,6 +45,12 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
                     FeedReaderContract.PenguinEntry.COLUMN_NAME_FIRST + " TEXT, " +
                     FeedReaderContract.PenguinEntry.COLUMN_NAME_LAST + " TEXT)";
 
+    private static final String SQL_CREATE_TAG =
+            "CREATE TABLE " + FeedReaderContract.TagEntry.TABLE_NAME + " (" +
+                    FeedReaderContract.FeedEntry._ID + " INTEGER PRIMARY KEY," +
+                    FeedReaderContract.TagEntry.COLUMN_NAME_FEED + " TEXT," +
+                    FeedReaderContract.TagEntry.COLUMN_NAME_COLOR + " TEXT)";
+
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + FeedReaderContract.StudyEntry.TABLE_NAME;
 
@@ -54,6 +63,9 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
     private static final String SQL_DELETE_PENGUIN =
             "DROP TABLE IF EXISTS " + FeedReaderContract.PenguinEntry.TABLE_NAME;
 
+    private static final String SQL_DELETE_TAG =
+            "DROP TABLE IF EXISTS " + FeedReaderContract.TagEntry.TABLE_NAME;
+
     public FeedReaderDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -64,6 +76,7 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_ACCOUNT);
         db.execSQL(SQL_CREATE_FEED);
         db.execSQL(SQL_CREATE_PENGUIN);
+        db.execSQL(SQL_CREATE_TAG);
     }
     // テーブルのupgrade時に元のやつを削除する
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -71,18 +84,20 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_ACCOUNT);
         db.execSQL(SQL_DELETE_FEED);
         db.execSQL(SQL_DELETE_PENGUIN);
+        db.execSQL(SQL_DELETE_TAG);
         onCreate(db);
     }
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onUpgrade(db, oldVersion, newVersion);
     }
-    public boolean setStudyData(String subject, float time, String date){
+    public boolean setStudyData(String subject, float time, String date, String todo){
         SQLiteDatabase db = this.getWritableDatabase();
         // Value設定 //
         ContentValues values = new ContentValues();
         values.put(FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT, subject);
         values.put(FeedReaderContract.StudyEntry.COLUMN_NAME_TIME, time);
         values.put(FeedReaderContract.StudyEntry.COLUMN_NAME_DATE, date);
+        values.put(FeedReaderContract.StudyEntry.COLUMN_NAME_TODO, todo);
 
         // PUSH
         long newRowId = db.insert(FeedReaderContract.StudyEntry.TABLE_NAME, null, values);
@@ -113,6 +128,16 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         long newRowId = db.insert(FeedReaderContract.PenguinEntry.TABLE_NAME, null, values);
         return true;
     }
+
+    public boolean setTagData(String tag_name, String color){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(FeedReaderContract.TagEntry.COLUMN_NAME_FEED, tag_name);
+        values.put(FeedReaderContract.TagEntry.COLUMN_NAME_COLOR, color);
+        long newRowId = db.insert(FeedReaderContract.TagEntry.TABLE_NAME, null, values);
+        return true;
+    }
+
     public boolean updateFeed(int now_feed, int feed){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();

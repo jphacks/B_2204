@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "/Users/somakai/workspace/cardGame/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/somakai/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/somakai/workspace/cardGame/app/.cxx/Debug/2y6b546o/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/somakai/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/somakai/workspace/cardGame/app/.cxx/Debug/2y6b546o/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "cardgame-Debug-x86_64": {
+      "artifactName": "cardgame",
+      "buildCommandComponents": [
+        "/Users/somakai/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/somakai/workspace/cardGame/app/.cxx/Debug/2y6b546o/x86_64",
+        "cardgame"
+      ],
+      "abi": "x86_64",
+      "output": "/Users/somakai/workspace/cardGame/app/build/intermediates/cxx/Debug/2y6b546o/obj/x86_64/libcardgame.so",
+      "runtimeFiles": []
+    }
+  }
+}

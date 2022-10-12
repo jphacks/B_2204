@@ -85,6 +85,7 @@ public class InputActivity extends AppCompatActivity {
 
         // テキスト読み込み用 //
         EditText et_kind = (EditText) binding.kindStudy;
+        EditText et_todo = (EditText) binding.toDo;
         EditText et_hour = (EditText) binding.timeHour;
         EditText et_minute = (EditText) binding.timeMinute;
 
@@ -96,6 +97,8 @@ public class InputActivity extends AppCompatActivity {
                 Log.d("Button:","Returnボタンが押されました");
                 // 情報取得 //
                 String subject = et_kind.getText().toString();
+                String toDo = getToDo(et_todo);
+                /* toDo "insert todo to Study data" -> done */
 
                 float hour = etTransfer(et_hour);
                 float minute = etTransfer(et_minute);
@@ -106,7 +109,7 @@ public class InputActivity extends AppCompatActivity {
                 // 時間変換 //
                 float time = calculateHour(hour, minute);
 
-                if(!dbHelper.setStudyData(subject, time, String.valueOf(sdf.format(date))) || !dbHelper.updateFeed(feed_num, (int) hour))
+                if(!dbHelper.setStudyData(subject, time, String.valueOf(sdf.format(date)), toDo) || !dbHelper.updateFeed(feed_num, (int) hour))
                     Toast.makeText(getApplicationContext(), R.string.unknown_error, Toast.LENGTH_SHORT).show();
                 else {
                     // アカウント情報取得
@@ -191,6 +194,13 @@ public class InputActivity extends AppCompatActivity {
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.action_bar_img, null);
         return view;
+    }
+
+    private String getToDo(EditText et){
+        if(et.getText().toString().length() == 0)
+            return "nothing to do";
+        else
+            return et.getText().toString();
     }
 
     @Override

@@ -13,6 +13,7 @@ public final class FeedReaderContract {
         public static final String COLUMN_NAME_SUBJECT = "subject";
         public static final String COLUMN_NAME_DATE = "date";
         public static final String COLUMN_NAME_TIME = "hour";
+        public static final String COLUMN_NAME_TODO = "todo";
     }
 
     public static class AccountEntry implements BaseColumns {
@@ -34,5 +35,12 @@ public final class FeedReaderContract {
         public static final String COLUMN_NAME_GENERATION = "generation"; // 世代
         public static final String COLUMN_NAME_FIRST = "first_open"; // 最初のオープン
         public static final String COLUMN_NAME_LAST = "last_open"; // 最後のオープン
+    }
+
+    // タグテーブル
+    public static class TagEntry implements BaseColumns {
+        public static final String TABLE_NAME = "Tags";
+        public static final String COLUMN_NAME_FEED = "tag_name";
+        public static final String COLUMN_NAME_COLOR = "tag_color";
     }
 }

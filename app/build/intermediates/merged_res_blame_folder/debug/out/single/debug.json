@@ -1,19 +1,19 @@
 [
     {
-        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
-    },
-    {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_edit_text.xml.flat",
         "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/edit_text.xml"
     },
     {
-        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
@@ -106,6 +106,10 @@
     {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_bone.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/bone.png"
     },
     {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_fish.png.flat",

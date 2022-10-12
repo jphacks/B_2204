@@ -117,7 +117,6 @@ public class FragmentStats extends Fragment {
             }
             BarDataSet dataSet = new BarDataSet(entry, subject[0]);
 
-            
             if (subject[0] == "")
                 dataSet.setColor(Color.GREEN);
             else if (subject[0] == "hhh")

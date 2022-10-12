@@ -15,7 +15,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.13177083333333334" />
-        <entry key="app/src/main/res/layout/fragment_game.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_game.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_stats.xml" value="0.13177083333333334" />
         <entry key="app/src/main/res/layout/nav_host_fragment.xml" value="0.11503623188405797" />
         <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.2528205128205128" />

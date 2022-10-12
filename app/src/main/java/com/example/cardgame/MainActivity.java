@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(this); // コンテクストを渡す
+    private CommonMethod cm = new CommonMethod(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             actionBar.setDisplayShowCustomEnabled(true); // CutomViewを表示するか
         }
 
-        if(!isLogIn()) { // Tableに何も無かったら
+        if(!cm.isLogIn()) { // Tableに何も無かったら
             Intent intent = new Intent(getApplication(), SignUpActivity.class);
             startActivity(intent);
         }
@@ -76,16 +77,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    public boolean isLogIn(){
-        // projection 作成
-        String[] projection = {
-                BaseColumns._ID,
-                FeedReaderContract.AccountEntry.COLUMN_NAME_ACCOUNT,
-        };
-        Cursor cursor = dbHelper.queryTable(FeedReaderContract.AccountEntry.TABLE_NAME,projection);
-        return cursor.getCount() != 0;
     }
 
     // アクションバーデザイン

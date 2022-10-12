@@ -57,7 +57,6 @@
                     android:layout_height="50dp"
                     android:hint="種類"
                     android:inputType="text"
-                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:maxLines="1"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
@@ -98,6 +97,7 @@
                     android:inputType="number"
                     android:maxLines="1"
                     android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
                     android:background="@drawable/edit_text"/>
 
                 <TextView
@@ -117,6 +117,7 @@
                     android:maxLines="1"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
                     android:background="@drawable/edit_text"/>
 
                 <TextView

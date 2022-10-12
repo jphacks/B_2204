@@ -2503,6 +2503,7 @@ drawable baby_feed
 drawable baby_move
 drawable baby_settle
 drawable background
+drawable bone
 drawable border
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3045,8 +3046,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id text_date
 id text_feed
-id text_game
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon

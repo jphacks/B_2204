@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class FeedReaderDbHelper extends SQLiteOpenHelper {
     // Version変更
-    public static final int DATABASE_VERSION = 19;
+    public static final int DATABASE_VERSION = 22;
     public static final String DATABASE_NAME = "StudiesDB.db";
 
     // ENTRYの型を設定
@@ -27,22 +27,50 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
                     FeedReaderContract.AccountEntry.COLUMN_NAME_ACCOUNT + " TEXT," +
                     FeedReaderContract.AccountEntry.COLUMN_NAME_PASS + " TEXT)";
 
+    // 餌テーブル
+    private static final String SQL_CREATE_FEED =
+            "CREATE TABLE " + FeedReaderContract.FeedEntry.TABLE_NAME + " (" +
+                    FeedReaderContract.FeedEntry._ID + " INTEGER PRIMARY KEY," +
+                    FeedReaderContract.FeedEntry.COLUMN_NAME_FEED + " TEXT)";
+
+    // ペンギン
+    private static final String SQL_CREATE_PENGUIN =
+            "CREATE TABLE " + FeedReaderContract.PenguinEntry.TABLE_NAME + " (" +
+                    FeedReaderContract.PenguinEntry._ID + " INTEGER PRIMARY KEY," +
+                    FeedReaderContract.PenguinEntry.COLUMN_NAME_STOMACH + " INTEGER, " +
+                    FeedReaderContract.PenguinEntry.COLUMN_NAME_GENERATION + " INTEGER, " +
+                    FeedReaderContract.PenguinEntry.COLUMN_NAME_FIRST + " TEXT, " +
+                    FeedReaderContract.PenguinEntry.COLUMN_NAME_LAST + " TEXT)";
+
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + FeedReaderContract.StudyEntry.TABLE_NAME;
 
     private static final String SQL_DELETE_ACCOUNT =
             "DROP TABLE IF EXISTS " + FeedReaderContract.AccountEntry.TABLE_NAME;
 
+    private static final String SQL_DELETE_FEED =
+            "DROP TABLE IF EXISTS " + FeedReaderContract.FeedEntry.TABLE_NAME;
+
+    private static final String SQL_DELETE_PENGUIN =
+            "DROP TABLE IF EXISTS " + FeedReaderContract.PenguinEntry.TABLE_NAME;
+
     public FeedReaderDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+
+    // テーブル作成
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ENTRIES);
         db.execSQL(SQL_CREATE_ACCOUNT);
+        db.execSQL(SQL_CREATE_FEED);
+        db.execSQL(SQL_CREATE_PENGUIN);
     }
+    // テーブルのupgrade時に元のやつを削除する
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(SQL_DELETE_ENTRIES);
         db.execSQL(SQL_DELETE_ACCOUNT);
+        db.execSQL(SQL_DELETE_FEED);
+        db.execSQL(SQL_DELETE_PENGUIN);
         onCreate(db);
     }
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -66,6 +94,55 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         values.put(FeedReaderContract.AccountEntry.COLUMN_NAME_ACCOUNT, user);
         values.put(FeedReaderContract.AccountEntry.COLUMN_NAME_PASS, pass);
         long newRowId = db.insert(FeedReaderContract.AccountEntry.TABLE_NAME, null, values);
+        return true;
+    }
+    public boolean setFeedData(int feed){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(FeedReaderContract.FeedEntry.COLUMN_NAME_FEED, feed);
+        long newRowId = db.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values);
+        return true;
+    }
+    public boolean setPenguinData(int gene, String first){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(FeedReaderContract.PenguinEntry.COLUMN_NAME_STOMACH, 100);
+        values.put(FeedReaderContract.PenguinEntry.COLUMN_NAME_GENERATION, gene);
+        values.put(FeedReaderContract.PenguinEntry.COLUMN_NAME_FIRST, first);
+        values.put(FeedReaderContract.PenguinEntry.COLUMN_NAME_LAST, first);
+        long newRowId = db.insert(FeedReaderContract.PenguinEntry.TABLE_NAME, null, values);
+        return true;
+    }
+    public boolean updateFeed(int now_feed, int feed){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(FeedReaderContract.FeedEntry.COLUMN_NAME_FEED, now_feed + feed);
+
+        String selection = FeedReaderContract.FeedEntry._ID + " = 1";
+
+        int count = db.update(
+                FeedReaderContract.FeedEntry.TABLE_NAME,
+                values,
+                selection,
+                null);
+
+        return true;
+    }
+
+    public boolean updatePenguin(int stomach, String last){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(FeedReaderContract.PenguinEntry.COLUMN_NAME_STOMACH, stomach);
+        values.put(FeedReaderContract.PenguinEntry.COLUMN_NAME_LAST, last);
+
+        String selection = FeedReaderContract.PenguinEntry._ID + " = 1";
+
+        int count = db.update(
+                FeedReaderContract.PenguinEntry.TABLE_NAME,
+                values,
+                selection,
+                null);
+
         return true;
     }
     public Cursor queryTable(String table_name, String[] projection,String selection,

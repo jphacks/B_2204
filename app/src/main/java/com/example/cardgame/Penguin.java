@@ -15,6 +15,7 @@ public class Penguin {
     public int state;
     public ImageView img;
     public List<PointF> feeds = new ArrayList<>(); // 餌配列
+    public List<ImageView> feed_imgs = new ArrayList<>(); // 餌画像配列
     public boolean isFind = false; // 餌を見つけたか
     public int idx = -1; // 餌番号
 
@@ -62,12 +63,12 @@ public class Penguin {
 
     // 運動方程式
     private PointF randomWalk(){
-        return new PointF((float)Math.cos(this.theta), (float)Math.sin(this.theta));
+        return new PointF(2f*(float)Math.cos(this.theta), 2f*(float)Math.sin(this.theta));
     }
 
     private PointF centerWalk(){
         if(calcDistance(this.rx, this.cx)>=200)
-            return new PointF((this.cx.x - this.rx.x)*0.01f,  ( this.cx.y - this.rx.y)*0.01f);
+            return new PointF((this.cx.x - this.rx.x)*0.02f,  ( this.cx.y - this.rx.y)*0.02f);
         else
             return new PointF(0f,0f);
     }
@@ -81,9 +82,10 @@ public class Penguin {
         return (float) Math.sqrt((p1.x - p2.x)*(p1.x - p2.x) + (p1.y - p2.y)*(p1.y - p2.y));
     }
 
-    public void addFeed(PointF p){
+    public void addFeed(PointF p, ImageView feed_img){
         feeds.add(p);
         isFind = false;
+        feed_imgs.add(feed_img);
     }
 
     private int findFeed(){
@@ -113,7 +115,9 @@ public class Penguin {
             Thread.sleep(100);//0.1秒停止
             img.setImageResource(R.drawable.baby_settle);
         }
-        feeds.remove(feeds.size()-1); // 削除
+        feed_imgs.get(idx).setImageResource(R.drawable.bone);
+        feeds.remove(idx); // 削除
+        feed_imgs.remove(idx);
         idx = -1;
         isFind = false;
     }

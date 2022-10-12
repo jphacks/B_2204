@@ -20,4 +20,19 @@ public final class FeedReaderContract {
         public static final String COLUMN_NAME_ACCOUNT = "account";
         public static final String COLUMN_NAME_PASS = "password";
     }
+
+    // 餌テーブル
+    public static class FeedEntry implements BaseColumns {
+        public static final String TABLE_NAME = "Feed";
+        public static final String COLUMN_NAME_FEED = "feeds";
+    }
+
+    // ペンギンテーブル
+    public static class PenguinEntry implements BaseColumns {
+        public static final String TABLE_NAME = "Penguin";
+        public static final String COLUMN_NAME_STOMACH = "stomach"; // 空腹具合
+        public static final String COLUMN_NAME_GENERATION = "generation"; // 世代
+        public static final String COLUMN_NAME_FIRST = "first_open"; // 最初のオープン
+        public static final String COLUMN_NAME_LAST = "last_open"; // 最後のオープン
+    }
 }

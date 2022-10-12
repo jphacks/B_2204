@@ -48,6 +48,8 @@ public class InputActivity extends AppCompatActivity {
     // DBヘルパー使用宣言 //
     FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(this); // コンテクストを渡す
     private String uri = "https://penguin-study-api.herokuapp.com/v1/users/";
+    private CommonMethod cm = new CommonMethod(this);
+    private int feed_num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,8 @@ public class InputActivity extends AppCompatActivity {
 
         binding = ActivityInputBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        feed_num = cm.getFeed();
 
         // ActionBarの設定
         if (savedInstanceState == null) {
@@ -102,11 +106,11 @@ public class InputActivity extends AppCompatActivity {
                 // 時間変換 //
                 float time = calculateHour(hour, minute);
 
-                if(!dbHelper.setStudyData(subject, time, String.valueOf(sdf.format(date))))
+                if(!dbHelper.setStudyData(subject, time, String.valueOf(sdf.format(date))) || !dbHelper.updateFeed(feed_num, (int) hour))
                     Toast.makeText(getApplicationContext(), R.string.unknown_error, Toast.LENGTH_SHORT).show();
                 else {
                     // アカウント情報取得
-                    List account = getAccount();
+                    List account = cm.getAccount();
 
                     // getリクエスト
                     uri += account.get(0) + "/password/" + account.get(1) + "/hour/"
@@ -179,31 +183,6 @@ public class InputActivity extends AppCompatActivity {
             return 0;
         else
             return new Float(et.getText().toString());
-    }
-
-    // アカウント情報取得
-    public List getAccount(){
-        // DB読み込み
-        SQLiteDatabase db_read = dbHelper.getReadableDatabase();
-        // queryのselect
-        String[] projection = {
-                BaseColumns._ID,
-                FeedReaderContract.AccountEntry.COLUMN_NAME_ACCOUNT,
-                FeedReaderContract.AccountEntry.COLUMN_NAME_PASS,
-        };
-        Cursor cursor = dbHelper.queryTable(FeedReaderContract.AccountEntry.TABLE_NAME,projection);
-        List account = new ArrayList<>();
-        while(cursor.moveToNext()) {
-            String name = cursor.getString(
-                    cursor.getColumnIndexOrThrow(FeedReaderContract.AccountEntry.COLUMN_NAME_ACCOUNT));
-            account.add(name);
-            String pass = cursor.getString(
-                    cursor.getColumnIndexOrThrow(FeedReaderContract.AccountEntry.COLUMN_NAME_PASS));
-            account.add(pass);
-        }
-        cursor.close();
-
-        return account;
     }
 
     // アクションバーデザイン

@@ -62,8 +62,11 @@ public class SignUpActivity extends AppCompatActivity {
                 String user = et_user.getText().toString();
                 String pass = et_pass.getText().toString();
                 String pass_second = et_pass_second.getText().toString();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+                Date date = new Date();
                 if(checker(user, pass, pass_second)){
-                    if(!dbHelper.setAccountData(user, pass))
+                    if(!dbHelper.setAccountData(user, pass) || !dbHelper.setFeedData(0)
+                            || !dbHelper.setPenguinData(1,String.valueOf(sdf.format(date))))
                         Toast.makeText(getApplicationContext(), R.string.unknown_error, Toast.LENGTH_SHORT).show();
                     else {
                         // Postリクエスト

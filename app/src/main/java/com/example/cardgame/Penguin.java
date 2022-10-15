@@ -18,12 +18,14 @@ public class Penguin {
     public List<ImageView> feed_imgs = new ArrayList<>(); // 餌画像配列
     public boolean isFind = false; // 餌を見つけたか
     public int idx = -1; // 餌番号
+    public float stomach;
 
-    Penguin(ImageView penguin_img, Point window_size){
+    Penguin(ImageView penguin_img, Point window_size, float stomach){
         this.img = penguin_img;
         initPoint(window_size);
         this.state = 0;
         this.theta = (float) (2 * Math.PI * Math.random());
+        this.stomach = stomach;
     }
 
     public PointF getPoint(){ return this.rx; }
@@ -107,6 +109,15 @@ public class Penguin {
         return -1;
     }
 
+    // お腹を減らす
+    public float hungry(float val){
+        return this.stomach -= val;
+    }
+
+    public void setStomach(float stomach){
+        this.stomach = stomach;
+    }
+
     // 餌を食う
     private void eat() throws InterruptedException {
         for(int i=0; i<10; i++) {
@@ -114,6 +125,7 @@ public class Penguin {
             img.setImageResource(R.drawable.baby_feed);
             Thread.sleep(100);//0.1秒停止
             img.setImageResource(R.drawable.baby_settle);
+            if(this.stomach < 100) this.stomach += 1;
         }
         feed_imgs.get(idx).setImageResource(R.drawable.bone);
         feeds.remove(idx); // 削除

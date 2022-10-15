@@ -2536,6 +2536,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_setting
+drawable ic_settings
 drawable ic_timer
 drawable icon
 drawable m3_appbar_background

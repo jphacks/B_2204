@@ -11,7 +11,7 @@ import java.security.PrivateKey;
 
 public class FeedReaderDbHelper extends SQLiteOpenHelper {
     // Version変更
-    public static final int DATABASE_VERSION = 23;
+    public static final int DATABASE_VERSION = 25;
     public static final String DATABASE_NAME = "StudiesDB.db";
 
     // ENTRYの型を設定
@@ -49,7 +49,7 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
             "CREATE TABLE " + FeedReaderContract.TagEntry.TABLE_NAME + " (" +
                     FeedReaderContract.FeedEntry._ID + " INTEGER PRIMARY KEY," +
                     FeedReaderContract.TagEntry.COLUMN_NAME_FEED + " TEXT," +
-                    FeedReaderContract.TagEntry.COLUMN_NAME_COLOR + " TEXT)";
+                    FeedReaderContract.TagEntry.COLUMN_NAME_COLOR + " INTEGER)";
 
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + FeedReaderContract.StudyEntry.TABLE_NAME;
@@ -129,7 +129,7 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public boolean setTagData(String tag_name, String color){
+    public boolean setTagData(String tag_name, int color){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(FeedReaderContract.TagEntry.COLUMN_NAME_FEED, tag_name);

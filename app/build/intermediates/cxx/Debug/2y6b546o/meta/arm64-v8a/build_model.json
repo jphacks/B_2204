@@ -128,7 +128,7 @@
         "rootBuildGradleFolder": "/Users/somakai/workspace/cardGame",
         "sdkFolder": "/Users/somakai/Library/Android/sdk",
         "isBuildOnlyTargetAbiEnabled": true,
-        "ideBuildTargetAbi": "arm64-v8a",
+        "ideBuildTargetAbi": "arm64-v8a,armeabi-v7a,armeabi",
         "isCmakeBuildCohabitationEnabled": false,
         "isPrefabEnabled": false
       },

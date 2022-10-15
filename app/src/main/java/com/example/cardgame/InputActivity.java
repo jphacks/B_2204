@@ -60,6 +60,10 @@ public class InputActivity extends AppCompatActivity {
 
         feed_num = cm.getFeed();
 
+        // FragmentStopWatchからの値を受け取り
+        String hour_text = getIntent().getStringExtra("HOUR");
+        String minute_text = getIntent().getStringExtra("MINUTE");
+
         // ActionBarの設定
         if (savedInstanceState == null) {
             View customActionBarView = this.getActionBarView(); // customActionBarの取得
@@ -89,6 +93,10 @@ public class InputActivity extends AppCompatActivity {
         EditText et_hour = (EditText) binding.timeHour;
         EditText et_minute = (EditText) binding.timeMinute;
 
+        if(hour_text != null)
+            et_hour.setText(hour_text);
+        if(minute_text != null)
+            et_minute.setText(minute_text);
 
         // 確定ボタン //
         Button bt_return = (Button) binding.buttonReturn;

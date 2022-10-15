@@ -27,9 +27,13 @@ public class FragmentStopwatch extends Fragment implements Runnable, View.OnClic
     private final Handler handler = new Handler(Looper.getMainLooper());
     private volatile boolean stopRun = false;
     private Thread thread;
+    private float time;
+    private long diffTime;
 
     private final SimpleDateFormat dataFormat =
             new SimpleDateFormat("mm:ss.SS", Locale.JAPAN);
+
+    private final SimpleDateFormat hourFormat = new SimpleDateFormat("mm", Locale.JAPAN);
 
     public FragmentStopwatch() {
         super(R.layout.fragment_stopwatch);}
@@ -58,15 +62,20 @@ public class FragmentStopwatch extends Fragment implements Runnable, View.OnClic
             stopRun = false;
             thread = new Thread(this);
             thread.start();
-
             startTime = System.currentTimeMillis();
-
         } else if(v == stopButton){
             stopRun = true;
+            time = (float) diffTime / (1000 * 60);
             timerText.setText(dataFormat.format(0));
+        } else {
+            //TODO("activityに遷移する")
+            Intent intent = new Intent(activity, InputActivity.class);
+            intent.putExtra("MINUTE", String.valueOf((int)time % 60));
+            intent.putExtra("HOUR", String.valueOf((int)time/60));
+            startActivity(intent);
         }
     }
-    
+
     public void run() {
         while (!stopRun) {
             // sleep: period msec
@@ -81,10 +90,8 @@ public class FragmentStopwatch extends Fragment implements Runnable, View.OnClic
             handler.post(() -> {
                 long endTime = System.currentTimeMillis();
                 // カウント時間 = 経過時間 - 開始時間
-                long diffTime = (endTime - startTime);
-
+                diffTime = (endTime - startTime);
                 timerText.setText(dataFormat.format(diffTime));
-
             });
         }
     }

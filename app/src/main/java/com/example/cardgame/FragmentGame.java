@@ -48,6 +48,7 @@ public class FragmentGame extends Fragment {
     private Penguin penguin = null;
     private float stomach = 100;
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+    final Handler mainHandler = new Handler(Looper.getMainLooper());
 
     private FeedReaderDbHelper dbHelper = null; // ここの時点ではActivityを取得できない
 
@@ -70,7 +71,6 @@ public class FragmentGame extends Fragment {
         String last = cm.getLast();
         try {
             stomach -= differenceDays(today, sdf.parse(last));
-            Log.d("STOMACH", String.valueOf(stomach));
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -90,9 +90,9 @@ public class FragmentGame extends Fragment {
         // 餌を表示するViewを取得
         ice_field = view.findViewById(R.id.ice_field);
 
-	    //buttonの取得
-	    ImageButton bt_feed =  view.findViewById(R.id.button_feed);
-	
+        //buttonの取得
+        ImageButton bt_feed =  view.findViewById(R.id.button_feed);
+
         bt_feed.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (feed_num <= 0)
@@ -102,15 +102,15 @@ public class FragmentGame extends Fragment {
                     feed_output.setText(feed_text,EDITABLE);
                     giveFeed(window_size);
                 }
-	        }
-	    });
+            }
+        });
 
         // ペンギンを動かす
         new Thread(new Runnable() {
             @Override
             public void run() {
                 ImageView penguin_img = view.findViewById(R.id.penguin);
-                penguin = new Penguin(penguin_img, window_size);
+                penguin = new Penguin(penguin_img, window_size, stomach);
                 int count = 0;
                 while(true) {
                     try {
@@ -120,6 +120,17 @@ public class FragmentGame extends Fragment {
                         }
                         penguin.move();
                         Thread.sleep(100);//0.1秒停止
+                        // View更新
+                        try {
+                            // メインスレッドに処理を戻す <= メインスレッド以外からはViewを触れない
+                            mainHandler.post(() -> {
+                                text_stomach.setText(String.valueOf((int)penguin.stomach));
+                                stomach_bar.setProgress((int)penguin.stomach);
+                            });
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                     } catch (InterruptedException e) {
 
                     }
@@ -161,20 +172,18 @@ public class FragmentGame extends Fragment {
 
     public void updatePenguin(boolean flag){
         Date date = new Date();
-        if(flag) stomach -= 0.01f; // お腹を減らす
+        if(flag)
+            stomach = penguin.hungry(0.01f); // お腹を減らす
         try {
             if (!dbHelper.updatePenguin(stomach, sdf.format(date))) // 更新
                 Thread.sleep(100);
         } catch (InterruptedException e) {
-                Log.e("ERRORR", String.valueOf(e));
+            Log.e("ERROR", String.valueOf(e));
         }
-        final Handler mainHandler = new Handler(Looper.getMainLooper());
         try {
             // メインスレッドに処理を戻す <= メインスレッド以外からはViewを触れない
             mainHandler.post(() -> {
                 text_date.setText(sdf.format(date),EDITABLE);
-                text_stomach.setText(String.valueOf((int)stomach));
-                stomach_bar.setProgress((int)stomach);
             });
         } catch (Exception e) {
             e.printStackTrace();
@@ -189,7 +198,4 @@ public class FragmentGame extends Fragment {
         float diffDays = (float) (datetime1 - datetime2) / one_date_time;
         return diffDays;
     }
-
-
-
 }

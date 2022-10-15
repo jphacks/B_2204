@@ -35,12 +35,10 @@ com/example/cardgame/FragmentGame.java
 com/example/cardgame/FragmentSettings.java
  com.example.cardgame.FragmentSettings
  com.example.cardgame.FragmentSettings$1
- com.example.cardgame.FragmentSettings$ButtonClickListener
-com/example/cardgame/InputActivity.java
- com.example.cardgame.InputActivity
- com.example.cardgame.InputActivity$1
- com.example.cardgame.InputActivity$2
- com.example.cardgame.InputActivity$3
+ com.example.cardgame.FragmentSettings$2
+ com.example.cardgame.FragmentSettings$3
+com/example/cardgame/FragmentStopwatch.java
+ com.example.cardgame.FragmentStopwatch
 com/example/cardgame/FeedReaderDbHelper.java
  com.example.cardgame.FeedReaderDbHelper
 com/example/cardgame/databinding/FragmentStopwatchBinding.java
@@ -62,5 +60,13 @@ com/example/cardgame/FragmentTimer.java
  com.example.cardgame.FragmentTimer
  com.example.cardgame.FragmentTimer$1
  com.example.cardgame.FragmentTimer$MyListener
-com/example/cardgame/FragmentStopwatch.java
- com.example.cardgame.FragmentStopwatch
+com/example/cardgame/InputActivity.java
+ com.example.cardgame.InputActivity
+ com.example.cardgame.InputActivity$1
+ com.example.cardgame.InputActivity$2
+ com.example.cardgame.InputActivity$3
+com/example/cardgame/ColorPickerDialog.java
+ com.example.cardgame.ColorPickerDialog
+ com.example.cardgame.ColorPickerDialog$1
+ com.example.cardgame.ColorPickerDialog$ColorPickerView
+ com.example.cardgame.ColorPickerDialog$OnColorChangedListener

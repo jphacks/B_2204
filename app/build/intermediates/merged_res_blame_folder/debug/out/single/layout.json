@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_timer.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_timer.xml"
+    },
+    {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_input.xml",
         "source": "/Users/mahiro/cardGame/app/src/main/res/layout/activity_input.xml"
     },
@@ -12,6 +16,10 @@
         "source": "/Users/mahiro/cardGame/app/src/main/res/layout/action_bar_img.xml"
     },
     {
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_stopwatch.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_stopwatch.xml"
+    },
+    {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_game.xml",
         "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_game.xml"
     },
@@ -20,7 +28,15 @@
         "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_stats.xml"
     },
     {
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_settings.xml"
+    },
+    {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
         "source": "/Users/mahiro/cardGame/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_stopwatch.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/activity_stopwatch.xml"
     }
 ]

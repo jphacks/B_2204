@@ -9,4 +9,14 @@
         android:id="@+id/navi_game"
         android:icon="@drawable/ic_game"
         android:title="@string/navi_game"/>
+
+    <item
+        android:id="@+id/navi_stopwatch"
+        android:icon="@drawable/ic_timer"
+        android:title="@string/navi_timer" />
+
+    <item
+        android:id="@+id/navi_settings"
+        android:icon="@drawable/ic_setting"
+        android:title="@string/navi_settings" />
 </menu>

@@ -28,4 +28,22 @@
     <string name ="server_error">サーバーエラーもう一度入力してください</string>
     <!-- "feed is empty" message -->
     <string name ="feed_empty_error">餌が不足しています</string>
+
+    <!-- settings fragment -->
+    <string name="navi_settings">設定</string>
+    <string name ="tag_add">タグを追加してください</string>
+    <string name ="tag_hint">タグの名前を入力</string>
+
+    <!-- color dialog -->
+    <string name ="pick_color">色を選択</string>
+    <string name ="color1">red</string>
+    <string name ="color2">blue</string>
+    <string name="color3">green</string>
+
+    <!-- timer fragment -->
+    <string name="navi_timer">タイマー</string>
+    <string name="start">スタート</string>
+    <string name="reset">リセット</string>
+    <string name="stop">ストップ</string>
+    <string name="add">記入する</string>
 </resources>

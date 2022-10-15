@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-45:12
+ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-54:12
 MERGED from [androidx.databinding:viewbinding:7.0.4] /Users/mahiro/.gradle/caches/transforms-3/463f0bddcfa5b8fbc698e469daace475/transformed/jetified-viewbinding-7.0.4/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.5.1] /Users/mahiro/.gradle/caches/transforms-3/8f1d5cc64c7e6f34d269540f351f1dc9/transformed/navigation-ui-2.5.1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.6.0] /Users/mahiro/.gradle/caches/transforms-3/e3ba8e6cff578cd96b602ad38939c593/transformed/material-1.6.0/AndroidManifest.xml:17:1-26:12
@@ -61,20 +61,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/mahiro/.gr
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/mahiro/.gradle/caches/transforms-3/53fee185d1af029394ecafe9a49c1d32/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/mahiro/.gradle/caches/transforms-3/cf94e474878a8354704cacf80407d5e1/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:2:1-46:12
-INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-54:12
 	package
 		ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:3:5-35
 		INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml
-		ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-45:12
+		ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-54:12
 		INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml
-		ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-45:12
+		ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:1-54:12
 		INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:2:11-69
@@ -87,7 +87,7 @@ ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:6:5-79
 	android:name
 		ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:6:22-76
 application
-ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:8:5-43:19
+ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:8:5-52:19
 MERGED from [com.google.android.material:material:1.6.0] /Users/mahiro/.gradle/caches/transforms-3/e3ba8e6cff578cd96b602ad38939c593/transformed/material-1.6.0/AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.6.0] /Users/mahiro/.gradle/caches/transforms-3/e3ba8e6cff578cd96b602ad38939c593/transformed/material-1.6.0/AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/mahiro/.gradle/caches/transforms-3/93f6e360d4ddb445726777e1bf8bb4ff/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -160,6 +160,18 @@ action#android.intent.action.SIGNUP
 ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:39:17-71
 	android:name
 		ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:39:25-68
+activity#com.example.cardgame.FragmentStopwatch
+ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:44:9-51:20
+	android:exported
+		ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:46:13-36
+	android:name
+		ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:45:13-46
+intent-filter#action:name:android.intent.action.STOPWATCH+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:47:13-50:29
+action#android.intent.action.STOPWATCH
+ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:48:17-74
+	android:name
+		ADDED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:48:25-71
 uses-sdk
 INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/mahiro/cardGame/app/src/main/AndroidManifest.xml

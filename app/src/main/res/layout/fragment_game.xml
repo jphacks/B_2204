@@ -25,20 +25,27 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="bottom">
+        android:orientation="horizontal">
 
         <ProgressBar
             android:id="@+id/stomach_bar"
             style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content" />
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:progressDrawable="@drawable/progress"
+            android:progress="100"
+            android:max="100"/>
 
         <TextView
             android:id="@+id/text_stomach"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
             android:text="100" />
 
     </LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="str_color_arr">
+        <item>@string/color1</item>
+        <item>@string/color2</item>
+        <item>@string/color3</item>
+    </array>
+</resources>

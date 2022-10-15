@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,14 +39,15 @@ import java.util.Date;
 import java.util.List;
 
 public class FragmentGame extends Fragment {
-    // Viewを表示？ //
     private int feed_num = 0;
     private TextView feed_output = null;
     private TextView text_date = null;
     private TextView text_stomach = null;
+    private ProgressBar stomach_bar = null;
     private CoordinatorLayout ice_field = null;
     private Penguin penguin = null;
     private float stomach = 100;
+    private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
 
     private FeedReaderDbHelper dbHelper = null; // ここの時点ではActivityを取得できない
 
@@ -63,7 +65,15 @@ public class FragmentGame extends Fragment {
         // 餌数取得
         CommonMethod cm = new CommonMethod(this.getActivity());
         feed_num = cm.getFeed();
+        Date today = new Date();
         stomach = cm.getStomach();
+        String last = cm.getLast();
+        try {
+            stomach -= differenceDays(today, sdf.parse(last));
+            Log.d("STOMACH", String.valueOf(stomach));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
         // 餌数表示
         String feed_text = "残り餌数: " + feed_num;
@@ -75,6 +85,7 @@ public class FragmentGame extends Fragment {
 
         // 空腹度表示
         text_stomach = view.findViewById(R.id.text_stomach);
+        stomach_bar = view.findViewById(R.id.stomach_bar);
 
         // 餌を表示するViewを取得
         ice_field = view.findViewById(R.id.ice_field);
@@ -105,7 +116,7 @@ public class FragmentGame extends Fragment {
                     try {
                         count++;
                         if(count%600 == 1){ // 1分に1回投げる
-                            updatePenguin(); // ペンギン情報の更新
+                            updatePenguin(count != 1); // ペンギン情報の更新
                         }
                         penguin.move();
                         Thread.sleep(100);//0.1秒停止
@@ -148,17 +159,22 @@ public class FragmentGame extends Fragment {
 
     }
 
-    public void updatePenguin(){
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+    public void updatePenguin(boolean flag){
         Date date = new Date();
-        stomach -= 0.01f; // お腹を減らす
-        if (!dbHelper.updatePenguin(stomach, sdf.format(date))) // 更新
-            Log.e("ERROR: ", "Can't update penguin");
+        if(flag) stomach -= 0.01f; // お腹を減らす
+        try {
+            if (!dbHelper.updatePenguin(stomach, sdf.format(date))) // 更新
+                Thread.sleep(100);
+        } catch (InterruptedException e) {
+                Log.e("ERRORR", String.valueOf(e));
+        }
         final Handler mainHandler = new Handler(Looper.getMainLooper());
         try {
             // メインスレッドに処理を戻す <= メインスレッド以外からはViewを触れない
             mainHandler.post(() -> {
                 text_date.setText(sdf.format(date),EDITABLE);
+                text_stomach.setText(String.valueOf((int)stomach));
+                stomach_bar.setProgress((int)stomach);
             });
         } catch (Exception e) {
             e.printStackTrace();
@@ -166,17 +182,10 @@ public class FragmentGame extends Fragment {
     }
 
     //　日付の引き算 //
-    public static float differenceDays(String strDate1,String strDate2)
-            throws ParseException {
-        Date date1 = DateFormat.getDateInstance().parse(strDate1);
-        Date date2 = DateFormat.getDateInstance().parse(strDate2);
-        return differenceDays(date1,date2);
-    }
-
     public static float differenceDays(Date date1,Date date2) {
         long datetime1 = date1.getTime();
         long datetime2 = date2.getTime();
-        long one_date_time = 1000 * 60 * 60 * 24;
+        long one_date_time = 1000 * 60 * 100; // 1分 = 0.01
         float diffDays = (float) (datetime1 - datetime2) / one_date_time;
         return diffDays;
     }

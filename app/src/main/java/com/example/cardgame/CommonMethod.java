@@ -14,7 +14,27 @@ public class CommonMethod {
         this.context = context;
         this.dbHelper = new FeedReaderDbHelper(context);
     }
-    public int getStomach(){
+
+    public String getLast(){
+        String[] projection = {
+                BaseColumns._ID,
+                FeedReaderContract.PenguinEntry.COLUMN_NAME_LAST,
+        };
+
+        String selection = FeedReaderContract.StudyEntry._ID + " = 1";
+
+        Cursor cursor = dbHelper.queryTable(FeedReaderContract.PenguinEntry.TABLE_NAME, projection, selection, null);
+        String val = "";
+        while(cursor.moveToNext()) {
+            val = cursor.getString(
+                    cursor.getColumnIndexOrThrow(FeedReaderContract.PenguinEntry.COLUMN_NAME_LAST));
+        }
+        cursor.close();
+
+        return val;
+    }
+
+    public float getStomach(){
         String[] projection = {
                 BaseColumns._ID,
                 FeedReaderContract.PenguinEntry.COLUMN_NAME_STOMACH,
@@ -23,9 +43,9 @@ public class CommonMethod {
         String selection = FeedReaderContract.StudyEntry._ID + " = 1";
 
         Cursor cursor = dbHelper.queryTable(FeedReaderContract.PenguinEntry.TABLE_NAME, projection, selection, null);
-        int val = 0;
+        float val = 0;
         while(cursor.moveToNext()) {
-            val = cursor.getInt(
+            val = cursor.getFloat(
                     cursor.getColumnIndexOrThrow(FeedReaderContract.PenguinEntry.COLUMN_NAME_STOMACH));
         }
         cursor.close();

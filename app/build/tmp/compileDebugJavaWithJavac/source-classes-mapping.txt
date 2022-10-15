@@ -2,6 +2,11 @@ com/example/cardgame/Penguin.java
  com.example.cardgame.Penguin
 com/example/cardgame/databinding/ActivitySignupBinding.java
  com.example.cardgame.databinding.ActivitySignupBinding
+com/example/cardgame/ColorDialogFragment.java
+ com.example.cardgame.ColorDialogFragment
+ com.example.cardgame.ColorDialogFragment$1
+ com.example.cardgame.ColorDialogFragment$DialogClickListener
+ com.example.cardgame.ColorDialogFragment$NoticeDialogListener
 com/example/cardgame/FeedReaderContract.java
  com.example.cardgame.FeedReaderContract
  com.example.cardgame.FeedReaderContract$AccountEntry
@@ -17,6 +22,8 @@ com/example/cardgame/SignUpActivity.java
  com.example.cardgame.SignUpActivity
  com.example.cardgame.SignUpActivity$1
  com.example.cardgame.SignUpActivity$2
+com/example/cardgame/databinding/FragmentTimerBinding.java
+ com.example.cardgame.databinding.FragmentTimerBinding
 com/example/cardgame/FragmentStats.java
  com.example.cardgame.FragmentStats
 com/example/cardgame/BuildConfig.java
@@ -25,8 +32,19 @@ com/example/cardgame/FragmentGame.java
  com.example.cardgame.FragmentGame
  com.example.cardgame.FragmentGame$1
  com.example.cardgame.FragmentGame$2
+com/example/cardgame/FragmentSettings.java
+ com.example.cardgame.FragmentSettings
+ com.example.cardgame.FragmentSettings$1
+ com.example.cardgame.FragmentSettings$ButtonClickListener
+com/example/cardgame/InputActivity.java
+ com.example.cardgame.InputActivity
+ com.example.cardgame.InputActivity$1
+ com.example.cardgame.InputActivity$2
+ com.example.cardgame.InputActivity$3
 com/example/cardgame/FeedReaderDbHelper.java
  com.example.cardgame.FeedReaderDbHelper
+com/example/cardgame/databinding/FragmentStopwatchBinding.java
+ com.example.cardgame.databinding.FragmentStopwatchBinding
 com/example/cardgame/MainActivity.java
  com.example.cardgame.MainActivity
  com.example.cardgame.MainActivity$1
@@ -34,12 +52,15 @@ com/example/cardgame/databinding/ActivityInputBinding.java
  com.example.cardgame.databinding.ActivityInputBinding
 com/example/cardgame/databinding/ActionBarImgBinding.java
  com.example.cardgame.databinding.ActionBarImgBinding
+com/example/cardgame/databinding/FragmentSettingsBinding.java
+ com.example.cardgame.databinding.FragmentSettingsBinding
 com/example/cardgame/CommonMethod.java
  com.example.cardgame.CommonMethod
 com/example/cardgame/databinding/FragmentStatsBinding.java
  com.example.cardgame.databinding.FragmentStatsBinding
-com/example/cardgame/InputActivity.java
- com.example.cardgame.InputActivity
- com.example.cardgame.InputActivity$1
- com.example.cardgame.InputActivity$2
- com.example.cardgame.InputActivity$3
+com/example/cardgame/FragmentTimer.java
+ com.example.cardgame.FragmentTimer
+ com.example.cardgame.FragmentTimer$1
+ com.example.cardgame.FragmentTimer$MyListener
+com/example/cardgame/FragmentStopwatch.java
+ com.example.cardgame.FragmentStopwatch

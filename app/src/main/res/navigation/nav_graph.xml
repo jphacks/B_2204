@@ -29,4 +29,28 @@
 
     </fragment>
 
+    <fragment
+        android:id="@+id/navi_stopwatch"
+        android:name="com.example.cardgame.FragmentStopwatch"
+        android:label="FragmentTimer"
+        tools:layout="@layout/fragment_stopwatch">
+
+        <action
+            android:id="@+id/action_to_stopwatch"
+            app:destination="@id/navi_stopwatch" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navi_settings"
+        android:name="com.example.cardgame.FragmentSettings"
+        android:label="FragmentSetting"
+        tools:layout="@layout/fragment_settings">
+
+        <action
+            android:id="@+id/action_to_settings"
+            app:destination="@id/navi_settings" />
+
+    </fragment>
+
 </navigation>

@@ -24,6 +24,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.CardGame" >
         <activity
             android:name="com.example.cardgame.MainActivity"
@@ -49,6 +50,15 @@
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.SIGNUP" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.cardgame.FragmentStopwatch"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.STOPWATCH" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

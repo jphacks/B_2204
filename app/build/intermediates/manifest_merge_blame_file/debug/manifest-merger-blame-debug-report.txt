@@ -24,7 +24,7 @@
 16-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:13:22-74
 17
 18    <application
-18-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:8:5-43:19
+18-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:8:5-52:19
 19        android:allowBackup="true"
 19-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:9:9-35
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -39,142 +39,160 @@
 25-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:12:9-54
 26        android:supportsRtl="true"
 26-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:13:9-35
-27        android:theme="@style/Theme.CardGame" >
-27-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:14:9-46
-28        <activity
-28-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:15:9-23:20
-29            android:name="com.example.cardgame.MainActivity"
-29-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:16:13-41
-30            android:exported="true" >
-30-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:17:13-36
-31            <intent-filter>
-31-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:18:13-22:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:19:17-69
-32-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:19:25-66
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:17-77
-34-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:27-74
-35            </intent-filter>
-36        </activity>
-37        <!-- InputActivity -->
-38        <activity
-38-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:25:9-33:20
-39            android:name="com.example.cardgame.InputActivity"
-39-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:26:13-42
-40            android:exported="true" >
-40-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:27:13-36
-41            <intent-filter>
-41-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:28:13-32:29
-42                <action android:name="android.intent.action.INPUT" />
-42-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:29:17-70
-42-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:29:25-67
-43
-44                <category android:name="android.intent.category.LAUNCHER" />
-44-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:17-77
-44-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:27-74
-45            </intent-filter>
-46        </activity>
-47        <activity
-47-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:35:9-42:20
-48            android:name="com.example.cardgame.SignUpActivity"
-48-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:36:13-42
-49            android:exported="true" >
-49-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:37:13-36
-50            <intent-filter>
-50-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:38:13-41:29
-51                <action android:name="android.intent.action.SIGNUP" />
-51-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:39:17-71
-51-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:39:25-68
-52
-53                <category android:name="android.intent.category.LAUNCHER" />
-53-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:17-77
-53-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:27-74
-54            </intent-filter>
-55        </activity>
-56
-57        <provider
-57-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-58            android:name="androidx.startup.InitializationProvider"
-58-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
-59            android:authorities="com.example.cardgame.androidx-startup"
-59-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
-60            android:exported="false" >
-60-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
-61            <meta-data
-61-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-62                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-62-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
-63                android:value="androidx.startup" />
-63-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
-64            <meta-data
-64-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mahiro/.gradle/caches/transforms-3/85c000ae06e827f0184aae672321919d/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-65                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-65-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mahiro/.gradle/caches/transforms-3/85c000ae06e827f0184aae672321919d/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-66                android:value="androidx.startup" />
-66-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mahiro/.gradle/caches/transforms-3/85c000ae06e827f0184aae672321919d/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-67        </provider>
-68
-69        <uses-library
-69-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
-70            android:name="androidx.window.extensions"
-70-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
-71            android:required="false" />
-71-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
-72        <uses-library
-72-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
-73            android:name="androidx.window.sidecar"
-73-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
-74            android:required="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
-74-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
-75        <activity
-75-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:18:9-24:45
-76            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
-76-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:19:13-100
-77            android:enabled="false"
-77-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:20:13-36
-78            android:exported="false"
-78-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:21:13-37
-79            android:launchMode="singleInstance"
-79-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:22:13-48
-80            android:process=":playcore_missing_splits_activity"
-80-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:23:13-64
-81            android:stateNotNeeded="true" />
-81-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:24:13-42
-82        <activity
-82-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:25:9-29:65
-83            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-83-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:26:13-93
-84            android:exported="false"
-84-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:27:13-37
-85            android:stateNotNeeded="true"
-85-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:28:13-42
-86            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
-86-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:29:13-62
-87        <service
-87-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:32:9-39:19
-88            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
-88-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:33:13-94
-89            android:enabled="false"
-89-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:34:13-36
-90            android:exported="true" >
-90-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:35:13-36
-91            <meta-data
-91-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:36:13-38:41
-92                android:name="com.google.android.play.core.assetpacks.versionCode"
-92-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:37:17-83
-93                android:value="11003" />
-93-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:38:17-38
-94        </service>
-95        <service
-95-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:40:9-43:40
-96            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
-96-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:41:13-95
-97            android:enabled="false"
-97-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:42:13-36
-98            android:exported="false" />
-98-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:43:13-37
-99    </application>
-100
-101</manifest>
+27        android:testOnly="true"
+28        android:theme="@style/Theme.CardGame" >
+28-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:14:9-46
+29        <activity
+29-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:15:9-23:20
+30            android:name="com.example.cardgame.MainActivity"
+30-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:16:13-41
+31            android:exported="true" >
+31-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:17:13-36
+32            <intent-filter>
+32-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:18:13-22:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:19:17-69
+33-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:19:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:17-77
+35-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:27-74
+36            </intent-filter>
+37        </activity>
+38        <!-- InputActivity -->
+39        <activity
+39-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:25:9-33:20
+40            android:name="com.example.cardgame.InputActivity"
+40-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:26:13-42
+41            android:exported="true" >
+41-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:27:13-36
+42            <intent-filter>
+42-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:28:13-32:29
+43                <action android:name="android.intent.action.INPUT" />
+43-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:29:17-70
+43-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:29:25-67
+44
+45                <category android:name="android.intent.category.LAUNCHER" />
+45-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:17-77
+45-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:27-74
+46            </intent-filter>
+47        </activity>
+48        <activity
+48-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:35:9-42:20
+49            android:name="com.example.cardgame.SignUpActivity"
+49-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:36:13-42
+50            android:exported="true" >
+50-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:37:13-36
+51            <intent-filter>
+51-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:38:13-41:29
+52                <action android:name="android.intent.action.SIGNUP" />
+52-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:39:17-71
+52-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:39:25-68
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:17-77
+54-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:27-74
+55            </intent-filter>
+56        </activity>
+57        <activity
+57-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:44:9-51:20
+58            android:name="com.example.cardgame.FragmentStopwatch"
+58-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:45:13-46
+59            android:exported="true" >
+59-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:46:13-36
+60            <intent-filter>
+60-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:47:13-50:29
+61                <action android:name="android.intent.action.STOPWATCH" />
+61-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:48:17-74
+61-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:48:25-71
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:17-77
+63-->/Users/mahiro/cardGame/app/src/main/AndroidManifest.xml:21:27-74
+64            </intent-filter>
+65        </activity>
+66
+67        <provider
+67-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+68            android:name="androidx.startup.InitializationProvider"
+68-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+69            android:authorities="com.example.cardgame.androidx-startup"
+69-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+70            android:exported="false" >
+70-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+71            <meta-data
+71-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+72                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+72-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+73                android:value="androidx.startup" />
+73-->[androidx.emoji2:emoji2:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/fd08cf07cec7f3f4d027ae145d5df4b6/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+74            <meta-data
+74-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mahiro/.gradle/caches/transforms-3/85c000ae06e827f0184aae672321919d/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+75                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+75-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mahiro/.gradle/caches/transforms-3/85c000ae06e827f0184aae672321919d/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+76                android:value="androidx.startup" />
+76-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mahiro/.gradle/caches/transforms-3/85c000ae06e827f0184aae672321919d/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+77        </provider>
+78
+79        <uses-library
+79-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+80            android:name="androidx.window.extensions"
+80-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+81            android:required="false" />
+81-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+82        <uses-library
+82-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+83            android:name="androidx.window.sidecar"
+83-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+84            android:required="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+84-->[androidx.window:window:1.0.0] /Users/mahiro/.gradle/caches/transforms-3/f3750f9a404ebfbb9d0e3475d4f6596b/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+85        <activity
+85-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:18:9-24:45
+86            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+86-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:19:13-100
+87            android:enabled="false"
+87-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:20:13-36
+88            android:exported="false"
+88-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:21:13-37
+89            android:launchMode="singleInstance"
+89-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:22:13-48
+90            android:process=":playcore_missing_splits_activity"
+90-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:23:13-64
+91            android:stateNotNeeded="true" />
+91-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:24:13-42
+92        <activity
+92-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:25:9-29:65
+93            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+93-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:26:13-93
+94            android:exported="false"
+94-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:27:13-37
+95            android:stateNotNeeded="true"
+95-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:28:13-42
+96            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
+96-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:29:13-62
+97        <service
+97-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:32:9-39:19
+98            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+98-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:33:13-94
+99            android:enabled="false"
+99-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:34:13-36
+100            android:exported="true" >
+100-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:35:13-36
+101            <meta-data
+101-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:36:13-38:41
+102                android:name="com.google.android.play.core.assetpacks.versionCode"
+102-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:37:17-83
+103                android:value="11003" />
+103-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:38:17-38
+104        </service>
+105        <service
+105-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:40:9-43:40
+106            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
+106-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:41:13-95
+107            android:enabled="false"
+107-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:42:13-36
+108            android:exported="false" />
+108-->[com.google.android.play:core:1.10.3] /Users/mahiro/.gradle/caches/transforms-3/fc2e212d8550cdb81a11c436ad268161/transformed/jetified-core-1.10.3/AndroidManifest.xml:43:13-37
+109    </application>
+110
+111</manifest>

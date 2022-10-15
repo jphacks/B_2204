@@ -71,6 +71,7 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
+array str_color_arr
 attr SharedValue
 attr SharedValueId
 attr action
@@ -2534,6 +2535,8 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_setting
+drawable ic_timer
 drawable icon
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
@@ -2576,6 +2579,9 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable progress
+drawable progress_background
+drawable progress_fill
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2650,6 +2656,8 @@ id action_mode_close_button
 id action_text
 id action_to_game
 id action_to_home
+id action_to_settings
+id action_to_stopwatch
 id actions
 id activity_chooser_view_content
 id add
@@ -2683,6 +2691,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id bt_color_dialog
+id bt_tag_return
 id buttonPanel
 id button_back
 id button_feed
@@ -2774,6 +2784,7 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id enter_button
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2902,6 +2913,8 @@ id nav_host_fragment
 id nav_host_fragment_container
 id navi_game
 id navi_home
+id navi_settings
+id navi_stopwatch
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3014,10 +3027,13 @@ id start
 id startHorizontal
 id startToEnd
 id startVertical
+id start_button
 id staticLayout
 id staticPostLayout
 id stomach_bar
 id stop
+id stop_button
+id stopwatch
 id stretch
 id submenuarrow
 id submit_area
@@ -3027,6 +3043,7 @@ id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
 id tag_accessibility_pane_title
+id tag_name
 id tag_on_apply_window_listener
 id tag_on_receive_content_listener
 id tag_on_receive_content_mime_types
@@ -3052,6 +3069,7 @@ id text_feed
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_stomach
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3061,6 +3079,7 @@ id textinput_suffix_text
 id time
 id time_hour
 id time_minute
+id timer_text
 id title
 id titleDividerNoCustom
 id title_template
@@ -3218,7 +3237,10 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dynamic_feature_install_fragment
 layout fragment_game
+layout fragment_settings
 layout fragment_stats
+layout fragment_stopwatch
+layout fragment_timer
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3327,6 +3349,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3337,6 +3360,9 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string color1
+string color2
+string color3
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -3431,17 +3457,25 @@ string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string navi_game
 string navi_home
+string navi_settings
+string navi_timer
 string ok
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string pick_color
 string progress
+string reset
 string retry
 string search_menu_title
 string server_error
+string start
 string status_bar_notification_info_overflow
+string stop
+string tag_add
+string tag_hint
 string unknown_error
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

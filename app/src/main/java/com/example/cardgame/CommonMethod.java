@@ -14,6 +14,24 @@ public class CommonMethod {
         this.context = context;
         this.dbHelper = new FeedReaderDbHelper(context);
     }
+    public int getStomach(){
+        String[] projection = {
+                BaseColumns._ID,
+                FeedReaderContract.PenguinEntry.COLUMN_NAME_STOMACH,
+        };
+
+        String selection = FeedReaderContract.StudyEntry._ID + " = 1";
+
+        Cursor cursor = dbHelper.queryTable(FeedReaderContract.PenguinEntry.TABLE_NAME, projection, selection, null);
+        int val = 0;
+        while(cursor.moveToNext()) {
+            val = cursor.getInt(
+                    cursor.getColumnIndexOrThrow(FeedReaderContract.PenguinEntry.COLUMN_NAME_STOMACH));
+        }
+        cursor.close();
+
+        return val;
+    }
     public int getFeed(){
          // ここでActivityを取得
         // queryのprojection

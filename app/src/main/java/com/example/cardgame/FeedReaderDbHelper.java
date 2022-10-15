@@ -40,7 +40,7 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_PENGUIN =
             "CREATE TABLE " + FeedReaderContract.PenguinEntry.TABLE_NAME + " (" +
                     FeedReaderContract.PenguinEntry._ID + " INTEGER PRIMARY KEY," +
-                    FeedReaderContract.PenguinEntry.COLUMN_NAME_STOMACH + " INTEGER, " +
+                    FeedReaderContract.PenguinEntry.COLUMN_NAME_STOMACH + " FLOAT, " +
                     FeedReaderContract.PenguinEntry.COLUMN_NAME_GENERATION + " INTEGER, " +
                     FeedReaderContract.PenguinEntry.COLUMN_NAME_FIRST + " TEXT, " +
                     FeedReaderContract.PenguinEntry.COLUMN_NAME_LAST + " TEXT)";
@@ -154,7 +154,7 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public boolean updatePenguin(int stomach, String last){
+    public boolean updatePenguin(float stomach, String last){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(FeedReaderContract.PenguinEntry.COLUMN_NAME_STOMACH, stomach);

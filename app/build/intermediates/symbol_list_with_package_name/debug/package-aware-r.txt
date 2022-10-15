@@ -3016,6 +3016,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id stomach_bar
 id stop
 id stretch
 id submenuarrow

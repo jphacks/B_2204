@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,18 +32,22 @@ public final class FragmentGameBinding implements ViewBinding {
   public final ImageView penguin;
 
   @NonNull
+  public final ProgressBar stomachBar;
+
+  @NonNull
   public final TextView textDate;
 
   @NonNull
   public final TextView textFeed;
 
   private FragmentGameBinding(@NonNull CoordinatorLayout rootView, @NonNull ImageButton buttonFeed,
-      @NonNull CoordinatorLayout iceField, @NonNull ImageView penguin, @NonNull TextView textDate,
-      @NonNull TextView textFeed) {
+      @NonNull CoordinatorLayout iceField, @NonNull ImageView penguin,
+      @NonNull ProgressBar stomachBar, @NonNull TextView textDate, @NonNull TextView textFeed) {
     this.rootView = rootView;
     this.buttonFeed = buttonFeed;
     this.iceField = iceField;
     this.penguin = penguin;
+    this.stomachBar = stomachBar;
     this.textDate = textDate;
     this.textFeed = textFeed;
   }
@@ -88,6 +93,12 @@ public final class FragmentGameBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.stomach_bar;
+      ProgressBar stomachBar = ViewBindings.findChildViewById(rootView, id);
+      if (stomachBar == null) {
+        break missingId;
+      }
+
       id = R.id.text_date;
       TextView textDate = ViewBindings.findChildViewById(rootView, id);
       if (textDate == null) {
@@ -101,7 +112,7 @@ public final class FragmentGameBinding implements ViewBinding {
       }
 
       return new FragmentGameBinding((CoordinatorLayout) rootView, buttonFeed, iceField, penguin,
-          textDate, textFeed);
+          stomachBar, textDate, textFeed);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

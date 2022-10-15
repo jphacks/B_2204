@@ -30,6 +30,8 @@ import com.github.mikephil.charting.data.Entry;
 import org.json.JSONException;
 import org.w3c.dom.Text;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -40,8 +42,10 @@ public class FragmentGame extends Fragment {
     private int feed_num = 0;
     private TextView feed_output = null;
     private TextView text_date = null;
+    private TextView text_stomach = null;
     private CoordinatorLayout ice_field = null;
     private Penguin penguin = null;
+    private float stomach = 100;
 
     private FeedReaderDbHelper dbHelper = null; // ここの時点ではActivityを取得できない
 
@@ -59,6 +63,7 @@ public class FragmentGame extends Fragment {
         // 餌数取得
         CommonMethod cm = new CommonMethod(this.getActivity());
         feed_num = cm.getFeed();
+        stomach = cm.getStomach();
 
         // 餌数表示
         String feed_text = "残り餌数: " + feed_num;
@@ -67,6 +72,9 @@ public class FragmentGame extends Fragment {
 
         // 時間表示
         text_date = view.findViewById(R.id.text_date);
+
+        // 空腹度表示
+        text_stomach = view.findViewById(R.id.text_stomach);
 
         // 餌を表示するViewを取得
         ice_field = view.findViewById(R.id.ice_field);
@@ -143,6 +151,9 @@ public class FragmentGame extends Fragment {
     public void updatePenguin(){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
         Date date = new Date();
+        stomach -= 0.01f; // お腹を減らす
+        if (!dbHelper.updatePenguin(stomach, sdf.format(date))) // 更新
+            Log.e("ERROR: ", "Can't update penguin");
         final Handler mainHandler = new Handler(Looper.getMainLooper());
         try {
             // メインスレッドに処理を戻す <= メインスレッド以外からはViewを触れない
@@ -152,11 +163,24 @@ public class FragmentGame extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
-
-        if (!dbHelper.updatePenguin(100, sdf.format(date)))
-            Log.e("ERROR: ", "Can't update penguin");
-        //TODO("空腹度を計算して減らす")
     }
+
+    //　日付の引き算 //
+    public static float differenceDays(String strDate1,String strDate2)
+            throws ParseException {
+        Date date1 = DateFormat.getDateInstance().parse(strDate1);
+        Date date2 = DateFormat.getDateInstance().parse(strDate2);
+        return differenceDays(date1,date2);
+    }
+
+    public static float differenceDays(Date date1,Date date2) {
+        long datetime1 = date1.getTime();
+        long datetime2 = date2.getTime();
+        long one_date_time = 1000 * 60 * 60 * 24;
+        float diffDays = (float) (datetime1 - datetime2) / one_date_time;
+        return diffDays;
+    }
+
+
 
 }

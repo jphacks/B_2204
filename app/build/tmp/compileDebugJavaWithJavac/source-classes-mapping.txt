@@ -1,72 +1,82 @@
-com/example/cardgame/Penguin.java
- com.example.cardgame.Penguin
-com/example/cardgame/databinding/ActivitySignupBinding.java
- com.example.cardgame.databinding.ActivitySignupBinding
-com/example/cardgame/ColorDialogFragment.java
- com.example.cardgame.ColorDialogFragment
- com.example.cardgame.ColorDialogFragment$1
- com.example.cardgame.ColorDialogFragment$DialogClickListener
- com.example.cardgame.ColorDialogFragment$NoticeDialogListener
-com/example/cardgame/FeedReaderContract.java
- com.example.cardgame.FeedReaderContract
- com.example.cardgame.FeedReaderContract$AccountEntry
- com.example.cardgame.FeedReaderContract$FeedEntry
- com.example.cardgame.FeedReaderContract$PenguinEntry
- com.example.cardgame.FeedReaderContract$StudyEntry
- com.example.cardgame.FeedReaderContract$TagEntry
-com/example/cardgame/databinding/ActivityMainBinding.java
- com.example.cardgame.databinding.ActivityMainBinding
-com/example/cardgame/databinding/FragmentGameBinding.java
- com.example.cardgame.databinding.FragmentGameBinding
-com/example/cardgame/SignUpActivity.java
- com.example.cardgame.SignUpActivity
- com.example.cardgame.SignUpActivity$1
- com.example.cardgame.SignUpActivity$2
-com/example/cardgame/databinding/FragmentTimerBinding.java
- com.example.cardgame.databinding.FragmentTimerBinding
-com/example/cardgame/FragmentStats.java
- com.example.cardgame.FragmentStats
-com/example/cardgame/BuildConfig.java
- com.example.cardgame.BuildConfig
-com/example/cardgame/FragmentGame.java
- com.example.cardgame.FragmentGame
- com.example.cardgame.FragmentGame$1
- com.example.cardgame.FragmentGame$2
-com/example/cardgame/FragmentSettings.java
- com.example.cardgame.FragmentSettings
- com.example.cardgame.FragmentSettings$1
- com.example.cardgame.FragmentSettings$2
- com.example.cardgame.FragmentSettings$3
-com/example/cardgame/FragmentStopwatch.java
- com.example.cardgame.FragmentStopwatch
-com/example/cardgame/FeedReaderDbHelper.java
- com.example.cardgame.FeedReaderDbHelper
-com/example/cardgame/databinding/FragmentStopwatchBinding.java
- com.example.cardgame.databinding.FragmentStopwatchBinding
-com/example/cardgame/MainActivity.java
- com.example.cardgame.MainActivity
- com.example.cardgame.MainActivity$1
-com/example/cardgame/databinding/ActivityInputBinding.java
- com.example.cardgame.databinding.ActivityInputBinding
-com/example/cardgame/databinding/ActionBarImgBinding.java
- com.example.cardgame.databinding.ActionBarImgBinding
-com/example/cardgame/databinding/FragmentSettingsBinding.java
- com.example.cardgame.databinding.FragmentSettingsBinding
-com/example/cardgame/CommonMethod.java
- com.example.cardgame.CommonMethod
-com/example/cardgame/databinding/FragmentStatsBinding.java
- com.example.cardgame.databinding.FragmentStatsBinding
-com/example/cardgame/FragmentTimer.java
- com.example.cardgame.FragmentTimer
- com.example.cardgame.FragmentTimer$1
- com.example.cardgame.FragmentTimer$MyListener
-com/example/cardgame/InputActivity.java
- com.example.cardgame.InputActivity
- com.example.cardgame.InputActivity$1
- com.example.cardgame.InputActivity$2
- com.example.cardgame.InputActivity$3
-com/example/cardgame/ColorPickerDialog.java
- com.example.cardgame.ColorPickerDialog
- com.example.cardgame.ColorPickerDialog$1
- com.example.cardgame.ColorPickerDialog$ColorPickerView
- com.example.cardgame.ColorPickerDialog$OnColorChangedListener
+com/example/penguinstudy/databinding/FragmentGameBinding.java
+ com.example.penguinstudy.databinding.FragmentGameBinding
+com/example/penguinstudy/FragmentGame.java
+ com.example.penguinstudy.FragmentGame
+ com.example.penguinstudy.FragmentGame$1
+ com.example.penguinstudy.FragmentGame$2
+com/example/penguinstudy/FeedReaderContract.java
+ com.example.penguinstudy.FeedReaderContract
+ com.example.penguinstudy.FeedReaderContract$AccountEntry
+ com.example.penguinstudy.FeedReaderContract$FeedEntry
+ com.example.penguinstudy.FeedReaderContract$PenguinEntry
+ com.example.penguinstudy.FeedReaderContract$StudyEntry
+ com.example.penguinstudy.FeedReaderContract$TagEntry
+com/example/penguinstudy/databinding/TextRowItemBinding.java
+ com.example.penguinstudy.databinding.TextRowItemBinding
+com/example/penguinstudy/databinding/FragmentStopwatchBinding.java
+ com.example.penguinstudy.databinding.FragmentStopwatchBinding
+com/example/penguinstudy/databinding/FragmentSettingsBinding.java
+ com.example.penguinstudy.databinding.FragmentSettingsBinding
+com/example/penguinstudy/databinding/FragmentStatsBinding.java
+ com.example.penguinstudy.databinding.FragmentStatsBinding
+com/example/penguinstudy/BuildConfig.java
+ com.example.penguinstudy.BuildConfig
+com/example/penguinstudy/CommonMethod.java
+ com.example.penguinstudy.CommonMethod
+com/example/penguinstudy/FragmentStats.java
+ com.example.penguinstudy.FragmentStats
+com/example/penguinstudy/databinding/ActionBarImgBinding.java
+ com.example.penguinstudy.databinding.ActionBarImgBinding
+com/example/penguinstudy/FragmentTimer.java
+ com.example.penguinstudy.FragmentTimer
+ com.example.penguinstudy.FragmentTimer$1
+ com.example.penguinstudy.FragmentTimer$MyListener
+com/example/penguinstudy/databinding/ActivityMainBinding.java
+ com.example.penguinstudy.databinding.ActivityMainBinding
+com/example/penguinstudy/Penguin.java
+ com.example.penguinstudy.Penguin
+com/example/penguinstudy/ColorDialogFragment.java
+ com.example.penguinstudy.ColorDialogFragment
+ com.example.penguinstudy.ColorDialogFragment$1
+ com.example.penguinstudy.ColorDialogFragment$DialogClickListener
+ com.example.penguinstudy.ColorDialogFragment$NoticeDialogListener
+com/example/penguinstudy/SignUpActivity.java
+ com.example.penguinstudy.SignUpActivity
+ com.example.penguinstudy.SignUpActivity$1
+ com.example.penguinstudy.SignUpActivity$2
+com/example/penguinstudy/InputActivity.java
+ com.example.penguinstudy.InputActivity
+ com.example.penguinstudy.InputActivity$1
+ com.example.penguinstudy.InputActivity$2
+ com.example.penguinstudy.InputActivity$3
+com/example/penguinstudy/databinding/ActivityInputBinding.java
+ com.example.penguinstudy.databinding.ActivityInputBinding
+com/example/penguinstudy/databinding/ActivityEditTagBinding.java
+ com.example.penguinstudy.databinding.ActivityEditTagBinding
+com/example/penguinstudy/CustomAdapter.java
+ com.example.penguinstudy.CustomAdapter
+ com.example.penguinstudy.CustomAdapter$ViewHolder
+com/example/penguinstudy/databinding/ActivitySignupBinding.java
+ com.example.penguinstudy.databinding.ActivitySignupBinding
+com/example/penguinstudy/FeedReaderDbHelper.java
+ com.example.penguinstudy.FeedReaderDbHelper
+com/example/penguinstudy/FragmentStopwatch.java
+ com.example.penguinstudy.FragmentStopwatch
+com/example/penguinstudy/databinding/FragmentTimerBinding.java
+ com.example.penguinstudy.databinding.FragmentTimerBinding
+com/example/penguinstudy/MainActivity.java
+ com.example.penguinstudy.MainActivity
+ com.example.penguinstudy.MainActivity$1
+com/example/penguinstudy/FragmentSettings.java
+ com.example.penguinstudy.FragmentSettings
+ com.example.penguinstudy.FragmentSettings$1
+com/example/penguinstudy/ColorPickerDialog.java
+ com.example.penguinstudy.ColorPickerDialog
+ com.example.penguinstudy.ColorPickerDialog$1
+ com.example.penguinstudy.ColorPickerDialog$ColorPickerView
+ com.example.penguinstudy.ColorPickerDialog$OnColorChangedListener
+com/example/penguinstudy/EditTagActivity.java
+ com.example.penguinstudy.EditTagActivity
+ com.example.penguinstudy.EditTagActivity$1
+ com.example.penguinstudy.EditTagActivity$2
+ com.example.penguinstudy.EditTagActivity$3

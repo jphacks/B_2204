@@ -1,38 +1,46 @@
 [
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_settings.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_timer.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_timer.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_signup.xml",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/activity_signup.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_input.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/activity_input.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/action_bar_img.xml",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/action_bar_img.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_signup.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/activity_signup.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_game.xml",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_game.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/action_bar_img.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/action_bar_img.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_stats.xml",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_stats.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_stopwatch.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_stopwatch.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_timer.xml",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_timer.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_settings.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_input.xml",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/activity_input.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_game.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_game.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_stopwatch.xml",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_stopwatch.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_stats.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/fragment_stats.xml"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/activity_main.xml"
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_edit_tag.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/activity_edit_tag.xml"
+    },
+    {
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/text_row_item.xml",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/layout/text_row_item.xml"
     }
 ]

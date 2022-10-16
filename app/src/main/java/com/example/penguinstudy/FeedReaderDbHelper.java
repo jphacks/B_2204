@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class FeedReaderDbHelper extends SQLiteOpenHelper {
     // Version変更
-    public static final int DATABASE_VERSION = 25;
+    public static final int DATABASE_VERSION = 27;
     public static final String DATABASE_NAME = "StudiesDB.db";
 
     // ENTRYの型を設定
@@ -46,7 +46,7 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_TAG =
             "CREATE TABLE " + FeedReaderContract.TagEntry.TABLE_NAME + " (" +
                     FeedReaderContract.FeedEntry._ID + " INTEGER PRIMARY KEY," +
-                    FeedReaderContract.TagEntry.COLUMN_NAME_FEED + " TEXT," +
+                    FeedReaderContract.TagEntry.COLUMN_NAME_TAG + " TEXT," +
                     FeedReaderContract.TagEntry.COLUMN_NAME_COLOR + " INTEGER)";
 
     private static final String SQL_DELETE_ENTRIES =
@@ -130,7 +130,7 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
     public boolean setTagData(String tag_name, int color){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(FeedReaderContract.TagEntry.COLUMN_NAME_FEED, tag_name);
+        values.put(FeedReaderContract.TagEntry.COLUMN_NAME_TAG, tag_name);
         values.put(FeedReaderContract.TagEntry.COLUMN_NAME_COLOR, color);
         long newRowId = db.insert(FeedReaderContract.TagEntry.TABLE_NAME, null, values);
         return true;

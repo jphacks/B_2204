@@ -40,7 +40,7 @@ public final class FeedReaderContract {
     // タグテーブル
     public static class TagEntry implements BaseColumns {
         public static final String TABLE_NAME = "Tags";
-        public static final String COLUMN_NAME_FEED = "tag_name";
+        public static final String COLUMN_NAME_TAG = "tag_name";
         public static final String COLUMN_NAME_COLOR = "tag_color";
     }
 }

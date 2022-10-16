@@ -15,6 +15,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.FrameLayout;
 
 public class ColorPickerDialog extends Dialog {
 
@@ -72,28 +73,27 @@ public class ColorPickerDialog extends Dialog {
         private boolean mTrackingOK;
         private boolean mHighlightOK;
         
-        private static final int CENTER_X = 100;
-        private static final int CENTER_Y = 100;
-        private static final int CENTER_RADIUS = 24;
+        private static final int CENTER_X = 400;
+        private static final int CENTER_Y = 400;
+        private static final int CENTER_RADIUS = 50;
         private static final float OK_X0 = - CENTER_X/2;
         private static final float OK_X1 =   CENTER_X/2;
-        private static final float OK_Y0 = (float) (CENTER_X * 1.2);
+        private static final float OK_Y0 = (float) (CENTER_X * 1.3);
         private static final float OK_Y1 = (float) (CENTER_X * 1.5);
         
         private void drawSVRegion(Canvas canvas) {
-        	final float RESOLUTION = (float)0.01;
+        	final float RESOLUTION = (float)0.001;
         	
         	for(float y = 0; y < 1; y += RESOLUTION) {
-            	mChroma = new int[10];
+            	mChroma = new int[100];
 
             	int i = 0;
-            	for(float x = 0; i < 10; x += 0.1, i+=1) {
+            	for(float x = 0; i < 100; x += 0.01, i+=1) {
             		mChroma[i] = setHSVColor(selectHue, x, y);
             	}
                 lg = new LinearGradient(OK_X0, 0, OK_X1, 0, mChroma, null, Shader.TileMode.CLAMP);
                 mPaintC.setShader(lg);
 
-                //canvas.drawRect(OK_X0, OK_X0 + (CENTER_X * y), OK_X1, OK_X0 + (float)(CENTER_X * (y)), mPaintC);
             	canvas.drawLine(OK_X0, OK_X0 + (CENTER_X * y), OK_X1, OK_X0 + (float)(CENTER_X * (y)), mPaintC);
             }
         }
@@ -320,6 +320,9 @@ public class ColorPickerDialog extends Dialog {
             }
         };
 
+        //ColorPickerView colorPickerView = new ColorPickerView(getContext(), l, mInitialColor);
+        //colorPickerView.setLayoutParams(new FrameLayout.LayoutParams(500, 500));
+        //setContentView(colorPickerView);
         ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
         setContentView(new ColorPickerView(getContext(), l, mInitialColor), lp);
         setTitle("- Color -");

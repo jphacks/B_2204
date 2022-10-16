@@ -42,13 +42,14 @@
         </activity>
 
         <activity
-            android:name="com.example.penguinstudy.FragmentStopwatch"
+            android:name="com.example.penguinstudy.EditTagActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.STOPWATCH" />
+                <action android:name="android.intent.action.EDIT_TAG" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

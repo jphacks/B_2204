@@ -27,7 +27,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.CardGame" >
         <activity
-            android:name="com.example.cardgame.MainActivity"
+            android:name="com.example.penguinstudy.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +37,7 @@
         </activity>
         <!-- InputActivity -->
         <activity
-            android:name="com.example.cardgame.InputActivity"
+            android:name="com.example.penguinstudy.InputActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.INPUT" />
@@ -46,7 +46,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.cardgame.SignUpActivity"
+            android:name="com.example.penguinstudy.SignUpActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.SIGNUP" />
@@ -55,10 +55,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.cardgame.FragmentStopwatch"
+            android:name="com.example.penguinstudy.EditTagActivity"
             android:exported="true" >
             <intent-filter>
-                <action android:name="android.intent.action.STOPWATCH" />
+                <action android:name="android.intent.action.EDIT_TAG" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

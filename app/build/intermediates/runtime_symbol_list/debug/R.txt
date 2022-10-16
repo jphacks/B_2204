@@ -2536,6 +2536,7 @@ int drawable ic_mtrl_chip_checked_circle 0x7f080079
 int drawable ic_mtrl_chip_close_circle 0x7f08007a
 int drawable ic_setting 0x7f08007b
 int drawable ic_settings 0x7f08007c
+int drawable ic_tag 0x7f0800af
 int drawable ic_timer 0x7f08007d
 int drawable icon 0x7f08007e
 int drawable m3_appbar_background 0x7f08007f
@@ -2691,6 +2692,7 @@ int id bounce 0x7f090065
 int id bounceBoth 0x7f090066
 int id bounceEnd 0x7f090067
 int id bounceStart 0x7f090068
+int id bt_add_tag 0x7f090218
 int id bt_color_dialog 0x7f090069
 int id bt_tag_return 0x7f09006a
 int id buttonPanel 0x7f09006b
@@ -2908,6 +2910,7 @@ int id mtrl_picker_text_input_range_start 0x7f09013e
 int id mtrl_picker_title_text 0x7f09013f
 int id mtrl_view_tag_bottom_padding 0x7f090140
 int id multiply 0x7f090141
+int id my_recycler_view 0x7f090219
 int id nav_controller_view_tag 0x7f090142
 int id nav_host_fragment 0x7f090143
 int id nav_host_fragment_container 0x7f090144
@@ -2941,6 +2944,7 @@ int id outline 0x7f09015f
 int id outward 0x7f090160
 int id overshoot 0x7f090161
 int id packed 0x7f090162
+int id pallete 0x7f09021b
 int id parallax 0x7f090163
 int id parent 0x7f090164
 int id parentPanel 0x7f090165
@@ -3064,6 +3068,7 @@ int id textSpacerNoButtons 0x7f0901da
 int id textSpacerNoTitle 0x7f0901db
 int id textStart 0x7f0901dc
 int id textTop 0x7f0901dd
+int id textView 0x7f09021a
 int id text_date 0x7f0901de
 int id text_feed 0x7f0901df
 int id text_input_end_icon 0x7f0901e0
@@ -3216,6 +3221,7 @@ int layout abc_search_view 0x7f0c0019
 int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout action_bar_img 0x7f0c001c
+int layout activity_edit_tag 0x7f0c0080
 int layout activity_input 0x7f0c001d
 int layout activity_main 0x7f0c001e
 int layout activity_signup 0x7f0c001f
@@ -3310,6 +3316,7 @@ int layout test_toolbar 0x7f0c0077
 int layout test_toolbar_custom_background 0x7f0c0078
 int layout test_toolbar_elevation 0x7f0c0079
 int layout test_toolbar_surface 0x7f0c007a
+int layout text_row_item 0x7f0c0081
 int layout text_view_with_line_height_from_appearance 0x7f0c007b
 int layout text_view_with_line_height_from_layout 0x7f0c007c
 int layout text_view_with_line_height_from_style 0x7f0c007d

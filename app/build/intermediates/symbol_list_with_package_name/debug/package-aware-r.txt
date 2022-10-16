@@ -1,4 +1,4 @@
-com.example.cardgame
+com.example.penguinstudy
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -2537,6 +2537,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_setting
 drawable ic_settings
+drawable ic_tag
 drawable ic_timer
 drawable icon
 drawable m3_appbar_background
@@ -2692,6 +2693,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id bt_add_tag
 id bt_color_dialog
 id bt_tag_return
 id buttonPanel
@@ -2909,6 +2911,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id my_recycler_view
 id nav_controller_view_tag
 id nav_host_fragment
 id nav_host_fragment_container
@@ -2942,6 +2945,7 @@ id outline
 id outward
 id overshoot
 id packed
+id pallete
 id parallax
 id parent
 id parentPanel
@@ -3065,6 +3069,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_date
 id text_feed
 id text_input_end_icon
@@ -3217,6 +3222,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout action_bar_img
+layout activity_edit_tag
 layout activity_input
 layout activity_main
 layout activity_signup
@@ -3311,6 +3317,7 @@ layout test_toolbar
 layout test_toolbar_custom_background
 layout test_toolbar_elevation
 layout test_toolbar_surface
+layout text_row_item
 layout text_view_with_line_height_from_appearance
 layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style

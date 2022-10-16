@@ -1,13 +1,11 @@
 
-package com.example.cardgame;
+package com.example.penguinstudy;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import java.security.PrivateKey;
 
 public class FeedReaderDbHelper extends SQLiteOpenHelper {
     // Version変更

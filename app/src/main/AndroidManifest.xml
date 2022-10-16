@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cardgame">
+    package="com.example.penguinstudy">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CardGame">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.penguinstudy.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
         </activity>
         <!-- InputActivity -->
         <activity
-            android:name=".InputActivity"
+            android:name="com.example.penguinstudy.InputActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.INPUT" />
@@ -33,7 +33,7 @@
         </activity>
 
         <activity
-            android:name="SignUpActivity"
+            android:name="com.example.penguinstudy.SignUpActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.SIGNUP" />
@@ -42,7 +42,7 @@
         </activity>
 
         <activity
-            android:name=".FragmentStopwatch"
+            android:name="com.example.penguinstudy.FragmentStopwatch"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.STOPWATCH" />

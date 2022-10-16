@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navi_home"
-        android:name="com.example.cardgame.FragmentStats"
+        android:name="com.example.penguinstudy.FragmentStats"
         android:label="FragmentStats"
         tools:layout="@layout/fragment_stats">
 
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navi_game"
-        android:name="com.example.cardgame.FragmentGame"
+        android:name="com.example.penguinstudy.FragmentGame"
         android:label="FragmentGame"
         tools:layout="@layout/fragment_game">
 
@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/navi_stopwatch"
-        android:name="com.example.cardgame.FragmentStopwatch"
+        android:name="com.example.penguinstudy.FragmentStopwatch"
         android:label="FragmentTimer"
         tools:layout="@layout/fragment_stopwatch">
 
@@ -43,7 +43,7 @@
 
     <fragment
         android:id="@+id/navi_settings"
-        android:name="com.example.cardgame.FragmentSettings"
+        android:name="com.example.penguinstudy.FragmentSettings"
         android:label="FragmentSetting"
         tools:layout="@layout/fragment_settings">
 

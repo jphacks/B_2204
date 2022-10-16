@@ -1,17 +1,13 @@
-package com.example.cardgame;
+package com.example.penguinstudy;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-
-import java.util.Optional;
 
 public class FragmentSettings extends Fragment{
     FeedReaderDbHelper dbHelper = null; // ここの時点ではActivityを取得できない

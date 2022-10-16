@@ -1,20 +1,15 @@
-package com.example.cardgame;
+package com.example.penguinstudy;
 
 import static android.widget.TextView.BufferType.EDITABLE;
 
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Point;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.provider.BaseColumns;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -26,17 +21,9 @@ import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 
-import com.github.mikephil.charting.data.Entry;
-
-import org.json.JSONException;
-import org.w3c.dom.Text;
-
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class FragmentGame extends Fragment {
     private int feed_num = 0;

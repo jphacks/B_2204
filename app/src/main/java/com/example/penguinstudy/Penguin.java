@@ -1,4 +1,4 @@
-package com.example.cardgame;
+package com.example.penguinstudy;
 
 import android.graphics.Point;
 import android.graphics.PointF;

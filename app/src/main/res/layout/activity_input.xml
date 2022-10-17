@@ -51,17 +51,10 @@
                 android:gravity="center"
                 android:layout_weight="1">
 
-                <EditText
-                    android:id="@+id/kind_study"
-                    android:layout_width="280dp"
-                    android:layout_height="50dp"
-                    android:hint="種類"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:paddingLeft="10dp"
-                    android:background="@drawable/edit_text"/>
+                <Spinner
+                    android:id="@+id/study_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 

@@ -8,6 +8,9 @@
         <entry key="..\:/Users/somaf/cardGame/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/somaf/cardGame/app/src/main/res/layout/activity_signup.xml" value="0.12" />
         <entry key="..\:/Users/somaf/cardGame/app/src/main/res/layout/fragment_game.xml" value="0.22" />
+        <entry key="app/src/main/res/drawable-v24/button_rank.xml" value="0.14739583333333334" />
+        <entry key="app/src/main/res/drawable/button_chart.xml" value="0.14739583333333334" />
+        <entry key="app/src/main/res/drawable/button_rank.xml" value="0.14739583333333334" />
         <entry key="app/src/main/res/drawable/circle_button.xml" value="0.14739583333333334" />
         <entry key="app/src/main/res/drawable/edit_text.xml" value="0.14739583333333334" />
         <entry key="app/src/main/res/drawable/progress.xml" value="0.14739583333333334" />
@@ -18,14 +21,18 @@
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_stopwatch.xml" value="0.13125" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.13177083333333334" />
+        <entry key="app/src/main/res/layout/fragment_charts.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_game.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.13125" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.13125" />
-        <entry key="app/src/main/res/layout/fragment_stats.xml" value="0.13177083333333334" />
+        <entry key="app/src/main/res/layout/fragment_stats.xml" value="0.11" />
         <entry key="app/src/main/res/layout/fragment_stopwatch.xml" value="0.13125" />
         <entry key="app/src/main/res/layout/fragment_timer.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/item_ranking.xml" value="0.165" />
         <entry key="app/src/main/res/layout/nav_host_fragment.xml" value="0.11503623188405797" />
         <entry key="app/src/main/res/layout/text_row_item.xml" value="0.5" />
         <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.2528205128205128" />
+        <entry key="app/src/main/res/menu/menu_header_navigation.xml" value="0.13125" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14739583333333334" />
       </map>
     </option>

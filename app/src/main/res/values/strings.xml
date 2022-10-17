@@ -46,4 +46,7 @@
     <string name="reset">リセット</string>
     <string name="stop">ストップ</string>
     <string name="add">記入する</string>
+
+    <!-- HeaderMenu -->
+    <string name="navi_charts">チャート</string>
 </resources>

@@ -1,22 +1,26 @@
 package com.example.penguinstudy;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CursorAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.penguinstudy.databinding.ActivityInputBinding;
-import com.example.penguinstudy.databinding.ActivityMainBinding;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -26,12 +30,9 @@ import java.util.Map;
 
 public class InputActivity extends AppCompatActivity {
 
-    // C++ ライブラリの読み込み
-    static {
-        System.loadLibrary("cardgame");
+    public float calculateHour(float hour, float minute){
+        return hour + (minute/60);
     }
-
-    public native float calculateHour(float hour, float minute);
 
     private ActivityInputBinding binding;
     // DBヘルパー使用宣言 //
@@ -39,6 +40,7 @@ public class InputActivity extends AppCompatActivity {
     private String uri = "https://penguin-study-api.herokuapp.com/v1/users/";
     private CommonMethod cm = new CommonMethod(this);
     private int feed_num;
+    private String subject = "default";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,10 +79,34 @@ public class InputActivity extends AppCompatActivity {
         });
 
         // テキスト読み込み用 //
-        EditText et_kind = (EditText) binding.kindStudy;
         EditText et_todo = (EditText) binding.toDo;
         EditText et_hour = (EditText) binding.timeHour;
         EditText et_minute = (EditText) binding.timeMinute;
+        Spinner sp_study = (Spinner) binding.studySpinner;
+        //  "setting spinner"
+        String[] projection = { FeedReaderContract.TagEntry.COLUMN_NAME_TAG };
+        Cursor tag_cursor = dbHelper.queryTable(FeedReaderContract.TagEntry.TABLE_NAME, projection);
+        ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this, android.R.layout.simple_spinner_item);
+
+        while(tag_cursor.moveToNext()) {
+
+            adapter.add(tag_cursor.getString(tag_cursor.getColumnIndexOrThrow("tag_name")));
+
+        }
+        tag_cursor.close();
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp_study.setAdapter(adapter);
+
+        // toDo get spinner data
+        sp_study.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                subject = parent.getSelectedItem().toString();
+                Log.d("checked",subject);
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
 
         if(hour_text != null)
             et_hour.setText(hour_text);
@@ -93,9 +119,7 @@ public class InputActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d("Button:","Returnボタンが押されました");
                 // 情報取得 //
-                String subject = et_kind.getText().toString();
                 String toDo = getToDo(et_todo);
-                /* toDo "insert todo to Study data" -> done */
 
                 float hour = etTransfer(et_hour);
                 float minute = etTransfer(et_minute);
@@ -105,6 +129,7 @@ public class InputActivity extends AppCompatActivity {
                 Date date = new Date();
                 // 時間変換 //
                 float time = calculateHour(hour, minute);
+
 
                 if(!dbHelper.setStudyData(subject, time, String.valueOf(sdf.format(date)), toDo) || !dbHelper.updateFeed(feed_num, (int) hour))
                     Toast.makeText(getApplicationContext(), R.string.unknown_error, Toast.LENGTH_SHORT).show();

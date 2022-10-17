@@ -2514,6 +2514,10 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button_chart
+drawable button_rank
+drawable charts_off
+drawable charts_on
 drawable circle_button
 drawable design_fab_background
 drawable design_ic_visibility
@@ -2584,6 +2588,8 @@ drawable notify_panel_notification_icon_bg
 drawable progress
 drawable progress_background
 drawable progress_fill
+drawable rank_off
+drawable rank_on
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2656,6 +2662,7 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_text
+id action_to_charts
 id action_to_game
 id action_to_home
 id action_to_settings
@@ -2696,6 +2703,8 @@ id bounceStart
 id bt_add_tag
 id bt_color_dialog
 id bt_tag_return
+id bt_to_charts
+id bt_to_rank
 id buttonPanel
 id button_back
 id button_feed
@@ -2841,7 +2850,6 @@ id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
-id kind_study
 id labeled
 id layout
 id left
@@ -2914,7 +2922,9 @@ id multiply
 id my_recycler_view
 id nav_controller_view_tag
 id nav_host_fragment
+id nav_host_fragment_charts
 id nav_host_fragment_container
+id navi_charts
 id navi_game
 id navi_home
 id navi_settings
@@ -2926,6 +2936,7 @@ id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_graph
+id navigation_graph_charts
 id navigation_header_container
 id never
 id neverCompleteToEnd
@@ -3040,6 +3051,7 @@ id stop
 id stop_button
 id stopwatch
 id stretch
+id study_spinner
 id submenuarrow
 id submit_area
 id supportScrollUp
@@ -3075,7 +3087,10 @@ id text_feed
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_name
+id text_rank
 id text_stomach
+id text_study
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3243,11 +3258,14 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dynamic_feature_install_fragment
+layout fragment_charts
 layout fragment_game
+layout fragment_rank
 layout fragment_settings
 layout fragment_stats
 layout fragment_stopwatch
 layout fragment_timer
+layout item_ranking
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3328,6 +3346,7 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
+navigation nav_graph_charts
 plurals mtrl_badge_content_description
 raw keep
 string abc_action_bar_home_description
@@ -3463,6 +3482,7 @@ string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string navi_charts
 string navi_game
 string navi_home
 string navi_settings

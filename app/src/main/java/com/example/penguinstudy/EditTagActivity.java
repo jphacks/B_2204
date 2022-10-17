@@ -59,14 +59,6 @@ public class EditTagActivity extends AppCompatActivity {
         bt_color.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // サイズ変更 //
-                /*
-                WindowManager.LayoutParams lp = colorPickerDialog.getWindow().getAttributes();
-                //DisplayMetrics metrics = getResources().getDisplayMetrics();
-                lp.width = 800;
-                lp.height = 800;
-                colorPickerDialog.getWindow().setAttributes(lp);
-                */
                 colorPickerDialog.show();
             } // colorピッカーを表示
         });

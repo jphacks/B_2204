@@ -25,7 +25,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class FragmentGame extends Fragment {
+public class FragmentGame extends Fragment implements Runnable {
     private int feed_num = 0;
     private TextView feed_output = null;
     private TextView text_date = null;
@@ -33,7 +33,9 @@ public class FragmentGame extends Fragment {
     private ProgressBar stomach_bar = null;
     private CoordinatorLayout ice_field = null;
     private Penguin penguin = null;
+    private ImageView penguin_img;
     private float stomach = 100;
+    private Point window_size = new Point();
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
     final Handler mainHandler = new Handler(Looper.getMainLooper());
 
@@ -45,7 +47,6 @@ public class FragmentGame extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Windowサイズ取得
-        Point window_size = new Point();
         getActivity().getWindowManager().getDefaultDisplay().getRealSize(window_size);
 
         dbHelper = new FeedReaderDbHelper(this.getActivity());
@@ -93,38 +94,38 @@ public class FragmentGame extends Fragment {
         });
 
         // ペンギンを動かす
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                ImageView penguin_img = view.findViewById(R.id.penguin);
-                penguin = new Penguin(penguin_img, window_size, stomach);
-                int count = 0;
-                while(true) {
-                    try {
-                        count++;
-                        if(count%600 == 1){ // 1分に1回投げる
-                            updatePenguin(count != 1); // ペンギン情報の更新
-                        }
-                        penguin.move();
-                        Thread.sleep(100);//0.1秒停止
-                        // View更新
-                        try {
-                            // メインスレッドに処理を戻す <= メインスレッド以外からはViewを触れない
-                            mainHandler.post(() -> {
-                                text_stomach.setText(String.valueOf((int)penguin.stomach));
-                                stomach_bar.setProgress((int)penguin.stomach);
-                            });
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
+        penguin_img = view.findViewById(R.id.penguin);
+        Thread thread = new Thread(this);
+        thread.start();
+    }
 
-                    } catch (InterruptedException e) {
-
-                    }
+    @Override
+    public void run() {
+        penguin = new Penguin(penguin_img, window_size, stomach);
+        int count = 0;
+        while (true) {
+            try {
+                count++;
+                if (count % 600 == 1) { // 1分に1回投げる
+                    updatePenguin(count != 1); // ペンギン情報の更新
                 }
-            }
-        }).start();
+                penguin.move();
+                Thread.sleep(100);//0.1秒停止
+                // View更新
+                try {
+                    // メインスレッドに処理を戻す <= メインスレッド以外からはViewを触れない
+                    mainHandler.post(() -> {
+                        text_stomach.setText(String.valueOf((int) penguin.stomach));
+                        stomach_bar.setProgress((int) penguin.stomach);
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
+            } catch (InterruptedException e) {
+
+            }
+        }
     }
 
     public void giveFeed(Point window_size){

@@ -7,7 +7,18 @@
     android:layout_marginBottom="@dimen/bottom_margin"
     tools:context=".FragmentRank">
 
+    <ProgressBar
+        android:id="@+id/loading"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:background="@drawable/icon_mini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="center" />
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -23,26 +34,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_chart"
-                android:textOn=""
+                android:checked="false"
                 android:textOff=""
-                android:checked="false"/>
+                android:textOn="" />
 
             <ToggleButton
                 android:id="@+id/bt_to_rank"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_rank"
-                android:textOn=""
+                android:checked="true"
                 android:textOff=""
-                android:checked="true"/>
+                android:textOn="" />
 
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/my_recycler_view"
-            android:scrollbars="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
 
     </LinearLayout>
 

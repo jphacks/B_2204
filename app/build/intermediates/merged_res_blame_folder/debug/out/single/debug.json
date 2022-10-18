@@ -36,12 +36,12 @@
         "source": "/Users/mahiro/cardGame/app/src/main/res/navigation/nav_graph.xml"
     },
     {
-        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_progress_background.png.flat",
@@ -70,6 +70,10 @@
     {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/layout_action_bar_img.xml.flat",
         "source": "/Users/mahiro/cardGame/app/src/main/res/layout/action_bar_img.xml"
+    },
+    {
+        "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_icon_mini.png.flat",
+        "source": "/Users/mahiro/cardGame/app/src/main/res/drawable/icon_mini.png"
     },
     {
         "merged": "/Users/mahiro/cardGame/app/build/intermediates/merged_res/debug/drawable_baby_feed.png.flat",

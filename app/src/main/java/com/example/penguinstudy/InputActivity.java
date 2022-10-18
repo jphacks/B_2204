@@ -102,7 +102,6 @@ public class InputActivity extends AppCompatActivity {
         sp_study.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 subject = parent.getSelectedItem().toString();
-                Log.d("checked",subject);
             }
             public void onNothingSelected(AdapterView<?> parent) {
             }

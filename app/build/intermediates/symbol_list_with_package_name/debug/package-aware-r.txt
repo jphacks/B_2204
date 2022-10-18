@@ -2544,6 +2544,7 @@ drawable ic_settings
 drawable ic_tag
 drawable ic_timer
 drawable icon
+drawable icon_mini
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2858,8 +2859,10 @@ id legacy
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
+id loading
 id locale
 id ltr
 id masked

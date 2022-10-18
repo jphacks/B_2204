@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.ViewHolder> {
 
-    private int[] ranks;
+    private String[] ranks;
     private String[] users;
-    private float[] studies;
+    private String[] studies;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView textRank;
@@ -37,7 +37,7 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.ViewHold
 
     }
 
-    public RankingAdapter(int[] ranks, String[] users, float[] studies) {
+    public RankingAdapter(String[] ranks, String[] users, String[] studies) {
         this.ranks = ranks;
         this.users = users;
         this.studies = studies;

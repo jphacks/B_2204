@@ -13,6 +13,7 @@
         <entry key="app/src/main/res/drawable/button_rank.xml" value="0.14739583333333334" />
         <entry key="app/src/main/res/drawable/circle_button.xml" value="0.14739583333333334" />
         <entry key="app/src/main/res/drawable/edit_text.xml" value="0.14739583333333334" />
+        <entry key="app/src/main/res/drawable/loading.xml" value="0.14739583333333334" />
         <entry key="app/src/main/res/drawable/progress.xml" value="0.14739583333333334" />
         <entry key="app/src/main/res/layout/action_bar_img.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_edit_tag.xml" value="0.2158678296734059" />
@@ -23,7 +24,7 @@
         <entry key="app/src/main/res/layout/content_main.xml" value="0.13177083333333334" />
         <entry key="app/src/main/res/layout/fragment_charts.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_game.xml" value="0.125" />
-        <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.13125" />
+        <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.18505123568414708" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.13125" />
         <entry key="app/src/main/res/layout/fragment_stats.xml" value="0.11" />
         <entry key="app/src/main/res/layout/fragment_stopwatch.xml" value="0.13125" />

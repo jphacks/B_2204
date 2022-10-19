@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.BaseColumns;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -12,16 +13,14 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.BarData;
-import com.github.mikephil.charting.data.BarDataSet;
-import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -54,7 +53,6 @@ public class FragmentAllLinechart extends Fragment {
             fragmentTransaction.commit();
         });
 
-        /*
         // DB 接続
         dbHelper = new FeedReaderDbHelper(this.getActivity()); // ここでActivityを取得
 
@@ -62,24 +60,23 @@ public class FragmentAllLinechart extends Fragment {
         getTags();
 
         // チャートを取得
-        mChart = view.findViewById(R.id.bar_chart);
+        mChart = view.findViewById(R.id.line_chart);
 
         // 日付取得
         date = new Date(); // 今日
 
         // グラフデータ格納
-        setChartData(cm.dateTransfer(date));
+        setChartData();
         TextView study_text = view.findViewById(R.id.study_time); // 上に勉強時間を書く
         study_text.setText(String.valueOf(study_time));
 
         try {
-            chartSetting();
+            //chartSetting();
         }catch (Exception e){
         }
-        */
     }
-    /*
-    public void setChartData(String date){
+
+    public void setChartData(){
         // queryのselect
         String[] projection = {
                 BaseColumns._ID,
@@ -87,25 +84,26 @@ public class FragmentAllLinechart extends Fragment {
                 "sum (" + FeedReaderContract.StudyEntry.COLUMN_NAME_TIME + ") as sum",
                 FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT,
         };
-        String selection = FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT + " = ? AND " +
-                FeedReaderContract.StudyEntry.COLUMN_NAME_DATE + " = ? ";
+        String selection = FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT + " = ? ";
+        String group_by = FeedReaderContract.StudyEntry.COLUMN_NAME_DATE;
         List<String[]> selectionArgs = new ArrayList<>();
         for(String subject: subjects)
-            selectionArgs.add(new String[]{subject, date});
-        List<IBarDataSet> data_set = new ArrayList<>();
+            selectionArgs.add(new String[]{subject});
+        List<ILineDataSet> data_set = new ArrayList<>();
         List<String> labels = new ArrayList<>();
         int c = 0;
         for(String[] subject: selectionArgs) {
-            Cursor cursor = dbHelper.queryTable(FeedReaderContract.StudyEntry.TABLE_NAME, projection, selection, subject);
-            List<BarEntry> entry = new ArrayList<>();
+            Cursor cursor = dbHelper.queryTable(FeedReaderContract.StudyEntry.TABLE_NAME, projection, selection, subject, group_by);
+            List<Entry> entry = new ArrayList<>();
             int i = 0;
             while (cursor.moveToNext()) {
                 float data = cursor.getFloat(cursor.getColumnIndexOrThrow("sum"));
+                String date = cursor.getString(cursor.getColumnIndexOrThrow(FeedReaderContract.StudyEntry.COLUMN_NAME_DATE));
                 study_time += data;
-                entry.add(new BarEntry(i, data));
+                entry.add(new Entry(i, data));
                 i++;
             }
-            BarDataSet dataSet = new BarDataSet(entry, subject[0]);
+            LineDataSet dataSet = new LineDataSet(entry, subject[0]);
             dataSet.setColor(colors.get(c));
             dataSet.setValueTextSize(0f);
             dataSet.setFormLineWidth(1f);
@@ -115,10 +113,10 @@ public class FragmentAllLinechart extends Fragment {
         }
 
         // 型変換
-        BarData barData = new BarData(data_set);
+        LineData lineData = new LineData(data_set);
 
         // set data
-        mChart.setData(barData);
+        mChart.setData(lineData);
     }
 
     public void getTags(){
@@ -156,9 +154,6 @@ public class FragmentAllLinechart extends Fragment {
         legend.setTextSize(20f);
 
         mChart.getAxisRight().setEnabled(false);
-        mChart.groupBars(0f, 0.2f, 0.2f);
     }
-
-     */
 }
 

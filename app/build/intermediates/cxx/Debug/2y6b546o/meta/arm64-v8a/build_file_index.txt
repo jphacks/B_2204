@@ -1,0 +1,1 @@
+/Users/somakai/workspace/cardGame/app/src/main/cpp/CMakeLists.txt

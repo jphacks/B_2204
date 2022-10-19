@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.BaseColumns;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CursorAdapter;
@@ -71,6 +72,24 @@ public class FragmentSettings extends Fragment{
                     cursor.getColumnIndexOrThrow(FeedReaderContract.TagEntry.COLUMN_NAME_COLOR));
             String tag = cursor.getString(
                     cursor.getColumnIndexOrThrow( FeedReaderContract.TagEntry.COLUMN_NAME_TAG));
+
+            //　loop内でtodoを取得
+            String[] projection_study = { FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT, FeedReaderContract.StudyEntry.COLUMN_NAME_TODO };
+            String selection = FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT + " = ?";
+            String[] selectionArg = { tag };
+            Cursor cursor_study = dbHelper.queryTable(FeedReaderContract.StudyEntry.TABLE_NAME,projection_study,selection,selectionArg);
+            cursor_study.moveToLast();
+            if (cursor_study.getPosition() > 0) {
+                String toDo = cursor_study.getString(
+                        cursor_study.getColumnIndexOrThrow(FeedReaderContract.StudyEntry.COLUMN_NAME_TODO));
+                if(toDo != null) {
+                    tag = tag + " \r\n TODO: " + toDo;
+                    Log.d("check", tag);
+                }
+            }
+            cursor_study.close();
+
+
             tags.add(tag);
             colors.add(color);
         }

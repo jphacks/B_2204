@@ -1,5 +1,10 @@
 com/example/penguinstudy/CommonMethod.java
  com.example.penguinstudy.CommonMethod
+com/example/penguinstudy/ColorPickerDialog.java
+ com.example.penguinstudy.ColorPickerDialog
+ com.example.penguinstudy.ColorPickerDialog$1
+ com.example.penguinstudy.ColorPickerDialog$ColorPickerView
+ com.example.penguinstudy.ColorPickerDialog$OnColorChangedListener
 com/example/penguinstudy/EditTagActivity.java
  com.example.penguinstudy.EditTagActivity
  com.example.penguinstudy.EditTagActivity$1
@@ -7,11 +12,6 @@ com/example/penguinstudy/EditTagActivity.java
  com.example.penguinstudy.EditTagActivity$3
 com/example/penguinstudy/FeedReaderDbHelper.java
  com.example.penguinstudy.FeedReaderDbHelper
-com/example/penguinstudy/ColorPickerDialog.java
- com.example.penguinstudy.ColorPickerDialog
- com.example.penguinstudy.ColorPickerDialog$1
- com.example.penguinstudy.ColorPickerDialog$ColorPickerView
- com.example.penguinstudy.ColorPickerDialog$OnColorChangedListener
 com/example/penguinstudy/FeedReaderContract.java
  com.example.penguinstudy.FeedReaderContract
  com.example.penguinstudy.FeedReaderContract$AccountEntry
@@ -71,13 +71,22 @@ com/example/penguinstudy/FragmentSettings.java
  com.example.penguinstudy.FragmentSettings$1
 com/example/penguinstudy/databinding/ActivitySignupBinding.java
  com.example.penguinstudy.databinding.ActivitySignupBinding
+com/example/penguinstudy/FragmentAllLinechart.java
+ com.example.penguinstudy.FragmentAllLinechart
 com/example/penguinstudy/FragmentStopwatch.java
  com.example.penguinstudy.FragmentStopwatch
 com/example/penguinstudy/databinding/FragmentTimerBinding.java
  com.example.penguinstudy.databinding.FragmentTimerBinding
+com/example/penguinstudy/SpinnerAdapter.java
+ com.example.penguinstudy.SpinnerAdapter
+ com.example.penguinstudy.SpinnerAdapter$ViewHolder
+com/example/penguinstudy/databinding/FragmentAllLinechartBinding.java
+ com.example.penguinstudy.databinding.FragmentAllLinechartBinding
 com/example/penguinstudy/MainActivity.java
  com.example.penguinstudy.MainActivity
  com.example.penguinstudy.MainActivity$1
+com/example/penguinstudy/databinding/FragmentTodayBarchartBinding.java
+ com.example.penguinstudy.databinding.FragmentTodayBarchartBinding
 com/example/penguinstudy/CustomAdapter.java
  com.example.penguinstudy.CustomAdapter
  com.example.penguinstudy.CustomAdapter$ViewHolder
@@ -89,6 +98,8 @@ com/example/penguinstudy/InputActivity.java
  com.example.penguinstudy.InputActivity$2
  com.example.penguinstudy.InputActivity$3
  com.example.penguinstudy.InputActivity$4
+com/example/penguinstudy/FragmentTodayBarchart.java
+ com.example.penguinstudy.FragmentTodayBarchart
 com/example/penguinstudy/SignUpActivity.java
  com.example.penguinstudy.SignUpActivity
  com.example.penguinstudy.SignUpActivity$1

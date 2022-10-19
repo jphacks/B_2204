@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph_charts"
+    app:startDestination="@id/navi_charts">
+
+    <fragment
+        android:id="@+id/navi_charts"
+        android:name="com.example.penguinstudy.FragmentCharts"
+        android:label="FragmentCharts"
+        tools:layout="@layout/fragment_charts">
+
+        <action
+            android:id="@+id/action_to_charts"
+            app:destination="@id/navi_charts" />
+
+    </fragment>
+
+</navigation>

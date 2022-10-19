@@ -24,6 +24,7 @@ import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -82,26 +83,33 @@ public class InputActivity extends AppCompatActivity {
         EditText et_todo = (EditText) binding.toDo;
         EditText et_hour = (EditText) binding.timeHour;
         EditText et_minute = (EditText) binding.timeMinute;
-        Spinner sp_study = (Spinner) binding.studySpinner;
+        Spinner sp_tags = (Spinner) binding.studySpinner;
         //  "setting spinner"
-        String[] projection = { FeedReaderContract.TagEntry.COLUMN_NAME_TAG };
+        String[] projection = {
+                FeedReaderContract.TagEntry.COLUMN_NAME_TAG,
+                FeedReaderContract.TagEntry.COLUMN_NAME_COLOR
+        };
         Cursor tag_cursor = dbHelper.queryTable(FeedReaderContract.TagEntry.TABLE_NAME, projection);
-        ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this, android.R.layout.simple_spinner_item);
-
+        //ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this, android.R.layout.simple_spinner_item);
+        List<String> tags = new ArrayList<>();
+        List<Integer> colors = new ArrayList<>();
         while(tag_cursor.moveToNext()) {
-
-            adapter.add(tag_cursor.getString(tag_cursor.getColumnIndexOrThrow("tag_name")));
-
+            tags.add(tag_cursor.getString(tag_cursor.getColumnIndexOrThrow(FeedReaderContract.TagEntry.COLUMN_NAME_TAG)));
+            colors.add(tag_cursor.getInt(tag_cursor.getColumnIndexOrThrow(FeedReaderContract.TagEntry.COLUMN_NAME_COLOR)));
         }
         tag_cursor.close();
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        sp_study.setAdapter(adapter);
+        SpinnerAdapter adapter = new SpinnerAdapter(this, R.layout.text_row_item,
+                tags.toArray(new String[tags.size()]), colors.stream().mapToInt(i -> i).toArray());
+
+        //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp_tags.setAdapter(adapter);
 
         // toDo get spinner data
-        sp_study.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        sp_tags.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 subject = parent.getSelectedItem().toString();
+                Log.d("SUBJECT: ", subject);
             }
             public void onNothingSelected(AdapterView<?> parent) {
             }

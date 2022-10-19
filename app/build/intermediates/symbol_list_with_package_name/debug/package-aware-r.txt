@@ -2516,6 +2516,8 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_chart
 drawable button_rank
+drawable change_chart
+drawable change_chart_left
 drawable charts_off
 drawable charts_on
 drawable circle_button
@@ -2663,11 +2665,13 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_text
+id action_to_all
 id action_to_charts
 id action_to_game
 id action_to_home
 id action_to_settings
 id action_to_stopwatch
+id action_to_today
 id actions
 id activity_chooser_view_content
 id add
@@ -2704,8 +2708,10 @@ id bounceStart
 id bt_add_tag
 id bt_color_dialog
 id bt_tag_return
+id bt_to_all
 id bt_to_charts
 id bt_to_rank
+id bt_to_today
 id buttonPanel
 id button_back
 id button_feed
@@ -2858,6 +2864,7 @@ id leftToRight
 id legacy
 id line1
 id line3
+id line_chart
 id linear
 id linearLayout
 id listMode
@@ -2927,11 +2934,14 @@ id nav_controller_view_tag
 id nav_host_fragment
 id nav_host_fragment_charts
 id nav_host_fragment_container
+id nav_host_fragment_contents
+id navi_all
 id navi_charts
 id navi_game
 id navi_home
 id navi_settings
 id navi_stopwatch
+id navi_today
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3055,6 +3065,7 @@ id stop_button
 id stopwatch
 id stretch
 id study_spinner
+id study_time
 id submenuarrow
 id submit_area
 id supportScrollUp
@@ -3261,6 +3272,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dynamic_feature_install_fragment
+layout fragment_all_linechart
 layout fragment_charts
 layout fragment_game
 layout fragment_rank
@@ -3268,6 +3280,7 @@ layout fragment_settings
 layout fragment_stats
 layout fragment_stopwatch
 layout fragment_timer
+layout fragment_today_barchart
 layout item_ranking
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3350,6 +3363,7 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
 navigation nav_graph_charts
+navigation nav_graph_content
 plurals mtrl_badge_content_description
 raw keep
 string abc_action_bar_home_description

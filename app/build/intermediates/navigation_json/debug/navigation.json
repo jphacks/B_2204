@@ -1,5 +1,10 @@
 [
   {
+    "name": "nav_graph_content",
+    "navigationXmlIds": [],
+    "deepLinks": []
+  },
+  {
     "name": "nav_graph",
     "navigationXmlIds": [],
     "deepLinks": []

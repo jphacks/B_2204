@@ -4,15 +4,23 @@ import android.content.Context;
 import android.database.Cursor;
 import android.provider.BaseColumns;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class CommonMethod {
     public Context context;
     public FeedReaderDbHelper dbHelper = null;
+    CommonMethod(){}
     CommonMethod(Context context){
         this.context = context;
         this.dbHelper = new FeedReaderDbHelper(context);
+    }
+
+    public String dateTransfer(Date date){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy'-'MM'-'dd");
+        return String.valueOf(sdf.format(date));
     }
 
     public String getLast(){

@@ -3,17 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph_charts"
-    app:startDestination="@id/navi_charts">
+    app:startDestination="@id/navi_today">
 
     <fragment
-        android:id="@+id/navi_charts"
-        android:name="com.example.penguinstudy.FragmentCharts"
-        android:label="FragmentCharts"
-        tools:layout="@layout/fragment_charts">
+        android:id="@+id/navi_today"
+        android:name="com.example.penguinstudy.FragmentTodayBarchart"
+        android:label="FragmentTodayBarchart"
+        tools:layout="@layout/fragment_today_barchart">
 
         <action
-            android:id="@+id/action_to_charts"
-            app:destination="@id/navi_charts" />
+            android:id="@+id/action_to_today"
+            app:destination="@id/navi_today" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navi_all"
+        android:name="com.example.penguinstudy.FragmentAllLinechart"
+        android:label="FragmentTodayBarchart"
+        tools:layout="@layout/fragment_all_linechart">
+
+        <action
+            android:id="@+id/action_to_all"
+            app:destination="@id/navi_all" />
 
     </fragment>
 

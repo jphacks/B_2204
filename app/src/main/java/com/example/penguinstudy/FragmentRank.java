@@ -67,7 +67,7 @@ public class FragmentRank extends Fragment implements Runnable {
         button.setOnClickListener( v -> {
             FragmentManager fragmentManager = getParentFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.nav_host_fragment_charts, FragmentCharts.class, null);
+            fragmentTransaction.replace(R.id.nav_host_fragment_contents, FragmentCharts.class, null);
             fragmentTransaction.commit();
         });
     }

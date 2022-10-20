@@ -99,7 +99,7 @@ public class InputActivity extends AppCompatActivity {
         }
         tag_cursor.close();
 
-        SpinnerAdapter adapter = new SpinnerAdapter(this, R.layout.text_row_item,
+        SpinnerAdapter adapter = new SpinnerAdapter(this, R.layout.text_spinner_item,
                 tags.toArray(new String[tags.size()]), colors.stream().mapToInt(i -> i).toArray());
 
         //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

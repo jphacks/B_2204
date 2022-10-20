@@ -10,10 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
 
     private String[] tags;
+    private String[] todo;
     private int[] colors;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView textView;
+        private final TextView textView2;
         private final View pallete;
 
         public ViewHolder(View view) {
@@ -21,21 +23,25 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             // Define click listener for the ViewHolder's View
 
             textView = (TextView) view.findViewById(R.id.textView);
+            textView2 = (TextView) view.findViewById(R.id.textView2);
             pallete = (View) view.findViewById(R.id.pallete);
         }
 
         public TextView getTextView() {
             return textView;
         }
-
+        public TextView getTextView2() {
+            return textView2;
+        }
         public View getPallete() {
             return pallete;
         }
     }
 
-    public CustomAdapter(String[] dataSet, int[] palletes) {
+    public CustomAdapter(String[] dataSet, int[] palletes, String[] todo_list) {
         tags = dataSet;
         colors = palletes;
+        todo = todo_list;
     }
 
     // Create new views (invoked by the layout manager)
@@ -55,6 +61,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         viewHolder.getTextView().setText(tags[position]);
+        viewHolder.getTextView().setText(todo[position]);
         viewHolder.getPallete().setBackgroundColor(colors[position]);
     }
 

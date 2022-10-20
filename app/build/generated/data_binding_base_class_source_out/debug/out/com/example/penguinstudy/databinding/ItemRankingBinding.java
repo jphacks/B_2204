@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +21,9 @@ public final class ItemRankingBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
+  public final ImageView imgMedal;
+
+  @NonNull
   public final TextView textName;
 
   @NonNull
@@ -28,9 +32,10 @@ public final class ItemRankingBinding implements ViewBinding {
   @NonNull
   public final TextView textStudy;
 
-  private ItemRankingBinding(@NonNull FrameLayout rootView, @NonNull TextView textName,
-      @NonNull TextView textRank, @NonNull TextView textStudy) {
+  private ItemRankingBinding(@NonNull FrameLayout rootView, @NonNull ImageView imgMedal,
+      @NonNull TextView textName, @NonNull TextView textRank, @NonNull TextView textStudy) {
     this.rootView = rootView;
+    this.imgMedal = imgMedal;
     this.textName = textName;
     this.textRank = textRank;
     this.textStudy = textStudy;
@@ -63,6 +68,12 @@ public final class ItemRankingBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.img_medal;
+      ImageView imgMedal = ViewBindings.findChildViewById(rootView, id);
+      if (imgMedal == null) {
+        break missingId;
+      }
+
       id = R.id.text_name;
       TextView textName = ViewBindings.findChildViewById(rootView, id);
       if (textName == null) {
@@ -81,7 +92,8 @@ public final class ItemRankingBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemRankingBinding((FrameLayout) rootView, textName, textRank, textStudy);
+      return new ItemRankingBinding((FrameLayout) rootView, imgMedal, textName, textRank,
+          textStudy);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

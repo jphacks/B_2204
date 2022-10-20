@@ -25,11 +25,15 @@ public final class TextRowItemBinding implements ViewBinding {
   @NonNull
   public final TextView textView;
 
+  @NonNull
+  public final TextView textView2;
+
   private TextRowItemBinding(@NonNull FrameLayout rootView, @NonNull View pallete,
-      @NonNull TextView textView) {
+      @NonNull TextView textView, @NonNull TextView textView2) {
     this.rootView = rootView;
     this.pallete = pallete;
     this.textView = textView;
+    this.textView2 = textView2;
   }
 
   @Override
@@ -71,7 +75,13 @@ public final class TextRowItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new TextRowItemBinding((FrameLayout) rootView, pallete, textView);
+      id = R.id.textView2;
+      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
+      if (textView2 == null) {
+        break missingId;
+      }
+
+      return new TextRowItemBinding((FrameLayout) rootView, pallete, textView, textView2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

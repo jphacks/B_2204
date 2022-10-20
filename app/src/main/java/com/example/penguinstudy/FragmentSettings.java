@@ -66,6 +66,7 @@ public class FragmentSettings extends Fragment{
         };
         Cursor cursor = dbHelper.queryTable(FeedReaderContract.TagEntry.TABLE_NAME,projection);
         List<String> tags = new ArrayList<>();
+        List<String> todo_list = new ArrayList<>();
         List<Integer> colors = new ArrayList<>();
         while (cursor.moveToNext()) {
             int color = (int) cursor.getLong(
@@ -83,18 +84,19 @@ public class FragmentSettings extends Fragment{
                 String toDo = cursor_study.getString(
                         cursor_study.getColumnIndexOrThrow(FeedReaderContract.StudyEntry.COLUMN_NAME_TODO));
                 if(toDo != null) {
-                    tag = tag + " \r\n TODO: " + toDo;
-                    Log.d("check", tag);
+                    todo_list.add("TODO ; " + toDo);
+                    Log.d("check", toDo);
                 }
             }
             cursor_study.close();
 
 
             tags.add(tag);
+            todo_list.add("TODO : nothing");
             colors.add(color);
         }
         // mapを使ってIntegerList => int[]変換
-        CustomAdapter adapter = new CustomAdapter(tags.toArray(new String[tags.size()]), colors.stream().mapToInt(i -> i).toArray());
+        CustomAdapter adapter = new CustomAdapter(tags.toArray(new String[tags.size()]), colors.stream().mapToInt(i -> i).toArray(), todo_list.toArray(new String[todo_list.size()]));
         recyclerView.setAdapter(adapter);
     }
 }

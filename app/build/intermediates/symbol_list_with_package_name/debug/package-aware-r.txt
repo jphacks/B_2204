@@ -2507,6 +2507,7 @@ drawable baby_settle
 drawable background
 drawable bone
 drawable border
+drawable bronze_medal
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2532,6 +2533,7 @@ drawable egg
 drawable egg_hibi
 drawable enter
 drawable fish
+drawable gold_medal
 drawable ic_clock_black_24dp
 drawable ic_game
 drawable ic_home
@@ -2579,6 +2581,7 @@ drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_overlay
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable no_medal
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -2596,6 +2599,7 @@ drawable progress_background
 drawable progress_fill
 drawable rank_off
 drawable rank_on
+drawable silver_medal
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2851,6 +2855,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id img_medal
 id immediateStop
 id included
 id info
@@ -3100,6 +3105,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView2
 id text_date
 id text_feed
 id text_input_end_icon
@@ -3356,6 +3362,7 @@ layout test_toolbar_custom_background
 layout test_toolbar_elevation
 layout test_toolbar_surface
 layout text_row_item
+layout text_spinner_item
 layout text_view_with_line_height_from_appearance
 layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style

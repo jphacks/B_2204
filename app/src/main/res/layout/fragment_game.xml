@@ -14,8 +14,8 @@
         android:id="@+id/penguin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/baby_settle"
-        android:contentDescription="@string/img_pg_settle" />
+        android:contentDescription="@string/img_pg_settle"
+        android:src="@drawable/baby_settle" />
 
     <TextView
         android:id="@+id/text_date"
@@ -61,6 +61,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/egg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/egg"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/text_feed"

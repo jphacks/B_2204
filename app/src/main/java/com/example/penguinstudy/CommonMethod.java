@@ -80,6 +80,26 @@ public class CommonMethod {
 
         return val;
     }
+    public int getGene(){
+        // ここでActivityを取得
+        // queryのprojection
+        String[] projection = {
+                BaseColumns._ID,
+                FeedReaderContract.PenguinEntry.COLUMN_NAME_GENERATION,
+        };
+
+        String selection = FeedReaderContract.PenguinEntry._ID + " = 1";
+
+        Cursor cursor = dbHelper.queryTable(FeedReaderContract.PenguinEntry.TABLE_NAME, projection, selection, null);
+        int val = 0;
+        while(cursor.moveToNext()) {
+            val = cursor.getInt(
+                    cursor.getColumnIndexOrThrow(FeedReaderContract.PenguinEntry.COLUMN_NAME_GENERATION));
+        }
+        cursor.close();
+
+        return val;
+    }
 
     // アカウント情報取得
     public List getAccount(){

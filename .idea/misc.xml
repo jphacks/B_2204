@@ -25,7 +25,7 @@
         <entry key="app/src/main/res/layout/activity_stopwatch.xml" value="0.13125" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.13177083333333334" />
         <entry key="app/src/main/res/layout/fragment_charts.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/fragment_game.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_game.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_rank.xml" value="0.18505123568414708" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.13125" />
         <entry key="app/src/main/res/layout/fragment_stats.xml" value="0.11" />

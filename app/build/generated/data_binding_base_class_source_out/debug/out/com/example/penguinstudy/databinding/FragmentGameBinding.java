@@ -26,6 +26,9 @@ public final class FragmentGameBinding implements ViewBinding {
   public final ImageButton buttonFeed;
 
   @NonNull
+  public final ImageButton egg;
+
+  @NonNull
   public final CoordinatorLayout iceField;
 
   @NonNull
@@ -44,11 +47,12 @@ public final class FragmentGameBinding implements ViewBinding {
   public final TextView textStomach;
 
   private FragmentGameBinding(@NonNull CoordinatorLayout rootView, @NonNull ImageButton buttonFeed,
-      @NonNull CoordinatorLayout iceField, @NonNull ImageView penguin,
+      @NonNull ImageButton egg, @NonNull CoordinatorLayout iceField, @NonNull ImageView penguin,
       @NonNull ProgressBar stomachBar, @NonNull TextView textDate, @NonNull TextView textFeed,
       @NonNull TextView textStomach) {
     this.rootView = rootView;
     this.buttonFeed = buttonFeed;
+    this.egg = egg;
     this.iceField = iceField;
     this.penguin = penguin;
     this.stomachBar = stomachBar;
@@ -90,6 +94,12 @@ public final class FragmentGameBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.egg;
+      ImageButton egg = ViewBindings.findChildViewById(rootView, id);
+      if (egg == null) {
+        break missingId;
+      }
+
       CoordinatorLayout iceField = (CoordinatorLayout) rootView;
 
       id = R.id.penguin;
@@ -122,8 +132,8 @@ public final class FragmentGameBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentGameBinding((CoordinatorLayout) rootView, buttonFeed, iceField, penguin,
-          stomachBar, textDate, textFeed, textStomach);
+      return new FragmentGameBinding((CoordinatorLayout) rootView, buttonFeed, egg, iceField,
+          penguin, stomachBar, textDate, textFeed, textStomach);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

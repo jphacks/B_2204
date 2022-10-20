@@ -19,6 +19,7 @@ public class Penguin {
     public boolean isFind = false; // 餌を見つけたか
     public int idx = -1; // 餌番号
     public float stomach;
+    public boolean alive = true;
 
     Penguin(ImageView penguin_img, Point window_size, float stomach){
         this.img = penguin_img;
@@ -37,30 +38,51 @@ public class Penguin {
         this.img.setY((float)(this.rx.y));
     }
 
+    // 生きているか
+    public boolean isAlive() throws InterruptedException{
+        if(!this.alive) return false;
+        if(this.stomach<=0) {
+            this.img.setImageResource(R.drawable.baby_death);
+            this.alive = false;
+            this.stomach = 0;
+        }
+        return this.alive;
+    }
+
+    // 生まれる
+    public void born(float stomach){
+        this.img.setImageResource(R.drawable.baby_settle);
+        this.stomach = stomach;
+        this.alive = true;
+    }
+
+    // 動く
     public void move(){
-        if(Math.random() < 0.01) // 1%で方向を変える => レヴィウォーク
-            this.theta =  (float) (2 * Math.PI * Math.random());
-        PointF rand_walk = randomWalk();
-        PointF cent_walk = centerWalk();
-        if(!isFind && feeds.size() != 0)
-            findFeed();
-        PointF feed_walk = feedWalk();
-        if(isFind) {
-            rand_walk = new PointF(0, 0);
-            cent_walk = new PointF(0, 0);
-            if(calcDistance(rx, feeds.get(idx))<10) {
-                try {
-                    this.eat();
-                } catch (InterruptedException e) {
-                    Log.e("EROOR: ", String.valueOf(e));
+        if(this.alive) {
+            if (Math.random() < 0.01) // 1%で方向を変える => レヴィウォーク
+                this.theta = (float) (2 * Math.PI * Math.random());
+            PointF rand_walk = randomWalk();
+            PointF cent_walk = centerWalk();
+            if (!isFind && feeds.size() != 0)
+                findFeed();
+            PointF feed_walk = feedWalk();
+            if (isFind) {
+                rand_walk = new PointF(0, 0);
+                cent_walk = new PointF(0, 0);
+                if (calcDistance(rx, feeds.get(idx)) < 10) {
+                    try {
+                        this.eat();
+                    } catch (InterruptedException e) {
+                        Log.e("EROOR: ", String.valueOf(e));
+                    }
                 }
             }
-        }
 
-        this.rx.x += rand_walk.x + cent_walk.x + feed_walk.x;
-        this.rx.y += rand_walk.y + cent_walk.y + feed_walk.y;
-        this.img.setX((float)(this.rx.x));
-        this.img.setY((float)(this.rx.y));
+            this.rx.x += rand_walk.x + cent_walk.x + feed_walk.x;
+            this.rx.y += rand_walk.y + cent_walk.y + feed_walk.y;
+            this.img.setX((float) (this.rx.x));
+            this.img.setY((float) (this.rx.y));
+        }
     }
 
     // 運動方程式

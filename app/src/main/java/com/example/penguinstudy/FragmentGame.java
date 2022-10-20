@@ -2,6 +2,9 @@ package com.example.penguinstudy;
 
 import static android.widget.TextView.BufferType.EDITABLE;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.PointF;
 import android.os.Bundle;
@@ -20,6 +23,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -34,6 +39,8 @@ public class FragmentGame extends Fragment implements Runnable {
     private CoordinatorLayout ice_field = null;
     private Penguin penguin = null;
     private ImageView penguin_img;
+    private ImageButton new_egg;
+    private int gene;
     private float stomach = 100;
     private Point window_size = new Point();
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
@@ -56,12 +63,33 @@ public class FragmentGame extends Fragment implements Runnable {
         feed_num = cm.getFeed();
         Date today = new Date();
         stomach = cm.getStomach();
+        gene = cm.getGene(); // 世代数取得
         String last = cm.getLast();
         try {
             stomach -= differenceDays(today, sdf.parse(last));
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
+        // 卵ボタン
+        new_egg = view.findViewById(R.id.egg);
+        // クリックイベント
+        new_egg.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                try {
+                    new_egg.setImageResource(R.drawable.egg_hibi);
+                    Thread.sleep(1000);
+                    // TODO "ペンギンの復活イベント"
+                    gene++; // 世代数を増やす
+                    Date date = new Date(); // 日付取得
+                    stomach = 100; // お腹戻す
+                    dbHelper.updatePenguin(gene, stomach, sdf.format(date));
+                    penguin.born(stomach);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
         // 餌数表示
         String feed_text = "残り餌数: " + feed_num;
@@ -109,7 +137,17 @@ public class FragmentGame extends Fragment implements Runnable {
                 if (count % 600 == 1) { // 1分に1回投げる
                     updatePenguin(count != 1); // ペンギン情報の更新
                 }
-                penguin.move();
+                if(penguin.isAlive()) {
+                    if(new_egg.getVisibility()  == View.VISIBLE) {
+                        new_egg.setVisibility(View.INVISIBLE);
+                    }
+                    penguin.move();
+                }else{
+                    mainHandler.post(() -> { // 死に画像
+                        if(new_egg.getVisibility()  == View.INVISIBLE)
+                            new_egg.setVisibility(View.VISIBLE); // 卵ボタン設置
+                    });
+                }
                 Thread.sleep(100);//0.1秒停止
                 // View更新
                 try {
@@ -162,6 +200,8 @@ public class FragmentGame extends Fragment implements Runnable {
         Date date = new Date();
         if(flag)
             stomach = penguin.hungry(0.01f); // お腹を減らす
+        if(stomach < 0)
+            stomach = 0;
         try {
             if (!dbHelper.updatePenguin(stomach, sdf.format(date))) // 更新
                 Thread.sleep(100);

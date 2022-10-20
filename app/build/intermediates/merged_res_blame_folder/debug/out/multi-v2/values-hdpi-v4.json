@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/somakai/.gradle/caches/transforms-3/62f739c452da76e055bdd8dfd658546b/transformed/appcompat-1.4.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "/Users/mahiro/.gradle/caches/transforms-3/62f739c452da76e055bdd8dfd658546b/transformed/appcompat-1.4.1/res/values-hdpi-v4/values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

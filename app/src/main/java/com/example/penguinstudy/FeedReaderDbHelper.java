@@ -168,6 +168,23 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
 
         return true;
     }
+    public boolean updatePenguin(int gene, float stomach, String last){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(FeedReaderContract.PenguinEntry.COLUMN_NAME_GENERATION, gene);
+        values.put(FeedReaderContract.PenguinEntry.COLUMN_NAME_STOMACH, stomach);
+        values.put(FeedReaderContract.PenguinEntry.COLUMN_NAME_LAST, last);
+
+        String selection = FeedReaderContract.PenguinEntry._ID + " = 1";
+
+        int count = db.update(
+                FeedReaderContract.PenguinEntry.TABLE_NAME,
+                values,
+                selection,
+                null);
+
+        return true;
+    }
     public Cursor queryTable(String table_name, String[] projection,String selection,
                              String[] selection_arg, String group_by, String having, String sort_order)
     {

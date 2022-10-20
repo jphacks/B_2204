@@ -2500,6 +2500,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baby_death
 drawable baby_feed
 drawable baby_move
 drawable baby_settle
@@ -2527,6 +2528,8 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable edit_text
+drawable egg
+drawable egg_hibi
 drawable enter
 drawable fish
 drawable ic_clock_black_24dp
@@ -2798,6 +2801,7 @@ id east
 id edit_query
 id edittext_dropdown_editable
 id edittext_dropdown_noneditable
+id egg
 id elastic
 id end
 id endToStart

@@ -3,9 +3,8 @@ com/example/penguinstudy/databinding/FragmentGameBinding.java
 com/example/penguinstudy/RankingAdapter.java
  com.example.penguinstudy.RankingAdapter
  com.example.penguinstudy.RankingAdapter$ViewHolder
-com/example/penguinstudy/FragmentGame.java
- com.example.penguinstudy.FragmentGame
- com.example.penguinstudy.FragmentGame$1
+com/example/penguinstudy/FragmentTodayBarchart.java
+ com.example.penguinstudy.FragmentTodayBarchart
 com/example/penguinstudy/FragmentRank.java
  com.example.penguinstudy.FragmentRank
 com/example/penguinstudy/FeedReaderContract.java
@@ -41,8 +40,10 @@ com/example/penguinstudy/databinding/ActivityMainBinding.java
  com.example.penguinstudy.databinding.ActivityMainBinding
 com/example/penguinstudy/databinding/FragmentChartsBinding.java
  com.example.penguinstudy.databinding.FragmentChartsBinding
-com/example/penguinstudy/Penguin.java
- com.example.penguinstudy.Penguin
+com/example/penguinstudy/SignUpActivity.java
+ com.example.penguinstudy.SignUpActivity
+ com.example.penguinstudy.SignUpActivity$1
+ com.example.penguinstudy.SignUpActivity$2
 com/example/penguinstudy/databinding/ItemRankingBinding.java
  com.example.penguinstudy.databinding.ItemRankingBinding
 com/example/penguinstudy/ColorDialogFragment.java
@@ -64,17 +65,15 @@ com/example/penguinstudy/databinding/ActivityInputBinding.java
  com.example.penguinstudy.databinding.ActivityInputBinding
 com/example/penguinstudy/databinding/ActivityEditTagBinding.java
  com.example.penguinstudy.databinding.ActivityEditTagBinding
-com/example/penguinstudy/SignUpActivity.java
- com.example.penguinstudy.SignUpActivity
- com.example.penguinstudy.SignUpActivity$1
- com.example.penguinstudy.SignUpActivity$2
+com/example/penguinstudy/FragmentSettings.java
+ com.example.penguinstudy.FragmentSettings
+ com.example.penguinstudy.FragmentSettings$1
 com/example/penguinstudy/databinding/ActivitySignupBinding.java
  com.example.penguinstudy.databinding.ActivitySignupBinding
 com/example/penguinstudy/FeedReaderDbHelper.java
  com.example.penguinstudy.FeedReaderDbHelper
-com/example/penguinstudy/FragmentSettings.java
- com.example.penguinstudy.FragmentSettings
- com.example.penguinstudy.FragmentSettings$1
+com/example/penguinstudy/FragmentAllLinechart.java
+ com.example.penguinstudy.FragmentAllLinechart
 com/example/penguinstudy/FragmentStopwatch.java
  com.example.penguinstudy.FragmentStopwatch
 com/example/penguinstudy/databinding/FragmentTimerBinding.java
@@ -100,7 +99,9 @@ com/example/penguinstudy/InputActivity.java
  com.example.penguinstudy.InputActivity$2
  com.example.penguinstudy.InputActivity$3
  com.example.penguinstudy.InputActivity$4
-com/example/penguinstudy/FragmentAllLinechart.java
- com.example.penguinstudy.FragmentAllLinechart
-com/example/penguinstudy/FragmentTodayBarchart.java
- com.example.penguinstudy.FragmentTodayBarchart
+com/example/penguinstudy/Penguin.java
+ com.example.penguinstudy.Penguin
+com/example/penguinstudy/FragmentGame.java
+ com.example.penguinstudy.FragmentGame
+ com.example.penguinstudy.FragmentGame$1
+ com.example.penguinstudy.FragmentGame$2

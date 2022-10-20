@@ -72,8 +72,9 @@ com/example/penguinstudy/databinding/ActivitySignupBinding.java
  com.example.penguinstudy.databinding.ActivitySignupBinding
 com/example/penguinstudy/FeedReaderDbHelper.java
  com.example.penguinstudy.FeedReaderDbHelper
-com/example/penguinstudy/FragmentAllLinechart.java
- com.example.penguinstudy.FragmentAllLinechart
+com/example/penguinstudy/FragmentSettings.java
+ com.example.penguinstudy.FragmentSettings
+ com.example.penguinstudy.FragmentSettings$1
 com/example/penguinstudy/FragmentStopwatch.java
  com.example.penguinstudy.FragmentStopwatch
 com/example/penguinstudy/databinding/FragmentTimerBinding.java
@@ -99,8 +100,7 @@ com/example/penguinstudy/InputActivity.java
  com.example.penguinstudy.InputActivity$2
  com.example.penguinstudy.InputActivity$3
  com.example.penguinstudy.InputActivity$4
+com/example/penguinstudy/FragmentAllLinechart.java
+ com.example.penguinstudy.FragmentAllLinechart
 com/example/penguinstudy/FragmentTodayBarchart.java
  com.example.penguinstudy.FragmentTodayBarchart
-com/example/penguinstudy/FragmentSettings.java
- com.example.penguinstudy.FragmentSettings
- com.example.penguinstudy.FragmentSettings$1

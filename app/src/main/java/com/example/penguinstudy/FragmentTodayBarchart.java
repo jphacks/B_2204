@@ -39,8 +39,8 @@ public class FragmentTodayBarchart extends Fragment {
 
     private BarChart mChart;
     private FeedReaderDbHelper dbHelper = null; // ここの時点ではActivityを取得できない
-    private List<String> subjects = new ArrayList<>();
-    private List<Integer> colors = new ArrayList<>();
+    private List<String> subjects = null;
+    private List<Integer> colors = null;
     private Date date;
     private float study_time;
     CommonMethod cm = new CommonMethod(); // 共通メソッド
@@ -53,6 +53,10 @@ public class FragmentTodayBarchart extends Fragment {
     // Viewが出来たら(ActivityのonCreateに相当) //
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        // initialize subjects and colors
+        subjects = new ArrayList<>();
+        colors = new ArrayList<>();
+
         // LineChartに移動
         ImageButton bt_to_all = view.findViewById(R.id.bt_to_all);
         bt_to_all.setOnClickListener( v -> {

@@ -28,6 +28,10 @@
         "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/layout_activity_retag.xml.flat",
+        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/activity_retag.xml"
+    },
+    {
         "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/layout_activity_signup.xml.flat",
         "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/activity_signup.xml"
     },

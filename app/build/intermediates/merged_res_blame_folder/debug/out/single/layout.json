@@ -48,6 +48,10 @@
         "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_timer.xml"
     },
     {
+        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_retag.xml",
+        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/activity_retag.xml"
+    },
+    {
         "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/text_spinner_item.xml",
         "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/text_spinner_item.xml"
     },
@@ -62,6 +66,10 @@
     {
         "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_rank.xml",
         "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_rank.xml"
+    },
+    {
+        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_retag.xml",
+        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_retag.xml"
     },
     {
         "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_today_barchart.xml",

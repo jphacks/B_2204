@@ -1,5 +1,6 @@
 package com.example.penguinstudy;
 
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+
+    private static Context activity;
 
     private String[] tags;
     private String[] todo;
@@ -26,16 +29,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
+            activity = view.getContext();
 
             textView = (TextView) view.findViewById(R.id.textView);
             textView2 = (TextView) view.findViewById(R.id.textView2);
             pallete = (View) view.findViewById(R.id.pallete);
             btSettingTag = (ImageButton) view.findViewById(R.id.tag_setting);
-            btSettingTag.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Log.d("Button:","Tagsettingボタンが押されました");
-                }
-            });
         }
 
         public TextView getTextView() {
@@ -47,6 +46,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         public View getPallete() {
             return pallete;
         }
+        public ImageButton getBtSettingTag() { return btSettingTag;}
 
     }
 
@@ -75,6 +75,15 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         viewHolder.getTextView().setText(tags[position]);
         viewHolder.getTextView2().setText(todo[position]);
         viewHolder.getPallete().setBackgroundColor(colors[position]);
+        viewHolder.getBtSettingTag().setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.d("Button:","Tagsettingボタンが押されました");
+
+                Intent intent = new Intent(activity, RetagActivity.class);
+                intent.putExtra("TAG", tags[viewHolder.getAdapterPosition()]);
+                activity.startActivity(intent);
+            }
+        });
     }
 
     // Return the size of your dataset (invoked by the layout manager)

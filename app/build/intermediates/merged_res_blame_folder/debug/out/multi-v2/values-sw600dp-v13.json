@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "/Users/mahiro/cardGame/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/somakai/.gradle/caches/transforms-3/e3ba8e6cff578cd96b602ad38939c593/transformed/material-1.6.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/mahiro/.gradle/caches/transforms-3/e3ba8e6cff578cd96b602ad38939c593/transformed/material-1.6.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/somakai/.gradle/caches/transforms-3/62f739c452da76e055bdd8dfd658546b/transformed/appcompat-1.4.1/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/mahiro/.gradle/caches/transforms-3/62f739c452da76e055bdd8dfd658546b/transformed/appcompat-1.4.1/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

@@ -61,10 +61,12 @@ public class FragmentSettings extends Fragment{
 
         // クエリ
         String[] projection = {
+                FeedReaderContract.TagEntry._ID,
                 FeedReaderContract.TagEntry.COLUMN_NAME_TAG,
                 FeedReaderContract.TagEntry.COLUMN_NAME_COLOR,
         };
         Cursor cursor = dbHelper.queryTable(FeedReaderContract.TagEntry.TABLE_NAME,projection);
+        List<String> ids = new ArrayList<>();
         List<String> tags = new ArrayList<>();
         List<String> todo_list = new ArrayList<>();
         List<Integer> colors = new ArrayList<>();
@@ -73,7 +75,7 @@ public class FragmentSettings extends Fragment{
                     cursor.getColumnIndexOrThrow(FeedReaderContract.TagEntry.COLUMN_NAME_COLOR));
             String tag = cursor.getString(
                     cursor.getColumnIndexOrThrow( FeedReaderContract.TagEntry.COLUMN_NAME_TAG));
-
+            String id = cursor.getString(cursor.getColumnIndexOrThrow( FeedReaderContract.TagEntry._ID));
             //　loop内でtodoを取得
             String[] projection_study = { FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT, FeedReaderContract.StudyEntry.COLUMN_NAME_TODO };
             String selection = FeedReaderContract.StudyEntry.COLUMN_NAME_SUBJECT + " = ?";
@@ -90,13 +92,13 @@ public class FragmentSettings extends Fragment{
             }
             cursor_study.close();
 
-
+            ids.add(id);
             tags.add(tag);
             todo_list.add("TODO : nothing");
             colors.add(color);
         }
         // mapを使ってIntegerList => int[]変換
-        CustomAdapter adapter = new CustomAdapter(tags.toArray(new String[tags.size()]), colors.stream().mapToInt(i -> i).toArray(), todo_list.toArray(new String[todo_list.size()]));
+        CustomAdapter adapter = new CustomAdapter(ids.toArray(new String[ids.size()]), tags.toArray(new String[tags.size()]), colors.stream().mapToInt(i -> i).toArray(), todo_list.toArray(new String[todo_list.size()]));
         recyclerView.setAdapter(adapter);
     }
 }

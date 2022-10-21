@@ -2714,7 +2714,6 @@ id bounceEnd
 id bounceStart
 id bt_add_tag
 id bt_color_dialog
-id bt_re_color_dialog
 id bt_tag_return
 id bt_to_all
 id bt_to_charts
@@ -2722,7 +2721,6 @@ id bt_to_rank
 id bt_to_today
 id buttonPanel
 id button_back
-id button_back_tag
 id button_feed
 id button_return
 id button_sign
@@ -3089,7 +3087,6 @@ id tag_name
 id tag_on_apply_window_listener
 id tag_on_receive_content_listener
 id tag_on_receive_content_mime_types
-id tag_rename
 id tag_screen_reader_focusable
 id tag_setting
 id tag_state_description
@@ -3268,7 +3265,6 @@ layout action_bar_img
 layout activity_edit_tag
 layout activity_input
 layout activity_main
-layout activity_retag
 layout activity_signup
 layout custom_dialog
 layout design_bottom_navigation_item

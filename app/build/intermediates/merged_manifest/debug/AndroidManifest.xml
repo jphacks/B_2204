@@ -63,15 +63,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.penguinstudy.RetagActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.Retag" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <provider
             android:name="androidx.startup.InitializationProvider"

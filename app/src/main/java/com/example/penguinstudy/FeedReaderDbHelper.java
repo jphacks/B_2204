@@ -127,6 +127,23 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         return true;
     }
 
+    // Tag関係
+    public boolean updateTag(String id, String tag_name, int color){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(FeedReaderContract.TagEntry.COLUMN_NAME_TAG, tag_name);
+        values.put(FeedReaderContract.TagEntry.COLUMN_NAME_COLOR, color);
+
+        String selection = FeedReaderContract.TagEntry._ID + " = ?";
+        String[] selectionArgs = {id};
+
+        int count = db.update(
+                FeedReaderContract.TagEntry.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return true;
+    }
     public boolean setTagData(String tag_name, int color){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();

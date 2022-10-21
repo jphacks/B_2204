@@ -23,6 +23,28 @@ public class CommonMethod {
         return String.valueOf(sdf.format(date));
     }
 
+    public String[] getTag(String id){
+        String[] projection = {
+                FeedReaderContract.TagEntry.COLUMN_NAME_COLOR,
+                FeedReaderContract.TagEntry.COLUMN_NAME_TAG
+        };
+
+        String selection = FeedReaderContract.TagEntry._ID + " = ?";
+        String[] selectionArgs = {id};
+
+        Cursor cursor = dbHelper.queryTable(FeedReaderContract.TagEntry.TABLE_NAME, projection, selection, selectionArgs);
+        String val1 = "";
+        String val2 = "";
+        while(cursor.moveToNext()) {
+            val1 = cursor.getString(
+                    cursor.getColumnIndexOrThrow(FeedReaderContract.TagEntry.COLUMN_NAME_TAG));
+            val2 = cursor.getString(
+                    cursor.getColumnIndexOrThrow(FeedReaderContract.TagEntry.COLUMN_NAME_COLOR));
+        }
+        cursor.close();
+        return new String[]{val1, val2};
+    }
+
     public String getLast(){
         String[] projection = {
                 BaseColumns._ID,

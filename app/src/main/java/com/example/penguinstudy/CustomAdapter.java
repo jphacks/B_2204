@@ -16,6 +16,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     private static Context activity;
 
+    private String[] ids;
     private String[] tags;
     private String[] todo;
     private int[] colors;
@@ -50,7 +51,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     }
 
-    public CustomAdapter(String[] dataSet, int[] palletes, String[] todo_list) {
+    public CustomAdapter(String[] ids, String[] dataSet, int[] palletes, String[] todo_list) {
+        this.ids = ids;
         tags = dataSet;
         colors = palletes;
         todo = todo_list;
@@ -69,18 +71,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-
-        // Get element from your dataset at this position and replace the
-        // contents of the view with that element
         viewHolder.getTextView().setText(tags[position]);
         viewHolder.getTextView2().setText(todo[position]);
         viewHolder.getPallete().setBackgroundColor(colors[position]);
         viewHolder.getBtSettingTag().setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.d("Button:","Tagsettingボタンが押されました");
-
-                Intent intent = new Intent(activity, RetagActivity.class);
-                intent.putExtra("TAG", tags[viewHolder.getAdapterPosition()]);
+                Intent intent = new Intent(activity, EditTagActivity.class);
+                intent.putExtra("TAG_ID", ids[viewHolder.getAdapterPosition()]); // IDを送る
                 activity.startActivity(intent);
             }
         });

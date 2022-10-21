@@ -3087,6 +3087,7 @@ int id tag_on_apply_window_listener 0x7f0901df
 int id tag_on_receive_content_listener 0x7f0901e0
 int id tag_on_receive_content_mime_types 0x7f0901e1
 int id tag_screen_reader_focusable 0x7f0901e2
+int id tag_setting 0x7f090233
 int id tag_state_description 0x7f0901e3
 int id tag_transition_group 0x7f0901e4
 int id tag_unhandled_key_event_manager 0x7f0901e5

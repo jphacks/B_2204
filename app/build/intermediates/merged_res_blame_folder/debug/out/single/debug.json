@@ -4,12 +4,12 @@
         "source": "/Users/somakai/workspace/cardGame/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/layout_fragment_charts.xml.flat",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_charts.xml"
-    },
-    {
         "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/navigation_nav_graph_content.xml.flat",
         "source": "/Users/somakai/workspace/cardGame/app/src/main/res/navigation/nav_graph_content.xml"
+    },
+    {
+        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/layout_fragment_charts.xml.flat",
+        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/fragment_charts.xml"
     },
     {
         "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/merged_res/debug/layout_activity_input.xml.flat",

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_ranking.xml",
-        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/item_ranking.xml"
-    },
-    {
         "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_edit_tag.xml",
         "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/activity_edit_tag.xml"
+    },
+    {
+        "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_ranking.xml",
+        "source": "/Users/somakai/workspace/cardGame/app/src/main/res/layout/item_ranking.xml"
     },
     {
         "merged": "/Users/somakai/workspace/cardGame/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_game.xml",

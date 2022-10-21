@@ -1,8 +1,12 @@
 package com.example.penguinstudy;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,6 +21,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         private final TextView textView;
         private final TextView textView2;
         private final View pallete;
+        private final ImageButton btSettingTag;
 
         public ViewHolder(View view) {
             super(view);
@@ -25,6 +30,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             textView = (TextView) view.findViewById(R.id.textView);
             textView2 = (TextView) view.findViewById(R.id.textView2);
             pallete = (View) view.findViewById(R.id.pallete);
+            btSettingTag = (ImageButton) view.findViewById(R.id.tag_setting);
+            btSettingTag.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Log.d("Button:","Tagsettingボタンが押されました");
+                }
+            });
         }
 
         public TextView getTextView() {
@@ -36,6 +47,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         public View getPallete() {
             return pallete;
         }
+
     }
 
     public CustomAdapter(String[] dataSet, int[] palletes, String[] todo_list) {
@@ -61,7 +73,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         viewHolder.getTextView().setText(tags[position]);
-        viewHolder.getTextView().setText(todo[position]);
+        viewHolder.getTextView2().setText(todo[position]);
         viewHolder.getPallete().setBackgroundColor(colors[position]);
     }
 

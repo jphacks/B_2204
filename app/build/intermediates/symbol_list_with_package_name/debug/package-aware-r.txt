@@ -3088,6 +3088,7 @@ id tag_on_apply_window_listener
 id tag_on_receive_content_listener
 id tag_on_receive_content_mime_types
 id tag_screen_reader_focusable
+id tag_setting
 id tag_state_description
 id tag_transition_group
 id tag_unhandled_key_event_manager

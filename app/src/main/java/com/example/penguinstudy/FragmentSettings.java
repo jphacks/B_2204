@@ -84,7 +84,7 @@ public class FragmentSettings extends Fragment{
                 String toDo = cursor_study.getString(
                         cursor_study.getColumnIndexOrThrow(FeedReaderContract.StudyEntry.COLUMN_NAME_TODO));
                 if(toDo != null) {
-                    todo_list.add("TODO ; " + toDo);
+                    todo_list.add("TODO : " + toDo);
                     Log.d("check", toDo);
                 }
             }

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,15 +24,19 @@ public final class TextRowItemBinding implements ViewBinding {
   public final View pallete;
 
   @NonNull
+  public final ImageButton tagSetting;
+
+  @NonNull
   public final TextView textView;
 
   @NonNull
   public final TextView textView2;
 
   private TextRowItemBinding(@NonNull FrameLayout rootView, @NonNull View pallete,
-      @NonNull TextView textView, @NonNull TextView textView2) {
+      @NonNull ImageButton tagSetting, @NonNull TextView textView, @NonNull TextView textView2) {
     this.rootView = rootView;
     this.pallete = pallete;
+    this.tagSetting = tagSetting;
     this.textView = textView;
     this.textView2 = textView2;
   }
@@ -69,6 +74,12 @@ public final class TextRowItemBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tag_setting;
+      ImageButton tagSetting = ViewBindings.findChildViewById(rootView, id);
+      if (tagSetting == null) {
+        break missingId;
+      }
+
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
@@ -81,7 +92,8 @@ public final class TextRowItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new TextRowItemBinding((FrameLayout) rootView, pallete, textView, textView2);
+      return new TextRowItemBinding((FrameLayout) rootView, pallete, tagSetting, textView,
+          textView2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -91,6 +91,7 @@ com/example/penguinstudy/databinding/FragmentTodayBarchartBinding.java
 com/example/penguinstudy/CustomAdapter.java
  com.example.penguinstudy.CustomAdapter
  com.example.penguinstudy.CustomAdapter$ViewHolder
+ com.example.penguinstudy.CustomAdapter$ViewHolder$1
 com/example/penguinstudy/FragmentCharts.java
  com.example.penguinstudy.FragmentCharts
 com/example/penguinstudy/databinding/TextSpinnerItemBinding.java

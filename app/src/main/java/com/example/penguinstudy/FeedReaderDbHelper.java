@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class FeedReaderDbHelper extends SQLiteOpenHelper {
     // Version変更
-    public static final int DATABASE_VERSION = 28;
+    public static final int DATABASE_VERSION = 31;
     public static final String DATABASE_NAME = "StudiesDB.db";
 
     // ENTRYの型を設定

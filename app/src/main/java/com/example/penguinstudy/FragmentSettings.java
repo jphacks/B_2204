@@ -43,6 +43,7 @@ public class FragmentSettings extends Fragment{
             public void onClick(View v) {
                 // 画面遷移 //
                 Intent intent = new Intent(activity, EditTagActivity.class);
+                intent.putExtra("TAG_ID", "not_edit"); // IDを送る
                 startActivity(intent);
             }
         });

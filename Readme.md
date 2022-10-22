@@ -1,6 +1,5 @@
 # ペンギン学習塾
-
-[![IMAGE ALT TEXT HERE](https://jphacks.com/wp-content/uploads/2022/08/JPHACKS2022_ogp.jpg)](https://www.youtube.com/watch?v=LUPQFB4QyVo)
+<img src="images/icon.png" width="200px">
 
 ## 製品概要
 ### 背景

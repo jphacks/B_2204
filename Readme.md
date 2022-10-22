@@ -10,7 +10,11 @@
 ### 製品説明
 勉強時間を管理しつつモチベーターの役割をこなします。使用者は自身の用途によってタグを作成し、タグごとに作業時間を管理することができます。作業することによって使用者は餌を取得することができます。そこで得た餌をペンギンに与えて育てることができます。また、他のユーザーと作業時間を比較することができます。
 ### スクリーンショット
-<img src="https://github.com/poteto0/cardGame/master/images/11640.jpg" width="200px">
+<img src="images/111640.jpg" width="200px"> <img src="images/111641.jpg" width="200px"> <img src="images/111642.jpg" width="200px">
+<img src="images/111643.jpg" width="200px">
+<img src="images/111644.jpg" width="200px">
+<img src="images/111645.jpg" width="200px">
+<img src="images/111646.jpg" width="200px">
 ### 特長
 #### 1. 育成ゲーム
 従来の同様アプリであまり用いられない育成ゲームによって、より勉強/作業をする理由付けをします。
